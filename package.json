@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start": "reveal-md content/ -w",
+        "build": "rm -rf docs && reveal-md content --static docs --static-dirs=content/attachments --theme theme/mytheme.css && mv docs/_assets docs/assets && find docs/*html | xargs sed -i '' \"s/\\/_assets/\\.\\/assets/g\""
+    }
+}
