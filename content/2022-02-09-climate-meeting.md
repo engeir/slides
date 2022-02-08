@@ -54,48 +54,30 @@ Creating synthetic volcanic forcing data
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 <!-- .slide: data-background-transition="slide-in fade-out" -->
-<!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### Post industrial volcanoes
 
-![Historic volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png)
-<!-- .element: style="width: 140%; left: -20%; position: absolute;" -->
+![Post industrial volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png)
 
 --
 
 <!-- .slide: data-transition="fade" -->
-<!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_FPP.png" -->
-<!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### FPP generated volcanoes
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+![FPP generated volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_FPP.png)
 
 --
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 <!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_single.png" -->
 <!-- .slide: data-background-size="95vw" -->
-<!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### Large single volcano
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<!-- .element: style="margin-top: -20vh;" -->
 
 --
 <!-- .slide: data-transition="slide-in fade-out" -->
