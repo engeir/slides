@@ -1,9 +1,13 @@
 {
     "scripts": {
-        "start": "reveal-md content/ -w --theme theme/mytheme.css",
-        "build": "rm -rf docs && reveal-md content --static docs --static-dirs=content/attachments --theme theme/mytheme.css && mv docs/_assets docs/assets && find docs/*html | xargs sed -i \"s/\\/_assets/\\.\\/assets/g\""
+        "start": "reveal-md content/ -w --theme theme/mytheme.css --disable-auto-open --listing-template theme/site-template.html",
+        "build": "rm -rf docs && reveal-md content --static docs --static-dirs=content/attachments --theme theme/mytheme.css && mv docs/_assets docs/assets && find docs/*html | xargs sed -i \"s/\\/_assets/\\.\\/assets/g\"",
+        "preexport:topdf": "cp $npm_config_file 2print.md && replace-in-file '/class=\"fragment\"/g' ' ' 2print.md --isRegex",
+        "export:topdf": "reveal-md 2print.md --theme theme/mytheme.css --print presentation.pdf",
+        "postexport:topdf": "rm 2print.md"
     },
     "dependencies": {
+        "replace-in-file": "^6.3.2",
         "reveal-md": "^5.3.2"
     }
 }

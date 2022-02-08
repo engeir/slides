@@ -2,6 +2,8 @@
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
  *
  * By Hakim El Hattab, http://hakim.se
+ *
+ * Edited by Eirik Rolland Enger, https://eirikenger.xyz
  */
 
 
@@ -44,3 +46,36 @@ $heading4Size: 1.0em;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+// Changes to site styles ----------------------
+body {
+    font-family: $mainFont;
+    background-color: $backgroundColor;
+    color: white;
+    font-size: 28px;
+}
+a:link {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #ff99aa;
+    background-color: transparent;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    position: relative;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+tr {
+    border-bottom: 1px solid #ccc;
+}
+th {
+    text-align: left;    
+}

@@ -1,5 +1,7 @@
 ---
-title: UiT Group Climate Meeting
+title: Running CESM2 with synthetic volcanic forcing
+event: UiT Climate Meeting
+date: "2022-02-09"
 ---
 
 # Running CESM2 with synthetic volcanic forcing
@@ -53,21 +55,23 @@ Creating synthetic volcanic forcing data
 --
 
 <!-- .slide: data-transition="slide-in fade-out" -->
+<!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png" -->
+<!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-transition="slide-in fade-out" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### Post industrial volcanoes
-
-![Post industrial volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png)
+<!-- .element: style="margin-top: -20vh;" -->
 
 --
 
 <!-- .slide: data-transition="fade" -->
+<!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_FPP.png" -->
+<!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### FPP generated volcanoes
-
-![FPP generated volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_FPP.png)
+<!-- .element: style="margin-top: -20vh;" -->
 
 --
 
