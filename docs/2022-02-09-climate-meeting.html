@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>reveal-md</title>
+    <title>UiT Group Climate Meeting</title>
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
@@ -15,11 +15,11 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section ><section data-markdown><script type="text/template"><!-- .slide: data-background="#222" -->
+      <div class="slides"><section ><section data-markdown><script type="text/template">
 
 # Running CESM2 with synthetic volcanic forcing
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#990000" -->
+<!-- .slide: data-background="#891919" -->
 
 ## Plan
 
@@ -27,20 +27,14 @@
 - Volcanoes are the only external forcing <!-- .element: class="fragment" data-fragment-index="2" -->
 - Obtain estimate of the temperature response <!-- .element: class="fragment" data-fragment-index="3" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 # Example
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background-color="#222" -->
 <!-- .slide: data-background="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/noresm/noresm_raw_dark.png" -->
 <!-- .slide: data-background-size="95vw" -->
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background-color="#222" -->
 <!-- .slide: data-background="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/noresm/response_func_noresm1_choose_dark.png" -->
 <!-- .slide: data-background-size="95vw" -->
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background-color="#222" -->
-<!-- .slide: data-background="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/noresm/noresm_raw_with_est_dark.png" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-background="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/noresm/noresm_raw_with_est_dark.png" -->
 <!-- .slide: data-background-size="95vw" -->
 </script></section><section data-markdown><script type="text/template">
 > FPP &#8212; filtered Poisson process
@@ -51,29 +45,19 @@
 <!-- .slide: data-background-video="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/animation.mp4" -->
 <!-- .slide: data-background-size="contain" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 # Current affairs
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 Creating synthetic volcanic forcing data
 </script></section><section data-markdown><script type="text/template">
 <!-- .slide: data-transition="slide-in fade-out" -->
 <!-- .slide: data-background-transition="slide-in fade-out" -->
-<!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png" -->
 <!-- .slide: data-background-size="95vw" -->
 <!-- .slide: data-background-color="#000" -->
 
 ### Post industrial volcanoes
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+![Historic volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png)
+<!-- .element: style="width: 60vw; left: -12vw; position: absolute;" -->
 </script></section><section data-markdown><script type="text/template">
 <!-- .slide: data-transition="fade" -->
 <!-- .slide: data-background="https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_FPP.png" -->
@@ -105,9 +89,7 @@ Creating synthetic volcanic forcing data
 </br>
 </br>
 </br>
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-<!-- .slide: data-transition="slide-in fade-out" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide: data-transition="slide-in fade-out" -->
 
 | ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple_vanilla.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT_simple_vanilla.png) |
 | -: | :- |
@@ -117,102 +99,38 @@ Historical run, unchanged
 <aside class="notes"><p>How do I do this? Two images side-by-side should not be hard!?</p>
 </aside></script></section><section data-markdown><script type="text/template">
 <!-- .slide: data-transition="fade" -->
-<!-- .slide: data-background="#222" -->
 
 | ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT_simple.png) |
 | -: | :- |
 
 Historical run with large eruption in 1850-01-15
 </script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 # Experiments
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
 <!-- .slide: data-transition="fade" -->
 
 1. Small ensemble over 5 to 10 years &#8594; Look at internal variability
 2. Longer run with volcanoes generated from an FPP <!-- .element: class="fragment" data-fragment-index="1" -->
 3. Volcanoes that cluster together <!-- .element: class="fragment" data-fragment-index="2" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 # Questions
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 What is an appropriate frequency of volcanoes?
-
-![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple_vanilla.png)
-<!-- .element: class="fragment" -->
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
 Is the response the same as that you get from, say CO<sub>2</sub>?
 
 What about solar?
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
 <!-- .slide: data-transition="slide-in fade-out" -->
 
 Is the response dependent on altitude? Magnitude/total emitted aerosols?
 </script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
 <!-- .slide: data-transition="fade" -->
 
 - What is an appropriate frequency of volcanoes?
 - Is the response the same as that you get from, say CO<sub>2</sub>? What about solar?
 - Is the response dependent on altitude? Magnitude/total emitted aerosols?
-</script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
-# iFrame background
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background-iframe="https://flottflyt.com" -->
-</script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
-# Code
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
-```python [21,22|19|2-13]
-def count_printed_lines(i: int) -> int:
-    """Run the print loop.
-
-    Parameters
-    ----------
-    i: int
-        How many lines to print
-
-    Returns
-    -------
-    int
-        The number of lines that was printed
-    """
-    for i in range(3):
-        print(f"Do nothing, just print line {i}")
-
-def main() -> None:
-    i = 9
-    _ = count_printed_lines(i)
-
-if __name__ == "__main__":
-    main()
-```
-</script></section></section><section ><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-<!-- .slide: style="color: #ee2" -->
-
-# Math
-
-> Regular text
-<!-- .element: class="fragment" style="font-size: 0.30em !important;" -->
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background="#222" -->
-
-$\frac{1}{2}=\sqrt{2}x$
-</script></section></section></div>
+</script></section></section><section  data-markdown><script type="text/template"></script></section></div>
     </div>
 
     <script src="./dist/reveal.js"></script>
@@ -255,7 +173,7 @@ $\frac{1}{2}=\sqrt{2}x$
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"history":true,"center":true,"transition":"slide"}, queryOptions);
     </script>
 
 

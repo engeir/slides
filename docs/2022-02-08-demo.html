@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>reveal-md</title>
+    <title>Demo of features</title>
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
@@ -15,25 +15,52 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides"><section ><section data-markdown><script type="text/template">
 
-I am empty
-</script></section><section ><section data-markdown><script type="text/template">
-# New slide to the right
-</script></section><section data-markdown><script type="text/template">
-# New slide from below
+# iFrame background
 
-`\(\frac{a}{2}=2b\)`
+<aside class="notes"><p>Test note</p>
+</aside></script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-iframe="https://eirikenger.xyz" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
 # Code
-</script></section><section data-markdown><script type="text/template">
-<!-- .slide: data-background-iframe="https://eirikenger.xyz" -->
 
-```python [1,2|3]
+![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple_vanilla.png)
+<!-- .element: class="fragment" -->
+</script></section><section data-markdown><script type="text/template">
+```python [21,22|19|2-13]
+def count_printed_lines(i: int) -> int:
+    """Run the print loop.
+
+    Parameters
+    ----------
+    i: int
+        How many lines to print
+
+    Returns
+    -------
+    int
+        The number of lines that was printed
+    """
+    for i in range(3):
+        print(f"Do nothing, just print line {i}")
+
 def main() -> None:
-    for i in range(9):
-        print(f"Printing line {i}")
+    i = 9
+    _ = count_printed_lines(i)
+
+if __name__ == "__main__":
+    main()
 ```
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: style="color: #ee2" -->
+
+# Math
+
+> Regular text
+<!-- .element: class="fragment" style="font-size: 0.30em !important;" -->
+</script></section><section data-markdown><script type="text/template">
+$\frac{1}{2}=\sqrt{2}x$
 </script></section></section></div>
     </div>
 
@@ -77,7 +104,7 @@ def main() -> None:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"transition":"fade","controls":true,"progress":true,"history":true,"center":true}, queryOptions);
     </script>
 
 
