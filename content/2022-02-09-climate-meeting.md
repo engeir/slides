@@ -60,7 +60,7 @@ Creating synthetic volcanic forcing data
 ### Post industrial volcanoes
 
 ![Historic volcanoes](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/synthetic_volcanoes_historic.png)
-<!-- .element: style="width: 60vw; left: -12vw; position: absolute;" -->
+<!-- .element: style="width: 140%; left: -20%; position: absolute;" -->
 
 --
 
