@@ -64,18 +64,18 @@ a:visited {
     background-color: transparent;
     text-decoration: none;
 }
-table {
+// table {
+// }
+table.center {
     border-collapse: collapse;
     width: 80%;
     position: relative;
-}
-table.center {
     margin-left:auto; 
     margin-right:auto;
 }
-tr {
+tr.center {
     border-bottom: 1px solid #ccc;
 }
-th {
+th.center {
     text-align: left;    
 }

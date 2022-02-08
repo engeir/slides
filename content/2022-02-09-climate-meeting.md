@@ -142,5 +142,3 @@ Is the response dependent on altitude? Magnitude/total emitted aerosols?
 - What is an appropriate frequency of volcanoes?
 - Is the response the same as that you get from, say CO<sub>2</sub>? What about solar?
 - Is the response dependent on altitude? Magnitude/total emitted aerosols?
-
----
