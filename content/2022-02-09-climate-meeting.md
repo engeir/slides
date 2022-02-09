@@ -36,9 +36,6 @@ date: "2022-02-09"
 
 --
 
-> FPP &#8212; filtered Poisson process
-
-<!-- .slide: style:"color=red" -->
 <!-- .slide: data-background-color="#002f4b" -->
 <!-- .slide: data-background-video-loop="true" -->
 <!-- .slide: data-background-video="https://github.com/engeir/presentations-files/raw/main/2021/fysikermotet/animation.mp4" -->
@@ -98,10 +95,41 @@ How do I do this? Two images side-by-side should not be hard!?
 
 <!-- .slide: data-transition="fade" -->
 
-| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT_simple.png) |
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens1.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens1.png) |
 | -: | :- |
 
-Historical run with large eruption in 1850-01-15
+Historical run, eruption in 1850-02-15
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens2.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens2.png) |
+| -: | :- |
+
+Historical run, eruption in 1850-05-15
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens3.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens3.png) |
+| -: | :- |
+
+Historical run, eruption in 1850-08-15
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens4.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens4.png) |
+| -: | :- |
+
+Historical run, eruption in 1850-11-15
+
+Note:
+[Reset](#/2/5)
+<!-- .element: style="position:relative;font-size:12pt;text-align:left" -->
 
 ---
 
@@ -112,7 +140,7 @@ Historical run with large eruption in 1850-01-15
 <!-- .slide: data-transition="fade" -->
 
 1. Small ensemble over 5 to 10 years &#8594; Look at internal variability
-2. Longer run with volcanoes generated from an FPP <!-- .element: class="fragment" data-fragment-index="1" -->
+2. Longer run with volcanoes generated from a Poisson process <!-- .element: class="fragment" data-fragment-index="1" -->
 3. Volcanoes that cluster together <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
