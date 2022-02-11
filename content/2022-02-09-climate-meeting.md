@@ -161,7 +161,11 @@ What about solar?
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 
-Is the response dependent on altitude? Magnitude/total emitted aerosols?
+Is the response dependent on altitude?
+
+Magnitude/total emitted aerosols?
+
+Or maybe what hemisphere the aerosols are mainly in?
 
 --
 
@@ -169,4 +173,6 @@ Is the response dependent on altitude? Magnitude/total emitted aerosols?
 
 - What is an appropriate frequency of volcanoes?
 - Is the response the same as that you get from, say CO<sub>2</sub>? What about solar?
-- Is the response dependent on altitude? Magnitude/total emitted aerosols?
+- Is the response dependent on altitude? Magnitude/total emitted aerosols? Or maybe what
+  hemisphere the aerosols are mainly in?
+

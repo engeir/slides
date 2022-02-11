@@ -1,5 +1,8 @@
 {
     "title": "Presentations",
     "separator": "\n---\n",
-    "verticalSeparator": "\n--\n"
+    "verticalSeparator": "\n--\n",
+    "revealOptions": {
+        "auto-animate": true
+    }
 }

@@ -6,24 +6,22 @@
  * Edited by Eirik Rolland Enger, https://eirikenger.xyz
  */
 
+// Default mixins and settings -------------------------------------------------------- //
+@import '../template/mixins';
+@import '../template/settings';
 
-// Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
-// ---------------------------------------------
-
-
-// Include theme-specific fonts
+// Include theme-specific fonts ------------------------------------------------------- //
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 
-
-// Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
+// Override theme settings (see ../template/settings.scss) ---------------------------- //
+$backgroundColor: #111;
 
 $mainColor: #fff;
 $headingColor: #fff;
-
 $mainFontSize: 42px;
+$mywhite: #ddd;
+$mygray: #505050;
+
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -31,51 +29,154 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
-// Change text colors against light slide backgrounds
-@include light-bg-text-color(#222);
+// Change text colors against light slide backgrounds --------------------------------- //
+@include light-bg-text-color(#111);
 
+// Theme template --------------------------------------------------------------------- //
+@import '../template/theme';
 
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------
-
-// Changes to site styles ----------------------
+// Changes to site styles ------------------------------------------------------------- //
 body {
-    font-family: $mainFont;
-    background-color: $backgroundColor;
-    color: white;
-    font-size: 28px;
+  font-family: $mainFont;
+  background-color: $backgroundColor;
+  color: white;
+  font-size: 28px;
 }
+
+// Navigation menu from home page ----------------------------------------------------- //
+.topnav {
+  border-bottom: 1px solid #333333;
+  border-width: 2px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.active {
+  color: pink;
+}
+.topnav-centered {
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topnav-right {
+  float: right;
+}
+nav {
+  padding: 10px;
+  @media (min-width: 600px) {
+    padding: 20px;
+  }
+}
+nav.flexbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  // Only space between if the width is large enough
+  @media (min-width: 600px) {
+    justify-content: space-between;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  ul li {
+    flex: 0 0 70px;
+    margin-right: 10px;
+    text-align: center;
+    @media (min-width: 600px) {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  > a {
+    margin-bottom: 10px;
+    @media (min-width: 600px) {
+      margin-bottom: 0px;
+    }
+  }
+}
+ul.fullwidth {
+  flex: 1 0 100%;
+  justify-content: center;
+  @media (min-width: 600px) {
+    flex: 0 1 auto;
+  }
+}
+nav.flexbox a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
+  color: $mywhite;
+}
+nav.flexbox a::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: $mygray;
+}
+nav.flexbox a:hover {
+  // color: $linkPink;
+  &::before {
+    width: 100%;
+    // background: linear-gradient(to right, $linkPink 40%, $linkPurple 75%);
+  }
+}
+
+// Colourful links -------------------------------------------------------------------- //
 a:link {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
 }
 a:visited {
-    color: #ff99aa;
-    background-color: transparent;
-    text-decoration: none;
+  color: #ff99aa;
+  background-color: transparent;
+  text-decoration: none;
 }
-// table {
-// }
+
+// Table ------------------------------------------------------------------------------ //
 table.center {
-    border-collapse: collapse;
-    width: 80%;
-    position: relative;
-    margin-left:auto; 
-    margin-right:auto;
+  border-collapse: collapse;
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 tr.center {
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 th.center {
-    text-align: left;    
+  text-align: left;
 }
