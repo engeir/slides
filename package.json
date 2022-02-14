@@ -4,10 +4,14 @@
         "build": "rm -rf docs && reveal-md content --static docs --static-dirs=content/attachments --theme theme/mytheme.css --highlight-theme gruvbox-dark --listing-template theme/site-template.html && mv docs/_assets docs/assets && find docs/*html | xargs sed -i.bak \"s/\\/_assets/\\.\\/assets/g\" && rm docs/*html.bak",
         "preexport:topdf": "cp $npm_config_file 2print.md && replace-in-file '/class=\"fragment\"/g' ' ' 2print.md --isRegex",
         "export:topdf": "reveal-md 2print.md --theme theme/mytheme.css --print presentation.pdf",
-        "postexport:topdf": "rm 2print.md"
+        "postexport:topdf": "rm 2print.md",
+        "postinstall": "patch-package"
     },
     "dependencies": {
         "replace-in-file": "^6.3.2",
         "reveal-md": "^5.3.2"
+    },
+    "devDependencies": {
+        "patch-package": "^6.4.7"
     }
 }
