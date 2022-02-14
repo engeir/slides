@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Generate static VuePress files
+    - name: Generate static presentations site
       uses: actions/setup-node@v2
       with:
         node-version: '16'
