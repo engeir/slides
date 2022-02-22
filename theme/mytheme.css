@@ -401,12 +401,12 @@ nav.flexbox a:hover::before {
   width: 100%; }
 
 a:link {
-  color: #025839;
+  color: #038a59;
   background-color: transparent;
   text-decoration: none; }
 
 a:visited {
-  color: #038a59;
+  color: #025839;
   background-color: transparent;
   text-decoration: none; }
 
