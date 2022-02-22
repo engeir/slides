@@ -306,7 +306,7 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   background-color: #111;
   color: white;
-  font-size: 28px; }
+  font-size: 25px; }
 
 .topnav {
   border-bottom: 1px solid #333333;
@@ -401,12 +401,12 @@ nav.flexbox a:hover::before {
   width: 100%; }
 
 a:link {
-  color: pink;
+  color: #025839;
   background-color: transparent;
   text-decoration: none; }
 
 a:visited {
-  color: #ff99aa;
+  color: #038a59;
   background-color: transparent;
   text-decoration: none; }
 
@@ -415,12 +415,19 @@ table.center {
   width: 80%;
   position: relative;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow: hidden; }
+
+table.center p {
+  line-height: 1.0em;
+  margin: 0.5em 0; }
 
 tr.center {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  height: 20px; }
 
 th.center {
-  text-align: left; }
+  text-align: left;
+  height: 20px; }
 
 /*# sourceMappingURL=mytheme.css.map */

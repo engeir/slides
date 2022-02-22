@@ -59,7 +59,7 @@
           </td>
           <td>
             <a href="{{filePath}}" title="{{title}}">
-              {{#title}}{{.}} {{/title}}{{^title}}{{filePath}}{{/title}}({{author}})
+                {{#title}}{{.}} {{/title}}{{^title}}{{filePath}}{{/title}}{{#author}}({{.}}){{/author}}
             </a>
           </td>
         </tr>
