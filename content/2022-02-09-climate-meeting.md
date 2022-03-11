@@ -2,6 +2,7 @@
 title: Running CESM2 with synthetic volcanic forcing
 event: UiT Climate Meeting
 date: "2022-02-09"
+
 ---
 
 # Running CESM2 with synthetic volcanic forcing
