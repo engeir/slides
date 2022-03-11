@@ -9,7 +9,10 @@
     },
     "dependencies": {
         "replace-in-file": "^6.3.2",
-        "reveal-md": "^5.3.2"
+        "reveal-md": "^5.3.2",
+        "reveal.js-copycode": "^1.0.3",
+        "reveal.js-simplemenu": "^1.0.9",
+        "revealjs-animated": "^1.0.0"
     },
     "devDependencies": {
         "patch-package": "^6.4.7"
