@@ -34,7 +34,7 @@ This will put the static page in the `docs` directory.
 
 ## Plugins
 
-In addition to the default plugins provided by `[reveal-md]`, the following plugins are
+In addition to the default plugins provided by [`reveal-md`](https://github.com/webpro/reveal-md), the following plugins are
 included in this project:
 
 - [spotlight]
