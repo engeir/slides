@@ -96,7 +96,7 @@ How do I do this? Two images side-by-side should not be hard!?
 
 <!-- .slide: data-transition="fade" -->
 
-| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens1.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens1.png) |
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220221_simple-ens1.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220221_simple-ens1.png) |
 | -: | :- |
 
 Historical run, eruption in 1850-02-15
@@ -105,7 +105,7 @@ Historical run, eruption in 1850-02-15
 
 <!-- .slide: data-transition="fade" -->
 
-| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens2.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens2.png) |
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220221_simple-ens2.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220221_simple-ens2.png) |
 | -: | :- |
 
 Historical run, eruption in 1850-05-15
@@ -114,7 +114,7 @@ Historical run, eruption in 1850-05-15
 
 <!-- .slide: data-transition="fade" -->
 
-| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens3.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens3.png) |
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220221_simple-ens3.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220221_simple-ens3.png) |
 | -: | :- |
 
 Historical run, eruption in 1850-08-15
@@ -123,10 +123,19 @@ Historical run, eruption in 1850-08-15
 
 <!-- .slide: data-transition="fade" -->
 
-| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220209_simple-ens4.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220209_simple-ens4.png) |
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220221_simple-ens4.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220221_simple-ens4.png) |
 | -: | :- |
 
 Historical run, eruption in 1850-11-15
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+| ![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v20220218_simple-ens5.png) | ![Temperature](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/TREFHT20220218_simple-ens5.png) |
+| -: | :- |
+
+Historical run, eruption in 1851-02-15
 
 Note:
 [Reset](#/2/5)
