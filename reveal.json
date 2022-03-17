@@ -6,7 +6,7 @@
     "transition": "slide",
     "auto-animate": true,
     "spotlight": {
-        "toggleSpotlightOnMouseDown": true,
+        "toggleSpotlightOnMouseDown": false,
         "spotlightOnKeyPressAndHold": 67
     }
 }

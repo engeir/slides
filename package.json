@@ -15,6 +15,12 @@
         "revealjs-animated": "^1.0.0"
     },
     "devDependencies": {
+        "cz-conventional-changelog": "^3.3.0",
         "patch-package": "^6.4.7"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
 }

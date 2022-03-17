@@ -39,14 +39,19 @@ included in this project:
 
 - [spotlight]
 
-  Turned off atm. Include by adding `"plugin/spotlight/spotlight.js",` to the file
-  `reveal-md.json`.
+  Turned off by default, but can be set in the YAML front matter with
+
+  ```yaml
+  revealOptions:
+    spotlight: 
+    - toggleSpotlightOnMouseDown: true
+  ```
 
 - [elapsed-time-bar]
 
   The timer is triggered by setting
 
-  ```yml
+  ```yaml
   revealOptions:
     allottedTime: 900000
   ```
