@@ -11,6 +11,14 @@ This is really just markdown files rendered in a nice way.
 It should be quite straight forward to use this for your own presentations. Just fork the
 repo and make some new markdown files, preferably on the format `YYYY-MM-DD-title.md`.
 
+### Install
+
+Installing all dependencies is done with
+
+```sh
+npm install
+```
+
 ### Run locally
 
 Run it locally with
