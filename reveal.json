@@ -1,7 +1,12 @@
 {
- "controls": true,
- "progress": true,
- "history": true,
- "center": true,
- "transition": "slide"
+    "controls": true,
+    "progress": true,
+    "history": true,
+    "center": true,
+    "transition": "slide",
+    "auto-animate": true,
+    "spotlight": {
+        "toggleSpotlightOnMouseDown": false,
+        "spotlightOnKeyPressAndHold": 67
+    }
 }

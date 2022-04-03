@@ -1,0 +1,153 @@
+// Import the theme for the slides ---------------------------------------------------- //
+@import 'source/mytheme.scss';
+
+// Changes to site styles ------------------------------------------------------------- //
+$mywhite: #ddd;
+$mygray: #505050;
+$myred: #ff0000;
+$mygreen: #038a59;
+$darkgreen: #025839;
+$mypink: #ff99aa;
+body {
+  font-family: $mainFont;
+  background-color: $backgroundColor;
+  color: white;
+  font-size: 25px;
+}
+
+// Navigation menu from home page ----------------------------------------------------- //
+.topnav {
+  border-bottom: 1px solid #333333;
+  border-width: 2px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.active {
+  color: pink;
+}
+.topnav-centered {
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topnav-right {
+  float: right;
+}
+nav {
+  padding: 10px;
+  @media (min-width: 600px) {
+    padding: 20px;
+  }
+}
+nav.flexbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  // Only space between if the width is large enough
+  @media (min-width: 600px) {
+    justify-content: space-between;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  ul li {
+    flex: 0 0 70px;
+    margin-right: 10px;
+    text-align: center;
+    @media (min-width: 600px) {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  > a {
+    margin-bottom: 10px;
+    @media (min-width: 600px) {
+      margin-bottom: 0px;
+    }
+  }
+}
+ul.fullwidth {
+  flex: 1 0 100%;
+  justify-content: center;
+  @media (min-width: 600px) {
+    flex: 0 1 auto;
+  }
+}
+nav.flexbox a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
+  color: $mywhite;
+}
+nav.flexbox a::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: $mygray;
+}
+nav.flexbox a:hover {
+  // color: $linkPink;
+  &::before {
+    width: 100%;
+    // background: linear-gradient(to right, $linkPink 40%, $linkPurple 75%);
+  }
+}
+
+// Colourful links -------------------------------------------------------------------- //
+a:link {
+  color: $mygreen;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: $darkgreen;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+// Table ------------------------------------------------------------------------------ //
+table.center {
+  border-collapse: collapse;
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+table.center p {
+  line-height: 1.0em;
+  margin: 0.5em 0;
+}
+tr.center {
+  border-bottom: 1px solid #ccc;
+  height: 20px;
+}
+th.center {
+  text-align: left;
+  height: 20px;
+}
