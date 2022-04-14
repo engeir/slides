@@ -17,10 +17,12 @@
     <link rel="shortcut icon" href="{{{base}}}/favicon.ico" />
     <link rel="stylesheet" href="{{{base}}}/dist/reset.css" />
     <link rel="stylesheet" href="{{{base}}}/dist/reveal.css" />
+    <link rel="stylesheet" href="{{{base}}}/dist/reveal.css" />
     <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
     <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
     <link rel="stylesheet" href="{{{base}}}/plugin/drawer/drawer.css" />
     <link rel="stylesheet" href="{{{base}}}/plugin/pointer/pointer.css" />
+    <link rel="stylesheet" href="{{{base}}}/plugin/copycode/copycode.css" />
 
     {{#cssPaths}}
     <link rel="stylesheet" href="{{{.}}}" />
@@ -50,6 +52,9 @@
     <script src="{{{base}}}/plugin/math/math.js"></script>
     <script src="{{{base}}}/plugin/drawer/drawer.js"></script>
     <script src="{{{base}}}/plugin/pointer/pointer.js"></script>
+    <script src="{{{base}}}/plugin/copycode/copycode.js"></script>
+    <script src="{{{base}}}/plugin/animated/revealjs-animated.js"></script>
+    <script src="{{{base}}}/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
     <script>
       function extend() {
         var target = {};
@@ -77,7 +82,7 @@
           RevealZoom,
           RevealNotes,
           RevealMath,
-          // CopyCode,
+          CopyCode,
           RevealPointer,
           RevealDrawer
         ]
