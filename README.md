@@ -8,8 +8,8 @@ I don't want them here. This is really just markdown files rendered in a nice wa
 
 ### Fork
 
-It should be quite straight forward to use this for your own presentations. Just fork
-the repo and make some new markdown files, preferably on the format
+It should be quite straight forward to use this for your own presentations. Just [fork
+the repo] and make some new markdown files, preferably on the format
 `YYYY-MM-DD-title.md`.
 
 ### Install
@@ -22,14 +22,8 @@ npm install
 
 ### Run locally
 
-To run it locally you should first install dependencies with
-
-```sh
-npm install
-```
-
-You can then start a locally hosted site (at
-[http://localhost:1948](http://localhost:1948)) with
+You can start a locally hosted site that will be available at
+[http://localhost:1948](http://localhost:1948) with
 
 ```sh
 npm run start
@@ -85,6 +79,7 @@ npx patch-package reveal.js
 Thus, if you want further changes from this project or other modules, this is done
 simply by changing the source files and running `npx patch-package some-package`.
 
+[fork the repo]: https://github.com/engeir/slides/fork
 [patch-package]: https://www.npmjs.com/package/patch-package
 [presentations]: https://github.com/engeir/presentations
 [reveal-drawer]: https://github.com/burnpiro/reveal-drawer
