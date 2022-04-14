@@ -1,4 +1,3 @@
 options.plugins.push(
-    Simplemenu,
-    CopyCode
+    CopyCode,
 );

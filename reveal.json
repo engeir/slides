@@ -4,9 +4,5 @@
     "history": true,
     "center": true,
     "transition": "slide",
-    "auto-animate": true,
-    "spotlight": {
-        "toggleSpotlightOnMouseDown": false,
-        "spotlightOnKeyPressAndHold": 67
-    }
+    "auto-animate": true
 }
