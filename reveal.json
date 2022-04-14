@@ -4,11 +4,5 @@
     "history": true,
     "center": true,
     "transition": "slide",
-    "auto-animate": true,
-    "pointer": {
-        "key": "q",
-        "color": "red",
-        "pointerSize": 12,
-        "alwaysVisible": false
-    }
+    "auto-animate": true
 }

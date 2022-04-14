@@ -10,8 +10,6 @@
         "node_modules/revealjs-animated/dist/revealjs-animated.js",
         "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js",
         "node_modules/reveal.js-copycode/plugin/copycode/copycode.js",
-        "plugin/pointer/pointer.js",
-        "plugin/drawer/drawer.js",
         "plugin.js"
     ]
 }

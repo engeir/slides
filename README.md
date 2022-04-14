@@ -1,19 +1,27 @@
 # Presentations
 
-This repository hosts presentations made using the [reveal-js] framework. [Presentations]
-stores other kinds of presentations, plus images and videos since I don't want them here.
-This is really just markdown files rendered in a nice way.
+This repository hosts presentations made using the [reveal.js] framework.
+[Presentations] stores other kinds of presentations, plus images and videos since
+I don't want them here. This is really just markdown files rendered in a nice way.
 
 ## Usage
 
 ### Fork
 
-It should be quite straight forward to use this for your own presentations. Just fork the
-repo and make some new markdown files, preferably on the format `YYYY-MM-DD-title.md`.
+It should be quite straight forward to use this for your own presentations. Just fork
+the repo and make some new markdown files, preferably on the format
+`YYYY-MM-DD-title.md`.
 
 ### Run locally
 
-Run it locally with
+To run it locally you should first install dependencies with
+
+```sh
+npm install
+```
+
+You can then start a locally hosted site (at
+[http://localhost:1948](http://localhost:1948)) with
 
 ```sh
 npm run start
@@ -30,22 +38,12 @@ If you for some reason want to build it manually, you can, with
 npm run build
 ```
 
-This will put the static page in the `docs` directory.
+This will put the static site in the `docs` directory.
 
 ## Plugins
 
 In addition to the default plugins provided by [reveal-md], the following plugins are
 included in this project:
-
-- [spotlight]
-
-  Turned off by default, but can be set in the YAML front matter with
-
-  ```yaml
-  revealOptions:
-    spotlight: 
-    - toggleSpotlightOnMouseDown: true
-  ```
 
 - [elapsed-time-bar]
 
@@ -60,16 +58,29 @@ included in this project:
 
 - [revealjs-animated]
 
-These are added using the `patch-package` module:
+- [reveal-drawer]
+
+- [reveal-pointer]
+
+## Project specifics
+
+This project makes a few changes to the original packages [reveal.js] and [reveal-md].
+These patches are made using the [patch-package] module:
 
 ```sh
-npm patch-package reveal-md
-npm patch-package reveal.js
+npx patch-package reveal-md
+npx patch-package reveal.js
 ```
+
+Thus, if you want further changes from this project or other modules, this is done
+simply by changing the source files and running `npx patch-package some-package`.
 
 [presentations]: https://github.com/engeir/presentations
 [spotlight]: https://github.com/denniskniep/reveal.js-plugin-spotlight
 [elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
 [revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
-[reveal-js]: https://revealjs.com
+[reveal-drawer]: https://github.com/burnpiro/reveal-drawer
+[reveal-pointer]: https://github.com/burnpiro/reveal-pointer
+[reveal.js]: https://revealjs.com
 [reveal-md]: https://github.com/webpro/reveal-md
+[patch-package]: https://www.npmjs.com/package/patch-package
