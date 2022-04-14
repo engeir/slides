@@ -12,6 +12,14 @@ It should be quite straight forward to use this for your own presentations. Just
 the repo and make some new markdown files, preferably on the format
 `YYYY-MM-DD-title.md`.
 
+### Install
+
+Installing all dependencies is done with
+
+```sh
+npm install
+```
+
 ### Run locally
 
 To run it locally you should first install dependencies with
