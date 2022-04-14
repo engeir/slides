@@ -1,4 +1,5 @@
 options.plugins.push(
-    Simplemenu,
-    CopyCode
+    CopyCode,
+    RevealPointer,
+    RevealDrawer,
 );

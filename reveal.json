@@ -5,8 +5,10 @@
     "center": true,
     "transition": "slide",
     "auto-animate": true,
-    "spotlight": {
-        "toggleSpotlightOnMouseDown": false,
-        "spotlightOnKeyPressAndHold": 67
+    "pointer": {
+        "key": "q",
+        "color": "red",
+        "pointerSize": 12,
+        "alwaysVisible": false
     }
 }

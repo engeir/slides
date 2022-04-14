@@ -60,6 +60,12 @@ included in this project:
 
 - [revealjs-animated]
 
+These are added using the `patch-package` module:
+
+```sh
+npm patch-package reveal-md
+npm patch-package reveal.js
+```
 
 [presentations]: https://github.com/engeir/presentations
 [spotlight]: https://github.com/denniskniep/reveal.js-plugin-spotlight
