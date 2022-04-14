@@ -53,7 +53,7 @@ This will put the static site in the `docs` directory.
 In addition to the default plugins provided by [reveal-md], the following plugins are
 included in this project:
 
-- [elapsed-time-bar]
+- [reveal.js-elapsed-time-bar]
 
   The timer is triggered by setting
 
@@ -65,6 +65,8 @@ included in this project:
   in the YAML front matter, where time is in seconds.
 
 - [revealjs-animated]
+
+- [reveal.js-copycode]
 
 - [reveal-drawer]
 
@@ -83,12 +85,12 @@ npx patch-package reveal.js
 Thus, if you want further changes from this project or other modules, this is done
 simply by changing the source files and running `npx patch-package some-package`.
 
-[presentations]: https://github.com/engeir/presentations
-[spotlight]: https://github.com/denniskniep/reveal.js-plugin-spotlight
-[elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
-[revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
-[reveal-drawer]: https://github.com/burnpiro/reveal-drawer
-[reveal-pointer]: https://github.com/burnpiro/reveal-pointer
-[reveal.js]: https://revealjs.com
-[reveal-md]: https://github.com/webpro/reveal-md
 [patch-package]: https://www.npmjs.com/package/patch-package
+[presentations]: https://github.com/engeir/presentations
+[reveal-drawer]: https://github.com/burnpiro/reveal-drawer
+[reveal-md]: https://github.com/webpro/reveal-md
+[reveal-pointer]: https://github.com/burnpiro/reveal-pointer
+[reveal.js-copycode]: https://github.com/Martinomagnifico/reveal.js-copycode
+[reveal.js-elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
+[reveal.js]: https://revealjs.com
+[revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
