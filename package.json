@@ -9,9 +9,7 @@
     },
     "dependencies": {
         "replace-in-file": "^6.3.2",
-        "reveal-md": "^5.3.2",
-        "reveal.js-copycode": "^1.0.3",
-        "revealjs-animated": "^1.0.0"
+        "reveal-md": "^5.3.2"
     },
     "devDependencies": {
         "cz-conventional-changelog": "^3.3.0",
