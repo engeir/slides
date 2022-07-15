@@ -1,0 +1,84 @@
+diff --git a/node_modules/reveal-md/lib/defaults.json b/node_modules/reveal-md/lib/defaults.json
+index 8485a93..60a6a3a 100644
+--- a/node_modules/reveal-md/lib/defaults.json
++++ b/node_modules/reveal-md/lib/defaults.json
+@@ -1,7 +1,7 @@
+ {
+   "assetsDir": "_assets",
+   "css": [],
+-  "highlightTheme": "zenburn",
++  "highlightTheme": "base16/zenburn",
+   "host": "localhost",
+   "listingTemplate": "template/listing.html",
+   "port": 1948,
+diff --git a/node_modules/reveal-md/lib/listing.js b/node_modules/reveal-md/lib/listing.js
+index 4372dc9..db63737 100644
+--- a/node_modules/reveal-md/lib/listing.js
++++ b/node_modules/reveal-md/lib/listing.js
+@@ -28,7 +28,7 @@ const renderListFile = async filePaths => {
+   const { title, listingTemplate, theme } = getOptions();
+   const template = await getListingTemplate(listingTemplate);
+   const themeUrl = getThemeUrl(theme, '.');
+-  const files = await Promise.all(filePaths.map(getFileMeta));
++  const files = await Promise.all(filePaths.reverse().map(getFileMeta));
+   return Mustache.render(template, {
+     base: '',
+     themeUrl,
+diff --git a/node_modules/reveal-md/lib/render.js b/node_modules/reveal-md/lib/render.js
+index 6ed3764..26ad41a 100644
+--- a/node_modules/reveal-md/lib/render.js
++++ b/node_modules/reveal-md/lib/render.js
+@@ -64,8 +64,12 @@ const renderFile = async (filePath, extraOptions) => {
+ module.exports = async (req, res) => {
+   const dir = await getInitialDir();
+   const filePath = path.join(dir, decodeURIComponent(req.url).replace(/\?.*/, ''));
+-  const markup = await renderFile(filePath);
+-  res.send(markup);
++  if (filePath.startsWith(dir)) {
++    const markup = await renderFile(filePath);
++    res.send(markup);
++    return;
++  }
++  res.status(401).send('Forbidden: Only slides inside the initial directory can be accessed.');
+ };
+ 
+ module.exports.slidify = slidify;
+diff --git a/node_modules/reveal-md/lib/static.js b/node_modules/reveal-md/lib/static.js
+index bf07a0e..e866b53 100644
+--- a/node_modules/reveal-md/lib/static.js
++++ b/node_modules/reveal-md/lib/static.js
+@@ -3,7 +3,7 @@ const fs = require('fs-extra');
+ const path = require('path');
+ const _ = require('lodash');
+ const { getOptions, getAssetsDir, getPath, getStaticDir, getSlideOptions, getFilesGlob } = require('./config');
+-const { isDirectory, isFile, parseYamlFrontMatter, getFilePaths, isAbsoluteURL } = require('./util');
++const { md, isDirectory, isFile, parseYamlFrontMatter, getFilePaths, isAbsoluteURL } = require('./util');
+ const { revealBasePath, highlightThemePath } = require('./constants');
+ const { renderFile } = require('./render');
+ const { renderListFile } = require('./listing');
+@@ -11,7 +11,6 @@ const featuredSlide = require('./featured-slide');
+ 
+ const files = new Set();
+ 
+-const mdImageRE = /!\[[^\]]*\]\((.*?)\s*(["'](?:.*[^"'])["'])?\s*\)/g;
+ const htmlImageRE = /<img.+src=["'](.+?)["'](?:.+?)>/g;
+ 
+ const relativeDir = (from, to) => path.relative(from, to).replace(/^\.\./, '.');
+@@ -63,13 +62,14 @@ const copyAssetsAndWriteFile = async (sourceDir, file, targetDir) => {
+   const awaits = await copyAssetsFromOptions(markdown);
+   const base = relativeDir(file, '.');
+   const markup = await renderFile(path.join(sourceDir, file), { base });
+-  let image;
+ 
+-  while ((image = mdImageRE.exec(markdown) || htmlImageRE.exec(markdown))) {
++  let image;
++  const html = md.marked(markdown.toString());
++  while ((image = htmlImageRE.exec(html))) {
+     const [, imgPath] = image;
+     if (!isAbsoluteURL(imgPath)) {
+       const relPath = path.join(path.dirname(file), imgPath);
+-      awaits.push(cp(path.join(sourceDir, relPath), path.join(targetDir, relPath)));
++      awaits.push(cp(path.join(sourceDir, relPath), path.join(targetDir, relPath)).catch(err => console.warn(err)));
+     }
+   }
+ 
