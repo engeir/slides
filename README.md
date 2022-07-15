@@ -16,7 +16,7 @@ the repo] and make some new markdown files, preferably on the format
 
 Installing all dependencies is done with
 
-```sh
+```bash
 npm install
 ```
 
@@ -25,7 +25,7 @@ npm install
 You can start a locally hosted site that will be available at
 [http://localhost:1948](http://localhost:1948) with
 
-```sh
+```bash
 npm run start
 ```
 
@@ -36,7 +36,7 @@ Pushing to GitHub will run a workflow that places the static site in the root of
 
 If you for some reason want to build it manually, you can, with
 
-```sh
+```bash
 npm run build
 ```
 
@@ -71,7 +71,7 @@ included in this project:
 This project makes a few changes to the original packages [reveal.js] and [reveal-md].
 These patches are made using the [patch-package] module:
 
-```sh
+```bash
 npx patch-package reveal-md
 npx patch-package reveal.js
 ```
