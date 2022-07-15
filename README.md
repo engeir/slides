@@ -44,6 +44,8 @@ This will put the static site in the `docs` directory.
 
 ## Plugins
 
+> _See an example demo of all features with [source] and [built site]._
+
 In addition to the default plugins provided by [reveal-md], the following plugins are
 included in this project:
 
@@ -89,3 +91,5 @@ simply by changing the source files and running `npx patch-package some-package`
 [reveal.js-elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
 [reveal.js]: https://revealjs.com
 [revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
+[source]: https://github.com/engeir/slides/blob/main/content/2022-02-08-demo.md?plain=1
+[built site]: https://slides.eirikenger.xyz/2022-02-08-demo.html
