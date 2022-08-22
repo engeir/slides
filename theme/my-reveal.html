@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>{{{title}}}</title>
     {{#absoluteUrl}}
@@ -30,18 +28,19 @@
     {{/cssPaths}} {{#watch}}
 
     <script>
-      document.write(
-        '<script src="http://' +
-          (location.host || 'localhost').split(':')[0] +
-          ':35729/livereload.js?snipver=1"></' +
-          'script>'
-      )
+        document.write(
+            '<script src="http://' +
+            (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' +
+            'script>'
+        )
     </script>
     {{/watch}}
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="reveal">
-      <div class="slides">{{{slides}}}</div>
+        <div class="slides">{{{slides}}}</div>
     </div>
 
     <script src="{{{base}}}/dist/reveal.js"></script>
@@ -57,42 +56,42 @@
     <script src="{{{base}}}/plugin/animated/revealjs-animated.js"></script>
     <script src="{{{base}}}/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
     <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
+        function extend() {
+            var target = {};
+            for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                    if (source.hasOwnProperty(key)) {
+                        target[key] = source[key];
+                    }
+                }
             }
-          }
+            return target;
         }
-        return target;
-      }
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath,
-          CopyCode,
-          RevealPointer,
-          RevealDrawer
-        ]
-      };
+        // default options to init reveal.js
+        var defaultOptions = {
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'default', // none/fade/slide/convex/concave/zoom
+            plugins: [
+                RevealMarkdown,
+                RevealHighlight,
+                RevealZoom,
+                RevealNotes,
+                RevealMath,
+                CopyCode,
+                RevealPointer,
+                RevealDrawer
+            ]
+        };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+        // options from URL query string
+        var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
+        var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
     </script>
 
     {{#scriptPaths}}
@@ -100,7 +99,8 @@
     {{/scriptPaths}}
 
     <script>
-      Reveal.initialize(options)
+        Reveal.initialize(options)
     </script>
-  </body>
+</body>
+
 </html>

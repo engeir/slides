@@ -1,71 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Eirik Rolland Enger" />
     <meta name="description" content="Reveal.js presentations." />
     <title>{{pageTitle}}</title>
     <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
-    />
-  </head>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+</head>
 
-  <body>
+<body>
     <!-- Navigation bar -->
     <nav class="flexbox">
-      <ul class="fullwidth">
-        <li>
-          <img
-            src="https://github.com/engeir/eirikenger/raw/main/images/my-github-logo.jpg"
-            style="width: 30px"
-            ,
-            class="logo"
-          />
-        </li>
-        <li><a href="https://eirikenger.xyz/">Home</a></li>
-      </ul>
-      <ul class="fullwidth">
-        <li><a href="https://eirikenger.xyz/news.html">News</a></li>
-        <li><a href="https://eirikenger.xyz/contact.html">Contact</a></li>
-      </ul>
+        <ul class="fullwidth">
+            <li>
+                <img src="https://github.com/engeir/eirikenger/raw/main/images/my-github-logo.jpg" style="width: 30px" ,
+                    class="logo" />
+            </li>
+            <li><a href="https://eirikenger.xyz/">Home</a></li>
+        </ul>
+        <ul class="fullwidth">
+            <li><a href="https://eirikenger.xyz/news.html">News</a></li>
+            <li><a href="https://eirikenger.xyz/contact.html">Contact</a></li>
+        </ul>
     </nav>
     <!-- GitHub fork me ribbon -->
-    <a
-      class="github-fork-ribbon right-bottom fixed"
-      href="https://github.com/engeir/slides/fork"
-      data-ribbon="Fork me on GitHub"
-      title="Fork me on GitHub"
-      >Fork me on GitHub</a
-    >
+    <a class="github-fork-ribbon right-bottom fixed" href="https://github.com/engeir/slides/fork"
+        data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <center>
-      <h1>{{pageTitle}}</h1>
+        <h1>{{pageTitle}}</h1>
     </center>
     <table class="center">
-      <thead>
-        <tr class="center">
-          <th class="center">Event</th>
-          <th class="center">Title</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#files}}
-        <tr class="center">
-          <td>
-            <p>{{#event}}{{.}}{{/event}}</p>
-            <p style="font-size: 12pt; color: #999">{{#date}}{{.}}{{/date}}</p>
-          </td>
-          <td>
-            <a href="{{filePath}}" title="{{title}}">
-              {{#title}}{{.}}
-              {{/title}}{{^title}}{{filePath}}{{/title}}{{#author}}({{.}}){{/author}}
-            </a>
-          </td>
-        </tr>
-        {{/files}}
-      </tbody>
+        <thead>
+            <tr class="center">
+                <th class="center">Event</th>
+                <th class="center">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#files}}
+            <tr class="center">
+                <td>
+                    <p>{{#event}}{{.}}{{/event}}</p>
+                    <p style="font-size: 12pt; color: #999">{{#date}}{{.}}{{/date}}{{#author}} — by {{.}}{{/author}}</p>
+                </td>
+                <td>
+                    <a href="{{filePath}}" title="{{title}}">
+                        {{#title}}{{.}}
+                        {{/title}}{{^title}}{{filePath}}{{/title}}
+                    </a>
+                </td>
+            </tr>
+            {{/files}}
+        </tbody>
     </table>
-  </body>
+</body>
+
 </html>
