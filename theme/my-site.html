@@ -45,12 +45,12 @@
             <tr class="center">
                 <td>
                     <p>{{#event}}{{.}}{{/event}}</p>
-                    <p style="font-size: 12pt; color: #999">{{#date}}{{.}}{{/date}}</p>
+                    <p style="font-size: 12pt; color: #999">{{#date}}{{.}}{{/date}}{{#author}} — by {{.}}{{/author}}</p>
                 </td>
                 <td>
                     <a href="{{filePath}}" title="{{title}}">
                         {{#title}}{{.}}
-                        {{/title}}{{^title}}{{filePath}}{{/title}}{{#author}}({{.}}){{/author}}
+                        {{/title}}{{^title}}{{filePath}}{{/title}}
                     </a>
                 </td>
             </tr>
