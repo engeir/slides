@@ -6,7 +6,7 @@ revealOptions:
   allottedTime: 900000
 ---
 
-## Using CESM2 and WACCM for synthetic volcanic eruption simulations
+## Using _CESM2_ and _WACCM_ for synthetic volcanic eruption simulations
 
 --
 
@@ -38,7 +38,7 @@ Norway
 
 ### Background and motivation
 
-The FPP and the deconvolution
+The FPP and deconvolution
 
 --
 
@@ -71,3 +71,42 @@ $$
 
 <a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
 data-src="https://opengraph.githubassets.com/0272a6274f1088fbd84c0a90f3d6d5abd7446f7e/engeir/volcano-cooking"></a>
+
+---
+
+## Results
+
+--
+
+### Single-volcano events
+
+Text
+
+--
+
+### Double-volcano events
+
+Text
+
+--
+
+### Long simulations
+
+Text
+
+---
+
+## Issues
+
+--
+
+### Seasonality
+
+- Strong seasonal variability
+- Weaker effect at different temperatures
+
+--
+
+### Expensive computations
+
+> Model runs take a long time, thus one per season is not reasonable
