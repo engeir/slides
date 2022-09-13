@@ -430,4 +430,68 @@ th.center {
   text-align: left;
   height: 20px; }
 
+/* Blockquote */
+myblockquote{
+  display:block;
+  background: #000;
+  padding: 15px 20px 15px 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 90px;
+  position: relative;
+  width: 76%;
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #bbb;
+  text-align: justify;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid #c76c0c;
+  border-right: 2px solid #c76c0c;
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+myblockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+myblockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+myblockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+myblockquote a:hover{
+ color: #666;
+}
+
+myblockquote em{
+  font-style: italic;
+}
 /*# sourceMappingURL=my-theme.css.map */
