@@ -3,7 +3,7 @@ title: Temperature response estimation from volcanic eruptions using CESM2 and W
 event: Boulder Visit
 date: "2022-09-30"
 revealOptions:
-  allottedTime: 900000
+  allottedTime: 2_400_000
 ---
 
 ## Temperature response estimation from volcanic eruptions using _CESM2_ and _WACCM6_
