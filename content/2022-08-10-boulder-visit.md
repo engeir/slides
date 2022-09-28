@@ -51,6 +51,8 @@ The FPP and deconvolution
 
 --
 
+<!-- .slide: data-transition="fade" -->
+
 ### Filtered Poisson Process
 
 $$
@@ -66,11 +68,19 @@ $$
 
 --
 
+<!-- .slide: data-transition="fade" -->
+
 ### Deconvolution algorithm
 
 $$
 \phi^{(n+1)}=\phi^{(n)}\frac{(T\_K-\langle T\_K\rangle)\*\hat{f}\_K+b}{\phi^{(n)}\*f\_K\*\hat{f}\_K+b}
 $$
+
+--
+
+<!-- .slide: data-transition="fade-in slide-out" -->
+
+### Phenomenological model for intermittent processes
 
 --
 
@@ -83,14 +93,21 @@ Notes:
 
 The middle atmosphere (MA) chemistry is capable of calculating the evolution of
 stratospheric aerosol from SO2 emissions from large volcanic eruptions. WACCM with MA
-can only run at nominal $2^\circ$ resolution, while the more expensive TSMLT1
+can only run at nominal 2° resolution, while the more expensive TSMLT1
 (troposphere, stratosphere, mesosphere and lower thermosphere) can go down to nominal
-$1^\circ$ resolution.
+1° resolution.
 
 --
 
 <a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
 data-src="https://opengraph.githubassets.com/0272a6274f1088fbd84c0a90f3d6d5abd7446f7e/engeir/volcano-cooking"></a>
+
+Notes:
+
+Made a Python project to create the volcanic forcing files. Uses the
+createVolcEruptV3.ncl script from
+[svn.code.sf.net](http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/) to
+convert from the source files.
 
 ---
 
@@ -113,18 +130,29 @@ data-src="https://opengraph.githubassets.com/0272a6274f1088fbd84c0a90f3d6d5abd74
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
+Notes:
+
+All volcanoes erupt between 18 and 20 km. Ensemble medians of four simulations with
+eruptions spaced with three months, one in each season.
+
 --
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/abf78e1fcd784f3c57c73c107dc193c5c34c25f8/assets/pic/volcano-ensemble-waveforms/compare-waveform-integrate.png" -->
 
+Notes:
+
+The smallest eruption is comparable in size to the Mt. Pinatubo eruption. The Young(est)
+Toba Tuff eruption (∼74000 years ago) has an estimated sulphur dioxide amount of 5400
+Tg, more than the strongest simulated here.
+
 --
 
 <!-- .slide: data-transition="fade" -->
 
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean1-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean3-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean6-trefht-strong.png" ></div> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 Notes:
 
@@ -144,6 +172,7 @@ information we are looking for lies.
 <img width="49%" src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-nov-medium.png">
 
 _Total aerosol optical depth in visible band_
+
 <!-- .element: style="font-size:20pt" -->
 
 Notes:
@@ -164,11 +193,23 @@ years it is mostly gone.
 
 --
 
-<!-- .slide: data-transition="fade-in slide-out" -->
+<!-- .slide: data-transition="fade" -->
+
+_How linear is the temperature response?_
+
+--
+
+<!-- .slide: data-transition="fade" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/a19bdfc5ad051cd259bd9741e67e1bf3ebe1e718/assets/pic/double-overlap/double-overlap-superpose.png" -->
 
---
+Notes:
+
+We see that when we superpose the single-events using the control run mean temperature
+as the baseline, we largely are able to explain the shape of the double-event. Could not
+have expected any better match, but this is clearly not enough to conclude.
+
+Works well as a test to check if it is worthwhile doing.
 
 Problem: simulations are not long enough to have a periodic signal
 
@@ -187,7 +228,7 @@ Problem: simulations are not long enough to have a periodic signal
 
 <div class="r-stack">
   <p class="fragment animated move-to" data-animated-move-to-top="-250px" data-animated-move-to-left="0px" data-fragment-index="0" data-animated-duration="300" data-animated-iterations="1" data-animated-fill="forwards">
-  Using the <a target="_blank" href="https://www.cesm.ucar.edu/projects/community-projects/LME/">CESM LME</a> data set
+  Using the <a style="color:#80ff80" target="_blank" href="https://www.cesm.ucar.edu/projects/community-projects/LME/">CESM LME</a> data set
   </p>
   <span>
   <img class="fragment fade-in" data-fragment-index="0" src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_forcing.png" width="49%" >
@@ -197,16 +238,22 @@ Problem: simulations are not long enough to have a periodic signal
 
 Notes:
 
-But this was run with CESM1, and more importantly with **CAM5**, hence with a low-top
-atmosphere reaching only to about $40\\,\mathrm{km}$. They also use $2^\circ$ resolution
-for the atmosphere and land components, which for now is the same as I do, but possibly
-$1^\circ$ will be needed.
+But this was run with CESM1, and more importantly with **CAM5** (as opposed to WACCM),
+hence with a low-top atmosphere reaching only to about 40 km. They also use 2°
+resolution for the atmosphere and land components, which for now is the same as I do,
+but possibly 1° will be needed.
 
 --
 
 <!-- .slide: data-transition="fade" -->
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean-respnse.png" -->
 <!-- .slide: data-background-size="contain" -->
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+Aim is to run with deep ocean and high-top atmosphere over several decades
 
 ---
 
