@@ -20,15 +20,13 @@ Norway
 ## Outline
 
 - Intro
-  - Background / motivation <!-- .element class="fragment" -->
-  - Method and model setup <!-- .element class="fragment" -->
+  - Background / motivation <!-- .element class="fragment" data-fragment-index="0" -->
+  - Method and model setup <!-- .element class="fragment" data-fragment-index="0" -->
 - Results
-  - Single-volcano events <!-- .element class="fragment" -->
-  - Double-volcano events <!-- .element class="fragment" -->
-  - Long simulations <!-- .element class="fragment" -->
-- Issues
-  - Seasonality <!-- .element class="fragment" -->
-  - Expensive computations <!-- .element class="fragment" -->
+  - Single-volcano events <!-- .element class="fragment" data-fragment-index="1" -->
+  - Double-volcano events <!-- .element class="fragment" data-fragment-index="1" -->
+- Outlook
+  - Long simulations <!-- .element class="fragment" data-fragment-index="2" -->
 
 ---
 
@@ -37,6 +35,8 @@ Norway
 <!-- .element class="r-fit-text" -->
 
 --
+
+<!-- .slide: data-transition="slide-in fade-out" -->
 
 ### Background and motivation
 
@@ -76,38 +76,51 @@ $$
 \phi^{(n+1)}=\phi^{(n)}\frac{(T\_K-\langle T\_K\rangle)\*\hat{f}\_K+b}{\phi^{(n)}\*f\_K\*\hat{f}\_K+b}
 $$
 
+<a href="https://doi.org/" data-citation-key="@richardson1972">Richardson (1972)</a>,
+<a href="https://doi.org/10.1086/111605" data-citation-key="@lucy1974">Lucy (1974)</a>,
+<a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto et al. (2009)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
 --
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 
 ### Phenomenological model for intermittent processes
 
+1. Stationarity <!-- .element class="fragment" -->
+2. Linearity <!-- .element class="fragment" -->
+
 --
+
+<!-- .slide: data-transition="slide-in fade-out" -->
 
 ### Model setup
 
-1. Synthetic eruptions are given to WACCM6
-2. Run using the **BWma1850** compset
+1. Synthetic eruptions are given to CESM2
+2. Run using the BWma1850 compset <!-- .element: class="fragment" data-fragment-index="1" -->
+
+<a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
+width="80%"
+data-src="https://opengraph.githubassets.com/0272a6274f1088fbd84c0a90f3d6d5abd7446f7e/engeir/volcano-cooking"></a>
+
+<!-- .element: class="fragment" data-fragment-index="0" -->
 
 Notes:
+
+What we want is to run CESM2 with custom synthetic volcanoes while the rest of the
+climate system stay unforced by external factors.
+
+Made a Python project to create the volcanic forcing files. Uses the
+**createVolcEruptV3.ncl** script from
+[svn.code.sf.net](http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/) to
+convert from the source files.
 
 The middle atmosphere (MA) chemistry is capable of calculating the evolution of
 stratospheric aerosol from SO2 emissions from large volcanic eruptions. WACCM with MA
 can only run at nominal 2° resolution, while the more expensive TSMLT1
 (troposphere, stratosphere, mesosphere and lower thermosphere) can go down to nominal
 1° resolution.
-
---
-
-<a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
-data-src="https://opengraph.githubassets.com/0272a6274f1088fbd84c0a90f3d6d5abd7446f7e/engeir/volcano-cooking"></a>
-
-Notes:
-
-Made a Python project to create the volcanic forcing files. Uses the
-createVolcEruptV3.ncl script from
-[svn.code.sf.net](http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/) to
-convert from the source files.
 
 ---
 
@@ -128,12 +141,17 @@ convert from the source files.
 <!-- .slide: data-transition="fade-in fade-out" -->
 
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                |                                                                                                                  $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                 $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                  |
 
 Notes:
 
-All volcanoes erupt between 18 and 20 km. Ensemble medians of four simulations with
-eruptions spaced with three months, one in each season.
+The smallest eruption is comparable in size to the Mt. Pinatubo eruption. The Young(est)
+Toba Tuff eruption (∼74000 years ago) has an estimated sulphur dioxide amount of 5400
+Tg, more than the strongest simulated here.
+
+Ensemble medians of four simulations with eruptions spaced with three months, one in
+each season.
 
 --
 
@@ -143,18 +161,24 @@ eruptions spaced with three months, one in each season.
 
 Notes:
 
-The smallest eruption is comparable in size to the Mt. Pinatubo eruption. The Young(est)
-Toba Tuff eruption (∼74000 years ago) has an estimated sulphur dioxide amount of 5400
-Tg, more than the strongest simulated here.
+We here look at the waveform of the temperature, to see if a clear difference between
+the shapes, and in particular the tails, can be found. The two strongest eruptions
+produce temperature responses that are similar in shape, while the weakest has a sharper
+peak. However, this difference is not conclusive, and the tail is also close to the two
+stronger eruptions.
 
 --
 
 <!-- .slide: data-transition="fade" -->
 
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean1-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean3-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean6-trefht-strong.png" ></div> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                 $1\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                                                 $3\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                    $6\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                    |
 
 Notes:
+
+This show longitude and time averages from the time of the eruption until 1, 3 and 6
+years have passed, respectively.
 
 The volcanoes influence the hemispheres differently depending on when within the year
 they appear, but the effect does not last very long (about 3 years).
@@ -166,7 +190,7 @@ information we are looking for lies.
 
 --
 
-<!-- .slide: data-transition="fade" -->
+<!-- .slide: data-transition="fade-in slide-out" -->
 
 <img width="49%" src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-may-medium.png">
 <img width="49%" src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-nov-medium.png">
@@ -182,6 +206,9 @@ depth. (_Total aerosol optical depth in visible band_.)
 
 We see that aerosol tend to spread to the winter hemisphere, but that after a couple of
 years it is mostly gone.
+
+Why do we care? Volcanoes in different hemispheres warm differently, but the temperature
+may still revert to equilibrium in similar ways, i.e., they have similar tails.
 
 --
 
@@ -201,7 +228,13 @@ _How linear is the temperature response?_
 
 <!-- .slide: data-transition="fade" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/a19bdfc5ad051cd259bd9741e67e1bf3ebe1e718/assets/pic/double-overlap/double-overlap-superpose.png" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/1e3d1dca42484fc10c418dd1ede027301c9a532d/assets/pic/double-overlap/double-overlap-temp-smoothing-simple.png" -->
+
+--
+
+<!-- .slide: data-transition="fade-in slide-out" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/1e3d1dca42484fc10c418dd1ede027301c9a532d/assets/pic/double-overlap/double-overlap-superpose.png" -->
 
 Notes:
 
@@ -212,6 +245,12 @@ have expected any better match, but this is clearly not enough to conclude.
 Works well as a test to check if it is worthwhile doing.
 
 Problem: simulations are not long enough to have a periodic signal
+
+---
+
+## Outlook
+
+<!-- .element class="r-fit-text" -->
 
 --
 
@@ -227,7 +266,7 @@ Problem: simulations are not long enough to have a periodic signal
 <!-- .slide: data-transition="fade" -->
 
 <div class="r-stack">
-  <p class="fragment animated move-to" data-animated-move-to-top="-250px" data-animated-move-to-left="0px" data-fragment-index="0" data-animated-duration="300" data-animated-iterations="1" data-animated-fill="forwards">
+  <p class="fragment animated move-to" data-animated-move-to-top="-200px" data-animated-move-to-left="0px" data-fragment-index="0" data-animated-duration="300" data-animated-iterations="1" data-animated-fill="forwards">
   Using the <a style="color:#80ff80" target="_blank" href="https://www.cesm.ucar.edu/projects/community-projects/LME/">CESM LME</a> data set
   </p>
   <span>
@@ -236,7 +275,13 @@ Problem: simulations are not long enough to have a periodic signal
   </span>
 </div>
 
+<a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
 Notes:
+
+Use datasets from CESM LME (Last Millennium Ensemble).
 
 But this was run with CESM1, and more importantly with **CAM5** (as opposed to WACCM),
 hence with a low-top atmosphere reaching only to about 40 km. They also use 2°
@@ -252,42 +297,22 @@ but possibly 1° will be needed.
 --
 
 <!-- .slide: data-transition="fade" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/4cfe0e39fca9474b5dcdbf9ab59eae968a32ecd4/assets/pic/gcm-temperature-decay/temperature-decay-avg.png" -->
+<!-- .slide: data-background-size="contain" -->
 
-Aim is to run with deep ocean and high-top atmosphere over several decades
+Notes:
 
----
-
-## Issues
-
-<!-- .element class="r-fit-text" -->
-
---
-
-### Seasonality
-
-- Strong seasonal variability
-- Weaker effect at different temperature
+Even with the single- and double-event simulations we may be able to run the
+deconvolution, but still need to reach equilibrium so the time series are periodic.
 
 --
 
-### Expensive computations
+Plan: run CESM2 with **deep ocean** and **high-top atmosphere** over several decades
 
-> Model runs take a long time, thus one per season is not reasonable
+Notes:
 
----
-
-<a href="https://www.glossa-journal.org/article/10.5334/gjgl.362/"
-data-citation-key="@aikio2002">Moskal (2018)</a> shows that suppletion for the
-exclusive happens only when the inclusive pronoun is also suppletive. This follows in
-work on \*ABA patterns in suppletion in <a
-href="https://mitpress.mit.edu/books/universals-comparative-morphology"
-data-citation-key="@benvenuto2009">Bobaljik (2012)</a> and <a
-href="https://link.springer.com/article/10.1007%2Fs11049-018-9425-0"
-data-citation-key="@danabasoglu2020">Smith et al (2019)</a>
-
-I also want to include @dong2019, but don't think that will work. Probably need <a
-href="https://link.springer.com/article/10.1007%2Fs11049-018-9425-0"
-data-citation-key="@gregory2016">Smith et al (2019)</a>
+**Problem 1**: Model runs take a long time, thus one per season is not reasonable.
+**Problem 2**: Due to strong seasonal variability, at least two is preferable.
 
 <!-- Start adding with revealjs-make-reflist -->
 <!-- Generated by revealjs-make-reflist. Do not edit. -->
@@ -296,23 +321,20 @@ data-citation-key="@gregory2016">Smith et al (2019)</a>
 
 ## References
 
-<div class="csl-entry" id="ref-aikio2002" role="doc-biblioentry">
-Aikio, A. T., T. Lakkala, A. Kozlovsky, and P. J. S. Williams. 2002. <span>“Electric Fields and Currents of Stable Drifting Auroral Arcs in the Evening Sector.”</span> <em>Journal of Geophysical Research: Space Physics</em> 107 (A12): SIA 3-1-SIA 3-14. <a href="https://doi.org/10.1029/2001ja009172">https://doi.org/10.1029/2001ja009172</a>.
-</div>
-<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-benvenuto2009" role="doc-biblioentry">
 Benvenuto, F, R Zanella, L Zanni, and M Bertero. 2009. <span>“Nonnegative Least-Squares Image Deblurring: Improved Gradient Projection Approaches.”</span> <em>Inverse Problems</em> 26 (2): 025004. <a href="https://doi.org/10.1088/0266-5611/26/2/025004">https://doi.org/10.1088/0266-5611/26/2/025004</a>.
 </div>
 <!-- .element: style="font-size:20pt" -->
-<div class="csl-entry" id="ref-danabasoglu2020" role="doc-biblioentry">
-Danabasoglu, G., J.-F. Lamarque, J. Bacmeister, D. A. Bailey, A. K. DuVivier, J. Edwards, L. K. Emmons, et al. 2020. <span>“The Community Earth System Model Version 2 (<span>Cesm2</span>).”</span> <em>Journal of Advances in Modeling Earth Systems</em> 12 (2): e2019MS001916. https://doi.org/<a href="https://doi.org/10.1029/2019MS001916">https://doi.org/10.1029/2019MS001916</a>.
+<div class="csl-entry" id="ref-lucy1974" role="doc-biblioentry">
+Lucy, L. B. 1974. <span>“<span class="nocase">An iterative technique for the rectification of observed distributions</span>.”</span> <em>The Astronomical Journal</em> 79 (6): 745. <a href="https://doi.org/10.1086/111605">https://doi.org/10.1086/111605</a>.
 </div>
 <!-- .element: style="font-size:20pt" -->
-
---
-
-<div class="csl-entry" id="ref-gregory2016" role="doc-biblioentry">
-Gregory, J. M., T. Andrews, P. Good, T. Mauritsen, and P. M. Forster. 2016. <span>“Small Global-Mean Cooling Due to Volcanic Radiative Forcing.”</span> <em>Climate Dynamics</em> 47 (12): 3979–91. <a href="https://doi.org/10.1007/s00382-016-3055-1">https://doi.org/10.1007/s00382-016-3055-1</a>.
+<div class="csl-entry" id="ref-ottobliesner2016" role="doc-biblioentry">
+Otto-Bliesner, Bette L., Esther C. Brady, John Fasullo, Alexandra Jahn, Laura Landrum, Samantha Stevenson, Nan Rosenbloom, Andrew Mai, and Gary Strand. 2016. <span>“Climate Variability and Change Since 850 <span>CE</span>: An Ensemble Approach with the Community Earth System Model.”</span> <em>Bulletin of the American Meteorological Society</em> 97 (5): 735–54. <a href="https://doi.org/10.1175/BAMS-D-14-00233.1">https://doi.org/10.1175/BAMS-D-14-00233.1</a>.
+</div>
+<!-- .element: style="font-size:20pt" -->
+<div class="csl-entry" id="ref-richardson1972" role="doc-biblioentry">
+Richardson, W. H. 1972. <span>“<span class="nocase">Bayesian-Based Iterative Method of Image Restoration*</span>.”</span> <em>J. Opt. Soc. Am.</em> 62 (1): 55–59. <a href="http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55">http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55</a>.
 </div>
 <!-- .element: style="font-size:20pt" -->
 <!-- End adding with revealjs-make-reflist -->
