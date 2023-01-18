@@ -8,19 +8,6 @@ revealOptions:
 
 # Global Temperature Response to Volcanic Activity
 
---
-
-## Outline
-
-- Intro
-  - Background / motivation <!-- .element class="fragment" data-fragment-index="0" -->
-  - Method and model setup <!-- .element class="fragment" data-fragment-index="0" -->
-- Results
-  - Single-volcano events <!-- .element class="fragment" data-fragment-index="1" -->
-  - Double-volcano events <!-- .element class="fragment" data-fragment-index="1" -->
-- Outlook
-  - Long simulations <!-- .element class="fragment" data-fragment-index="2" -->
-
 ---
 
 ## Intro
@@ -128,6 +115,13 @@ can only run at nominal 2° resolution, while the more expensive TSMLT1
 
 ## Progress
 
+<!-- .element class="r-fit-text" -->
+
+--
+
+- CESM2 simulations
+- CESM LME deconvolution analysis
+
 ---
 
 ## Results
@@ -185,7 +179,8 @@ stronger eruptions.
 
 <!-- .slide: data-transition="fade" -->
 
-_How linear is the temperature response?_
+_Do non-linear effects become important as an eruption occur when the temperature is in
+a perturbed state?_
 
 --
 
@@ -240,9 +235,88 @@ CESM1 Last Millennium Ensemble
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+--
+
+### Deconvolution
+
+<!-- .element class="r-fit-text" -->
+<!-- .slide: data-transition="slide-in fade-out" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v1.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v2.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v3.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v8.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v7.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v10.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v11.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v14.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v15.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v17.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v19.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v18.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
 ---
 
-## Outlook
+## Going Forward
 
 <!-- .element class="r-fit-text" -->
 
@@ -271,68 +345,6 @@ Linear response to volcanic forcing in different climate states in CESM2
 ### Paper 3
 
 Assessment of non-linear responses in the LongRunMIP ensemble
-
---
-
-<!-- .slide: data-transition="slide-in fade-out" -->
-
-### Long simulations
-
-<!-- .element class="r-fit-text" -->
-
---
-
-<!-- .slide: class="data-auto-animate" -->
-<!-- .slide: data-transition="fade" -->
-
-<div class="r-stack">
-  <p class="fragment animated move-to" data-animated-move-to-top="-200px" data-animated-move-to-left="0px" data-fragment-index="0" data-animated-duration="300" data-animated-iterations="1" data-animated-fill="forwards">
-  Using the <a style="color:#80ff80" target="_blank" href="https://www.cesm.ucar.edu/projects/community-projects/LME/">CESM LME</a> data set
-  </p>
-  <span>
-  <img class="fragment fade-in" data-fragment-index="0" src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_forcing.png" width="49%" >
-  <img class="fragment fade-in" data-fragment-index="0" src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_temperature.png" width="49%" >
-  </span>
-</div>
-
-<a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>
-
-<!-- .element: style="font-size:13pt" -->
-
-Notes:
-
-Use datasets from CESM LME (Last Millennium Ensemble).
-
-But this was run with CESM1, and more importantly with **CAM5** (as opposed to WACCM),
-hence with a low-top atmosphere reaching only to about 40 km. They also use 2°
-resolution for the atmosphere and land components, which for now is the same as I do,
-but possibly 1° will be needed.
-
---
-
-<!-- .slide: data-transition="fade" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean-respnse.png" -->
-<!-- .slide: data-background-size="contain" -->
-
---
-
-<!-- .slide: data-transition="fade" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/4cfe0e39fca9474b5dcdbf9ab59eae968a32ecd4/assets/pic/gcm-temperature-decay/temperature-decay-avg.png" -->
-<!-- .slide: data-background-size="contain" -->
-
-Notes:
-
-Even with the single- and double-event simulations we may be able to run the
-deconvolution, but still need to reach equilibrium so the time series are periodic.
-
---
-
-Plan: run CESM2 with **deep ocean** and **high-top atmosphere** over several decades
-
-Notes:
-
-**Problem 1**: Model runs take a long time, thus one per season is not reasonable.
-**Problem 2**: Due to strong seasonal variability, at least two is preferable.
 
 <!-- Start adding with revealjs-make-reflist -->
 <!-- Generated by revealjs-make-reflist. Do not edit. -->
