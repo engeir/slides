@@ -292,12 +292,6 @@ CESM1 Last Millennium Ensemble
 
 --
 
-<!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v15.png" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-transition="fade" -->
-
---
-
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v17.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
