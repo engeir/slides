@@ -10,17 +10,59 @@ revealOptions:
 
 ---
 
-## Intro
+## Motivation and background
 
 <!-- .element class="r-fit-text" -->
 
 --
 
+$$
+\Delta T(t)=\int\_{\infty}^{t}G(t-s)\[F(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
+$$
+
+_Linear and stationary response $G(t)$_
+
+<!-- .element class="fragment" -->
+
+Note:
+
+Let us start off with an equation describing temperature fluctuations in terms of an
+integral over a response function G, multiplited with a known forcing and a noise term.
+This assumes a linear and stationary response, and we want to test the hypothesis of a
+linear response function G.
+
+--
+
 <!-- .slide: data-transition="slide-in fade-out" -->
 
-### Background and motivation
+### Filtered Poisson Process
 
-The FPP and the deconvolution algorithm
+$$
+\Delta T\_K(t)=\sum_{k=1}^K A\_k \phi\left( \frac{t-t\_k}{\tau\_\mathrm{d}} \right)
+$$
+
+$$
+\downarrow
+$$
+
+<!-- .element class="fragment" data-fragment-index="1" -->
+
+$$
+\Delta T\_K(t)=\[\phi\*f\_K\]\left(\frac{t}{\tau_\mathrm{d}}\right)
+$$
+
+<!-- .element class="fragment" data-fragment-index="1" -->
+
+Note:
+
+If only volcanic forcing is considered, we may write the equation for temperature
+fluctuations on a different form, as a sum over K temperature time series that are the
+response to K volcanic events, each with its own amplitude and arrival time, and with a
+common width.
+
+This formalism allows us to write this up as a convolution between a general response
+function and a forcing time series. The amplitudes and arrival times are now baked into
+F, while the duration time is given by the shape of the response function.
 
 --
 
@@ -35,29 +77,7 @@ Note:
 
 --
 
-<!-- .slide: data-transition="fade" -->
-
-### Filtered Poisson Process
-
-$$
-T\_K(t)=\sum_{k=1}^K A\_k \phi\left( \frac{t-t\_k}{\tau\_\mathrm{d}} \right)
-$$
-
-$$
-\downarrow
-$$
-
-<!-- .element class="fragment" data-fragment-index="1" -->
-
-$$
-T\_K(t)=[\phi\*f\_K]\left(\frac{t}{\tau_\mathrm{d}}\right)
-$$
-
-<!-- .element class="fragment" data-fragment-index="1" -->
-
---
-
-<!-- .slide: data-transition="fade" -->
+<!-- .slide: data-transition="fade-in slide-out" -->
 
 ### Deconvolution algorithm
 
@@ -70,15 +90,6 @@ $$
 <a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto et al. (2009)</a>
 
 <!-- .element: style="font-size:13pt" -->
-
---
-
-<!-- .slide: data-transition="fade-in slide-out" -->
-
-### Phenomenological model for intermittent processes
-
-1. Stationarity <!-- .element class="fragment" -->
-2. Linearity <!-- .element class="fragment" -->
 
 --
 
@@ -113,17 +124,6 @@ can only run at nominal 2° resolution, while the more expensive TSMLT1
 
 ---
 
-## Progress
-
-<!-- .element class="r-fit-text" -->
-
---
-
-- CESM2 simulations
-- CESM LME deconvolution analysis
-
----
-
 ## Results
 
 <!-- .element class="r-fit-text" -->
@@ -140,7 +140,7 @@ can only run at nominal 2° resolution, while the more expensive TSMLT1
 
 <!-- .slide: data-transition="fade-in fade-out" -->
 
-| <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
+| <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                |                                                                                                                  $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                 $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                  |
 
@@ -157,7 +157,7 @@ each season.
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/abf78e1fcd784f3c57c73c107dc193c5c34c25f8/assets/pic/volcano-ensemble-waveforms/compare-waveform-integrate.png" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/91302ea7b928b6a0072972295f121a76536bef7a/assets/pic/volcano-ensemble-waveforms/compare-waveform-integrate.png" -->
 
 Notes:
 
@@ -166,6 +166,12 @@ the shapes, and in particular the tails, can be found. The two strongest eruptio
 produce temperature responses that are similar in shape, while the weakest has a sharper
 peak. However, this difference is not conclusive, and the tail is also close to the two
 stronger eruptions.
+
+--
+
+<!-- .slide: data-transition="fade-in slide-out" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/91302ea7b928b6a0072972295f121a76536bef7a/assets/pic/volcano-ensemble-waveforms/compare-waveform-max.png" -->
 
 --
 
@@ -237,14 +243,42 @@ CESM1 Last Millennium Ensemble
 
 --
 
-### Deconvolution
+### Deconvolution Issues
 
 <!-- .element class="r-fit-text" -->
-<!-- .slide: data-transition="slide-in fade-out" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations-files/5a16dfcfb846a776baada1ca1e5cd5b9e622a7aa/2021/fysikermotet/noresm/noresm_raw_dark.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations-files/5a16dfcfb846a776baada1ca1e5cd5b9e622a7aa/2021/fysikermotet/noresm/response_func_noresm1_choose_dark.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
 
 --
 
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v1.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+Forcing A
+
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/0a0b95444c83bcdf5f2ed272ddd21d86fb45a904/2023/midterm-evaluation/pic/f_orig.png" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-transition="fade" -->
+
+--
+
+Forcing B
+
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/0a0b95444c83bcdf5f2ed272ddd21d86fb45a904/2023/midterm-evaluation/pic/f_forward.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
@@ -258,7 +292,7 @@ CESM1 Last Millennium Ensemble
 
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v18.png" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-transition="fade" -->
+<!-- .slide: data-transition="fade-in slide-out" -->
 
 ---
 
@@ -269,6 +303,20 @@ CESM1 Last Millennium Ensemble
 --
 
 ### Paper 1
+
+Linear response to volcanic forcing in different climate states in CESM2
+
+<!-- .slide: data-transition="slide-in fade-out" -->
+
+--
+
+<!-- .slide: data-transition="fade-in slide-out" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/1e3d1dca42484fc10c418dd1ede027301c9a532d/assets/pic/double-overlap/double-overlap-superpose.png" -->
+
+--
+
+### Paper 2
 
 Pulse estimation from simulation data with a deconvolution method
 
@@ -282,12 +330,6 @@ Pulse estimation from simulation data with a deconvolution method
 
 --
 
-### Paper 2
-
-Linear response to volcanic forcing in different climate states in CESM2
-
---
-
 ### Paper 3
 
 Assessment of non-linear responses in the LongRunMIP ensemble
@@ -298,10 +340,10 @@ Assessment of non-linear responses in the LongRunMIP ensemble
 
 <!-- .slide: data-transition="fade" -->
 
-- LongRunMIP: ensemble of $1000$–$6000$ year long runs
+- LongRunMIP: ensemble of $1000$–$6000$ year long simulations
 - Temperature anomaly as
   $$
-  \Delta T(t)=\int\_{\infty}^{t}G(t-s)(F(s)\mathrm{d}s+\sigma \mathrm{d}B(s))
+  \Delta T(t)=\int\_{\infty}^{t}G(t-s)\[F(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
   $$
   <!-- .element class="fragment" data-fragment-index="0" -->
 - Parameter estimation within a Bayesian framework, using INLA\*
@@ -309,8 +351,7 @@ Assessment of non-linear responses in the LongRunMIP ensemble
 
 \*integrated nested Laplace approximations, introduced for climate data in <a
 href="https://doi.org/10.5194/esd-11-329-2020"
-data-citation-key="@myrvollnilsen2020">Myrvoll-Nilsen, E., Sørbye, S. H., et al.
-(2020)</a>
+data-citation-key="@myrvollnilsen2020">Myrvoll-Nilsen et al. (2020)</a>
 
 <!-- .element class="fragment" data-fragment-index="1" -->
 <!-- .element: style="font-size:12pt" -->
