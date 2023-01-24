@@ -91,6 +91,14 @@ $$
 
 <!-- .element: style="font-size:13pt" -->
 
+Notes:
+
+An iterative algorithm where an initial guess of the response function is updated, with
+the times series for temperature T and forcing F also on the right-hand-side. The term b
+in both the numerator and the denominator ensures positive values.
+
+The hat on the forcing indicate that is uses negative times, i.e., F_hat(t)=F(-t).
+
 --
 
 <!-- .slide: data-transition="slide-in fade-out" -->
@@ -164,14 +172,21 @@ Notes:
 We here look at the waveform of the temperature, to see if a clear difference between
 the shapes, and in particular the tails, can be found. The two strongest eruptions
 produce temperature responses that are similar in shape, while the weakest has a sharper
-peak. However, this difference is not conclusive, and the tail is also close to the two
-stronger eruptions.
+peak. The tail is more similar two the other two, but this could be an effect of the
+normalization we are doing.
 
 --
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/hack-md-notes/91302ea7b928b6a0072972295f121a76536bef7a/assets/pic/volcano-ensemble-waveforms/compare-waveform-max.png" -->
+
+Note:
+
+If we instead normalize by dividing through with the maximum value of the time series,
+we find that the initial rise across all three is similar, while the weakest move faster
+to equilibrium than the two stronger. One possibility is that the two stronger reach
+past a threshold the weakest never get to.
 
 --
 
@@ -229,17 +244,34 @@ CESM1 Last Millennium Ensemble
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Notes:
+
+The volcanic forcing is here events with zero width, meaning an event consist of one
+element, described fully by an arrival time and amplitude.
+
 --
 
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/821c7c6b8aeaa906f73c5c70a0185579cf3e4482/2023/midterm-evaluation/pic/cesm_lme_deconvolution_delta_new2_zoomed-temp.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Notes:
+
+The temperature is the output of simulations with the CESM1 climate model.
+
 --
 
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/821c7c6b8aeaa906f73c5c70a0185579cf3e4482/2023/midterm-evaluation/pic/cesm_lme_deconvolution_delta_new2_zoomed.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
+
+Notes:
+
+The estimated response function has the expected shape with a short initial rise and a
+longer decay lasting approximately a decade.
+
+A good amount of noise is still present, and adding to this analysis is a more in depth
+look at how the deconvolution algorithm handle this kind of noisy input data.
 
 --
 
@@ -254,17 +286,40 @@ CESM1 Last Millennium Ensemble
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Notes:
+
+Two things to notice:
+
+1. Different resolution, so we must either up sample or down sample.
+2. The forcing has a decaying tail, the events are not just a delta-like pulse with an
+   amplitude and arrival time.
+
 --
 
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations-files/5a16dfcfb846a776baada1ca1e5cd5b9e622a7aa/2021/fysikermotet/noresm/response_func_noresm1_choose_dark.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Note:
+
+The corresponding response function has strong seasonal dependence, marked with filled
+in circles, and otherwise falls down to zero very quickly.
+
 --
 
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v1.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
+
+Note:
+
+This first example is the simplest case. Forcing with no width is convolved with a
+response function (original response) which gives us a temperature time series.
+Deconvolving with the forcing and temperature time series gives back an almost perfect
+estimated response function.
+
+But, what if we moved all forcing events one element forward before using it in the
+deconvolution?
 
 --
 
@@ -274,6 +329,12 @@ Forcing A
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Note:
+
+From this ...
+
+(I.e., we use this to convolve with a response function and create the temperature.)
+
 --
 
 Forcing B
@@ -282,17 +343,33 @@ Forcing B
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Note:
+
+... to this.
+
+(And this when we deconvolve.)
+
 --
 
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v17.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade" -->
 
+Note:
+
+When the forcing events have no width, reconstructing the response function is fine. We
+get some spurious spikes, but the general shape is correct
+
 --
 
 <!-- .slide: data-background="https://github.com/engeir/hack-md-notes/raw/main/assets/pic/de-verify/v18.png" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-transition="fade-in slide-out" -->
+
+Note:
+
+However, if the forcing events have a decaying tail, reconstructing the response fails.
+It falls to zero immediately, except from a spike on the first index (time = 0).
 
 ---
 
@@ -308,6 +385,12 @@ Linear response to volcanic forcing in different climate states in CESM2
 
 <!-- .slide: data-transition="slide-in fade-out" -->
 
+Note:
+
+This relates to the first part of the results, with CESM2 simulations, with the
+possibility of running the same experiments in a different climate state. (E.g., after a
+CO2 doubling/quadrupling.)
+
 --
 
 <!-- .slide: data-transition="fade-in slide-out" -->
@@ -321,6 +404,11 @@ Linear response to volcanic forcing in different climate states in CESM2
 Pulse estimation from simulation data with a deconvolution method
 
 <!-- .slide: data-transition="slide-in fade-out" -->
+
+Note:
+
+This relates to the deconvolution of a long data set, and the challenges you meet when
+using the deconvolution algorithm with climate data.
 
 --
 
@@ -355,6 +443,16 @@ data-citation-key="@myrvollnilsen2020">Myrvoll-Nilsen et al. (2020)</a>
 
 <!-- .element class="fragment" data-fragment-index="1" -->
 <!-- .element: style="font-size:12pt" -->
+
+Note:
+
+The LongRunMIP is an ensemble consisting of climate simulations between 1000 and 6000
+years in length. Within this ensemble we want to take the model introduced in the very
+beginning for temperature fluctuations to estimate the response from a general forcing.
+
+To do this, parameter estimation is done within a Bayesian framework by making use of
+the INLA methodology, which was presented by Myrvoll-Nilsen et al. (2020), who also
+demonstrated its use on climate data.
 
 <!-- Start adding with revealjs-make-reflist -->
 <!-- Generated by revealjs-make-reflist. Do not edit. -->
