@@ -3,6 +3,7 @@ date: "2022-08-24"
 author: Eirik Rolland Enger
 event: CSU Group Meeting
 title: About Me
+hidden: true
 revealOptions:
   zoomLevel: 2.5
   allottedTime: 300000

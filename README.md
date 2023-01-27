@@ -42,6 +42,22 @@ npm run build
 
 This will put the static site in the `docs` directory.
 
+## Static site YAML fields
+
+The YAML fields that are used for the list view on the built static site are
+
+```yaml
+hidden: false
+author: Your Name
+title: My Title
+event: Cool Event
+date: "2023-01-17"
+```
+
+None need to be given, and while most have the effect of the text being shown in the
+list view, `hidden: true` will instead make sure the slide is not listed (it will,
+however, be created as a site just as any other slide).
+
 ## Plugins
 
 > _See an example demo of all features with [source] and [built site]._
@@ -58,7 +74,8 @@ included in this project:
     allottedTime: 900000
   ```
 
-  in the YAML front matter, where time is in seconds.
+  in the YAML front matter, where time is in milliseconds. The example above will give a
+  timer that takes 15 minutes.
 
 - [revealjs-animated]
 

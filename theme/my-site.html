@@ -42,6 +42,7 @@
         </thead>
         <tbody>
             {{#files}}
+            {{^hidden}}
             <tr class="center">
                 <td>
                     <p>{{#event}}{{.}}{{/event}}</p>
@@ -54,12 +55,15 @@
                     </a>
                 </td>
             </tr>
+            {{/hidden}}
             {{/files}}
         </tbody>
     </table>
     <myblockquote>
-    Download the presentations as PDFs by adding <code>?print-pdf</code> to the end
-    of a link: from <code>https://slides.eirikenger.xyz/2022-02-08-demo.html</code> to
-    <code>https://slides.eirikenger.xyz/2022-02-08-demo.html?print-pdf</code></myblockquote>
-  </body>
+        Download the presentations as PDFs by adding <code>?print-pdf</code> to the end
+        of a link: from <code>https://slides.eirikenger.xyz/2022-02-08-demo.html</code> to
+        <code>https://slides.eirikenger.xyz/2022-02-08-demo.html?print-pdf</code>
+    </myblockquote>
+</body>
+
 </html>
