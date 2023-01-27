@@ -17,10 +17,10 @@ revealOptions:
 --
 
 $$
-\Delta T(t)=\int\_{\infty}^{t}G(t-s)\[F(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
+\Delta T(t)=\int\_{\infty}^{t}\phi(t-s)\[f\_K(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
 $$
 
-_Linear and stationary response $G(t)$_
+_Linear and stationary response $\phi(t)$_
 
 <!-- .element class="fragment" -->
 
@@ -431,7 +431,7 @@ Assessment of non-linear responses in the LongRunMIP ensemble
 - LongRunMIP: ensemble of $1000$–$6000$ year long simulations
 - Temperature anomaly as
   $$
-  \Delta T(t)=\int\_{\infty}^{t}G(t-s)\[F(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
+  \Delta T(t)=\int\_{\infty}^{t}\phi(t-s)\[f\_K(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
   $$
   <!-- .element class="fragment" data-fragment-index="0" -->
 - Parameter estimation within a Bayesian framework, using INLA\*
