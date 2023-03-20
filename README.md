@@ -98,6 +98,12 @@ npx patch-package reveal.js
 Thus, if you want further changes from this project or other modules, this is done
 simply by changing the source files and running `npx patch-package some-package`.
 
+## Licenses
+
+The source code of the website and main repository itself is licensed under the MIT license.
+
+The content of the [content](./content) directory is licensed under the CC0 1.0 Universal license, which can be found [here](./content/LICENSE).
+
 [fork the repo]: https://github.com/engeir/slides/fork
 [patch-package]: https://www.npmjs.com/package/patch-package
 [presentations]: https://github.com/engeir/presentations
