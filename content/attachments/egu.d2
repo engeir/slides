@@ -1,0 +1,26 @@
+title: Insensitivity of global temperature response to the magnitude of volcanic eruptions
+
+motivation: Motivation {
+  plt: AOD vs TOA from Gregory et al. (2016)
+  quote: Quote about usefulness
+  linearity_formula: T = L\[F\]
+  alternatives: SO2, AOD, TOA, or some function of them?
+
+  plt -> quote
+  quote -> linearity_formula
+  linearity_formula -> alternatives
+}
+
+results: Results {
+  aodtmp: AOD vs temperature
+  toatmp: TOA vs temperature
+  so2tmp: SO2 vs temperature
+
+  aodtmp <-> toatmp: Compare them?
+  aodtmp <-> so2tmp: Compare them?
+  toatmp <-> so2tmp: Compare them?
+}
+
+title -> motivation: "Motivation"
+title -> results: "Makes sense of the title"
+motivation.plt <-> results: "Compare these as well?"
