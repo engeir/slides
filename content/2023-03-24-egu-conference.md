@@ -107,13 +107,13 @@ being proportional, with a proportionality constant of 25 estimated in the AR5.
 
 --
 
-Previously a linear relation has been used, that is
+Using a linear operator to describe temperature fluctuations:
 
 $\Delta T(t)=\hat{L}[f(t)]$
 
 Notes:
 
-Previous efforts have often been using a linear relation to describe temperature
+Previous efforts have often been to use a linear operator to describe temperature
 fluctuations in response to a forcing. Some studies also assume the forcing from
 different agents to be similar, although this have been disputed by several.
 
@@ -336,9 +336,10 @@ equator (1 degree east).
 The slides can be viewed both with
 ([html](https://slides.eirikenger.xyz/2023-01-24-midterm-evaluation-presentation),
 [pdf](https://raw.githubusercontent.com/engeir/presentations-files/main/2022/chess-am/poster.pdf))
-and without speaker notes
+and without
 ([html](https://slides.eirikenger.xyz/2023-01-24-midterm-evaluation-presentation?showNotes=true),
-[pdf](https://raw.githubusercontent.com/engeir/presentations-files/main/2022/chess-am/poster.pdf)).
+[pdf](https://raw.githubusercontent.com/engeir/presentations-files/main/2022/chess-am/poster.pdf))
+speaker notes.
 
 [Link](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html) and QR code to the
 conference abstract information:

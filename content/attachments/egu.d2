@@ -30,15 +30,12 @@ motivation: Motivation {
   quote: '"Run with both AOGCMs and AGCMs"'
   linearity_formula: "Linearity relation" {
     formula: |latex
-    T = L\[F\]
+      T = L\[F\]
     |
   }
   alternatives: SO2, AOD, TOA, or some function of them?
 
-  plt ->\
-    quote ->\
-    linearity_formula ->\
-    alternatives
+  plt -> quote -> linearity_formula -> alternatives
 }
 
 results: Results {
