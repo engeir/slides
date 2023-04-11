@@ -316,6 +316,11 @@ Aerosol optical depth versus temperature on semilog-x axis
 --
 
 <!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/aod_vs_toa_avg.webp" -->
+
+--
+
+<!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
 
 Notes:
