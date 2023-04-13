@@ -20,7 +20,7 @@ layer"___
 
 <!-- .element: style="font-size:18pt" -->
 
-<img src="./attachments/UiT_Logo_Eng_2l_Hvit.png" width="auto" height="110px" />
+<img src="./attachments/egu2023/UiT_Logo_Eng_2l_Hvit.png" width="auto" height="110px" />
 <img src="https://egu23.eu/EGU22-sharing-is-encouraged.png" width="auto" height="110px" />
 <a href="https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html" target="_blank">
 <img src="./attachments/egu2023/egu23-3331-qr.png" width="auto" height="110px" /> </a>
@@ -28,9 +28,9 @@ layer"___
 Notes:
 
 Hi, and thanks for showing up to my talk here today. My name is Eirik Enger, and I'm a
-PhD candidate at UiT the Arctic University of Norway. My work there focus on how
-volcanoes affect climate, and today we will look at "Insensitivity of global temperature
-response to the magnitude of volcanic eruptions".
+PhD candidate at UiT the Arctic University of Norway. My work focus on how volcanoes
+affect climate, and today we will look at "Insensitivity of global temperature response
+to the magnitude of volcanic eruptions".
 
 ---
 
@@ -54,7 +54,7 @@ Figure from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1)
 
 <!-- .element: style="font-size:13pt" -->
 
-![Gregory AOD vs forcing](./attachments/gregory-aod-toa-swap-trans.png)
+![Gregory AOD vs forcing](./attachments/egu2023/gregory-aod-toa-swap-trans.png)
 
 <!-- .element: class="r-stretch" -->
 
@@ -65,11 +65,10 @@ So, $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto M\_\{k,\\,\mathrm\{TOA\}\}^\max$?
 Notes:
 
 This plot is from Gregory et al. (2016), and it's showing radiative forcing against
-aerosol optical depth. Two simulations were done with the HadCM3 climate model by the
-authors, one with the HadGEM2 climate model by [Andrews
-(2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1) while the AR5 data points are from
-a time series from the Fifth Assessment report of the IPCC (intergovernmental panel on
-climate change).
+aerosol optical depth. Two simulations were done by the authors using the HadCM3 climate
+model, one simulation by [Andrews (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1)
+used the HadGEM2 climate model while the AR5 data points are from a time series from the
+Fifth Assessment report of the IPCC (intergovernmental panel on climate change).
 
 This show a proportionality between annual mean values of AOD and radiative forcing, but
 only for AOD values up to 0.15, roughly equivalent to the peak of the 1991 Mt. Pinatubo
@@ -77,8 +76,11 @@ eruption. Whether this property holds as one goes to much greater values, for ex
 comparable to the Young Toba Tuff eruption 74ky ago, is of interest to us. Such a super
 volcano would have roughly one hundred times the AOD values as Mt. Pinatubo, but
 previous simulations indicate radiative forcing values that are only about twenty times
-Mt. Pinatubo. Is this because the relation does not hold for this large values or is it
-a shortcoming on the model's side?
+that of Mt. Pinatubo. Is this because the linearity does not hold for this large values,
+or is it a shortcoming on the model's side?
+
+Can we make a similar comparison of the peak values, for example in daily resolution (as
+opposed to averaging over the whole year before comparing)?
 
 Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), figure 4.
 
@@ -120,7 +122,7 @@ being proportional, with a proportionality constant of 25 estimated in the AR5.
 Using a linear operator to describe temperature fluctuations:
 
 $$
-\Delta T(t)=\hat{L}[f(t)]
+\Delta T(t)=\hat{L}[f_K(t)]
 $$
 
 $$
@@ -131,26 +133,24 @@ $$
 
 Notes:
 
-Previous efforts have often been to use a linear operator to describe temperature
-fluctuations in response to a forcing. Some studies also assume the forcing from
-different agents to be similar, although this have been disputed by several.
+Previous efforts of estimating a temperature response function from forcing data have
+often been to use a linear operator to describe temperature fluctuations in response to
+a forcing. Some studies also assume the forcing from different agents to be similar,
+although this have been disputed by several studies.
 
-The equation is depicting the linear relation between some forcing F and the
-deterministic temperature due to the forcing.
+The equation is depicting the linear relation between some forcing 𝑓(𝑡) and the
+deterministic temperature fluctuation due to the forcing.
 
-Here, we wish to look further into the linearity assumption in relation to volcanoes
-over a large range of eruption magnitudes, where with magnitude it is meant the total
-sulphur aerosol mass.
+We wish to look further into the linearity assumption in relation to volcanoes over a
+large range of eruption magnitudes. With magnitude, we here mean the total sulphur
+aerosol mass.
 
-We wish to ask: is it reasonable to write up the temperature response to volcanic
+In particular, is it reasonable to write up the temperature response to volcanic
 eruptions as a convolution between the forcing and some general shape function, here
 represented by the letter 𝜙.
 
-The forcing is here consisting only of forcing due to episodic volcanoes, and we
-consider three different sources to describe the forcing; total injected SO2 in
-Tg, the aerosol optical depth and forcing as top-of-the-atmosphere radiative imbalance.
-Injected SO2 is the input to the model that it reads from to simulate the volcanoes,
-while both AOD and radiative imbalance are output variables of the model.
+The forcing is here consisting only of forcing due to episodic volcanoes, where 𝐴
+represent the amplitude of a given volcanic event arriving at time 𝑡_𝑘.
 
 --
 
@@ -184,8 +184,6 @@ thereof) of the temperature response.
 \Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
 $$`
 
-<!-- .element style="font-size:20pt" -->
-
 `$$
 A_k\left\{
 \begin{aligned}
@@ -193,7 +191,7 @@ A_k\left\{
 &\overset{?}{=}M_k^{\max}
 \end{aligned}
 \right.,\,
-M_k^\max=\left\{
+M=\left\{
 \begin{aligned}
 &\mathrm{SO_2\,[Tg]}\\
 &\mathrm{AOD\,[1]}\\
@@ -202,14 +200,21 @@ M_k^\max=\left\{
 \right.
 $$`
 
-<!-- .element style="font-size:20pt" -->
-
-where `$M_k^{\max}$` is the magnitude of event `$k$`, given in injected
-`$\mathrm{SO_2}$`, the `$\mathrm{AOD}$` (aerosol optical depth), top-of-the-atmosphere
-radiative imbalance in `$\mathrm{W/m^2}$`, or possibly something else entirely.
+where `$M_k^{\max}$` is the peak magnitude of event `$k$`.
 
 <!-- .element: class="fragment" -->
-<!-- .element style="font-size:20pt" -->
+
+Notes:
+
+The question then become, can we convolve a general response function with some forcing
+representation to obtain temperature fluctuations? Or do we perhaps need a non-linear
+transformation of the forcing to be able to get temperature from convolutions?
+
+We consider three different sources to describe the forcing; total injected SO2 in Tg,
+the aerosol optical depth and forcing as top-of-the-atmosphere radiative imbalance.
+
+(Injected SO2 is used as model input to simulate the volcanoes, while both AOD and
+radiative imbalance are output variables of the model.)
 
 ---
 
@@ -235,20 +240,22 @@ _Legend description for the forthcoming figures._
 | V2         | VolMIP, version 2            |
 
 <!-- .element: class_="fragment animated move-to scale-down" data-animated-move-to-left="-15vw" data-animated-move-to-top="10vh" -->
-<!-- .element style="font-size:15pt" -->
+<!-- .element: style="font-size:15pt" -->
 
 Notes:
 
 We have run the CESM2 as an AOGCM and AGCM with constant SST conditions with made up
-volcanic eruptions of three different sizes: the smallest volcano is comparable to the
-Mt. Pinatubo eruption, the largest volcano is comparable to the Young Toba Tuff eruption
-(i.e., roughly 100 times Mt. Pinatubo), while the third sits in the middle between the
-two extremes.
+volcanic eruptions of three different sizes:
+
+- the smallest volcano is comparable to the Mt. Pinatubo eruption
+- the largest volcano is comparable to the Young Toba Tuff eruption (i.e., roughly 100
+  times Mt. Pinatubo)
+- the third sits in the middle between the two extremes.
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/injection_vs_temperature.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_temperature.webp" -->
 
 Notes:
 
@@ -270,7 +277,7 @@ as the orange circle (C2WN), and the most extreme C2W point.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/injection_vs_temperature_logscale.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_temperature_logscale.webp" -->
 
 Notes:
 
@@ -290,7 +297,7 @@ axis for the injected SO2.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/injection_vs_aod.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_aod.webp" -->
 
 Notes:
 
@@ -310,7 +317,7 @@ Injection versus aerosol optical depth
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/injection_vs_aod_logscale.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_aod_logscale.webp" -->
 
 Notes:
 
@@ -330,7 +337,7 @@ Injection versus aerosol optical depth on log-log axis
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/aod_vs_temperature.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_temperature.webp" -->
 
 Notes:
 
@@ -350,7 +357,7 @@ Aerosol optical depth versus temperature
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/aod_vs_temperature_logscale.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_temperature_logscale.webp" -->
 
 Notes:
 
@@ -370,17 +377,17 @@ Aerosol optical depth versus temperature on semilog-x axis
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/injection_vs_toa.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_toa.webp" -->
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/toa_vs_temperature.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/toa_vs_temperature.webp" -->
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/aod_vs_toa_avg.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_toa_avg.webp" -->
 
 ---
 
