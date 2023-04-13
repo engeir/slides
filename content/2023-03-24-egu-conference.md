@@ -8,6 +8,7 @@ revealOptions:
   transition: "none"
   allottedTime: 480_000
   showNotes: separate-page
+  pdfSeparateFragments: false
 ---
 
 # Insensitivity of global temperature response to the magnitude of volcanic eruptions
@@ -37,6 +38,7 @@ response to the magnitude of volcanic eruptions".
 
 See to the abstract, pull out some of it to mention here.
 
+<!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-visibility="hidden" -->
 
 Notes:
@@ -46,11 +48,15 @@ The reason we are visiting this topic is that there have been several attempts t
 
 --
 
+<!-- .slide: data-background-color="#001928" -->
+
 Figure from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1)
 
 <!-- .element: style="font-size:13pt" -->
 
 ![Gregory AOD vs forcing](./attachments/gregory-aod-toa-swap-trans.png)
+
+<!-- .element: class="r-stretch" -->
 
 So, $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto M\_\{k,\\,\mathrm\{TOA\}\}^\max$?
 
@@ -58,7 +64,7 @@ So, $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto M\_\{k,\\,\mathrm\{TOA\}\}^\max$?
 
 Notes:
 
-This plot if from Gregory et al. (2016), and it's showing radiative forcing against
+This plot is from Gregory et al. (2016), and it's showing radiative forcing against
 aerosol optical depth. Two simulations were done with the HadCM3 climate model by the
 authors, one with the HadGEM2 climate model by [Andrews
 (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1) while the AR5 data points are from
@@ -77,6 +83,8 @@ a shortcoming on the model's side?
 Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), figure 4.
 
 --
+
+<!-- .slide: data-background-color="#001928" -->
 
 <!-- .slide: data-visibility="hidden" -->
 
@@ -107,9 +115,19 @@ being proportional, with a proportionality constant of 25 estimated in the AR5.
 
 --
 
+<!-- .slide: data-background-color="#001928" -->
+
 Using a linear operator to describe temperature fluctuations:
 
-$\Delta T(t)=\hat{L}[f(t)]$
+$$
+\Delta T(t)=\hat{L}[f(t)]
+$$
+
+$$
+\Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
+$$
+
+<!-- .element: class="fragment" -->
 
 Notes:
 
@@ -124,11 +142,49 @@ Here, we wish to look further into the linearity assumption in relation to volca
 over a large range of eruption magnitudes, where with magnitude it is meant the total
 sulphur aerosol mass.
 
+We wish to ask: is it reasonable to write up the temperature response to volcanic
+eruptions as a convolution between the forcing and some general shape function, here
+represented by the letter 𝜙.
+
+The forcing is here consisting only of forcing due to episodic volcanoes, and we
+consider three different sources to describe the forcing; total injected SO2 in
+Tg, the aerosol optical depth and forcing as top-of-the-atmosphere radiative imbalance.
+Injected SO2 is the input to the model that it reads from to simulate the volcanoes,
+while both AOD and radiative imbalance are output variables of the model.
+
 --
 
+<!-- .slide: data-background-color="#001928" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
+
+Notes:
+
+Results from running CESM2(WACCM6) with a 400 Tg volcanic event occurring once (Single
+event, orange) and occurring twice four years apart (Double event, blue). "Superposed"
+in green is two copies of the single event superposed. The single event is copied and
+shifted in time, where the shadings mark the two regions of the single events.
+
+The volcano erupted on 15. February 1853 and on the same day in 1857, located at the
+equator (1 degree east).
+
+From this initial simulation of overlapping pulses, the superposing of temperature
+responses is relatively good, motivating further analysis of the linearity (or lack
+thereof) of the temperature response.
+
+--
+
+<!-- .slide: data-background-color="#001928" -->
+<!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
+<!-- .slide: data-background-opacity="0.1" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-repeat="no-repeat" -->
+
 `$$
-\Delta T=\phi\ast f_K=\phi\ast\sum_k A_k\delta(t-t_k)
+\Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
 $$`
+
+<!-- .element style="font-size:20pt" -->
 
 `$$
 A_k\left\{
@@ -146,29 +202,26 @@ M_k^\max=\left\{
 \right.
 $$`
 
-<!-- .element: class="fragment" -->
+<!-- .element style="font-size:20pt" -->
 
-where `$M_k^{\max}$` is the magnitude of event `$k$`, given in `$\mathrm{Tg}$`
+where `$M_k^{\max}$` is the magnitude of event `$k$`, given in injected
 `$\mathrm{SO_2}$`, the `$\mathrm{AOD}$` (aerosol optical depth), top-of-the-atmosphere
 radiative imbalance in `$\mathrm{W/m^2}$`, or possibly something else entirely.
 
 <!-- .element: class="fragment" -->
-
-Notes:
-
-We wish to ask: is it reasonable to write up the temperature response to volcanic
-eruptions as a convolution between the forcing and some general shape function, here
-represented by the letter 𝜙.
-
-The forcing is here consisting only of forcing due to episodic volcanoes, and we
-consider three different sources to describe the forcing; total injected SO2 in
-Tg, the aerosol optical depth and forcing as top-of-the-atmosphere radiative imbalance.
-Injected SO2 is the input to the model that it reads from to simulate the volcanoes,
-while both AOD and radiative imbalance are output variables of the model.
+<!-- .element style="font-size:20pt" -->
 
 ---
 
 ## Results
+
+<!-- .slide: data-visibility="hidden" -->
+
+--
+
+_Legend description for the forthcoming figures._
+
+<!-- .element style="font-size:20pt" -->
 
 | Short Name | Long Name                    |
 | :--------- | :--------------------------- |
@@ -181,6 +234,7 @@ while both AOD and radiative imbalance are output variables of the model.
 | V1         | VolMIP, version 1            |
 | V2         | VolMIP, version 2            |
 
+<!-- .element: class_="fragment animated move-to scale-down" data-animated-move-to-left="-15vw" data-animated-move-to-top="10vh" -->
 <!-- .element style="font-size:15pt" -->
 
 Notes:
@@ -316,23 +370,21 @@ Aerosol optical depth versus temperature on semilog-x axis
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/aod_vs_toa_avg.webp" -->
+<!-- .slide: data-background="./attachments/injection_vs_toa.webp" -->
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
+<!-- .slide: data-background="./attachments/toa_vs_temperature.webp" -->
 
-Notes:
+--
 
-Results from running CESM2(WACCM6) with a 400 Tg volcanic event occurring once (Single
-event, orange) and occurring twice four years apart (Double event, blue). "Superposed"
-in green is two copies of the single event superposed.
-
-The volcano erupted on 15. February 1853 and on the same day in 1857, located at the
-equator (1 degree east).
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/aod_vs_toa_avg.webp" -->
 
 ---
+
+<!-- .slide: data-background-color="#001928" -->
 
 ### Links
 
