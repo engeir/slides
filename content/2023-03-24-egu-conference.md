@@ -397,6 +397,10 @@ Aerosol optical depth versus temperature on semilog-x axis
 
 <!-- FIXME: for now, I'm using an old slide as an example. Update the links! -->
 
+_FIXME: for now, I'm using an old slide as an example. Update the links!_
+
+<!-- .element: style="color:red" -->
+
 The slides can be viewed both with
 ([html](https://slides.eirikenger.xyz/2023-01-24-midterm-evaluation-presentation),
 [pdf](https://raw.githubusercontent.com/engeir/presentations-files/main/2022/chess-am/poster.pdf))
