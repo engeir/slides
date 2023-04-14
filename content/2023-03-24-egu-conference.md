@@ -145,7 +145,7 @@ We wish to look further into the linearity assumption in relation to volcanoes o
 large range of eruption magnitudes. With magnitude, we here mean the total sulphur
 aerosol mass.
 
-In particular, is it reasonable to write up the temperature response to volcanic
+In particular; is it reasonable to write up the temperature response to volcanic
 eruptions as a convolution between the forcing and some general shape function, here
 represented by the letter 𝜙.
 
@@ -200,9 +200,12 @@ M=\left\{
 \right.
 $$`
 
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
 where `$M_k^{\max}$` is the peak magnitude of event `$k$`.
 
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .element: style="font-size:20pt" -->
 
 Notes:
 
@@ -226,7 +229,7 @@ radiative imbalance are output variables of the model.)
 
 _Legend description for the forthcoming figures._
 
-<!-- .element style="font-size:20pt" -->
+<!-- .element: style="font-size:20pt" -->
 
 | Short Name | Long Name                    |
 | :--------- | :--------------------------- |
