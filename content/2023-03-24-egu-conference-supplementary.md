@@ -1,5 +1,5 @@
 ---
-title: Insensitivity of global temperature response to the magnitude of volcanic eruptions
+title: "Supplementary to: Insensitivity of global temperature response to the magnitude of volcanic eruptions"
 event: EGU General Assembly 2023
 author: Eirik R. Enger
 date: "2023-03-24"
@@ -11,12 +11,7 @@ revealOptions:
   pdfSeparateFragments: false
 ---
 
-<!--
-Color is from https://uit.no/ressurs/uit/profil2019/examples/fargekart.png, but at a
-darker luminosity.
--->
-
-# Insensitivity of global temperature response to the magnitude of volcanic eruptions
+# Supplementary to: Insensitivity of global temperature response to the magnitude of volcanic eruptions
 
 <!-- .element: style="font-size:50pt" -->
 
@@ -62,6 +57,10 @@ Figure from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1)
 ![Gregory AOD vs forcing](./attachments/egu2023/gregory-aod-toa-swap-trans.png)
 
 <!-- .element: class="r-stretch" -->
+
+So, $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto M\_\{k,\\,\mathrm\{TOA\}\}^\max$?
+
+<!-- .element: class="fragment" -->
 
 Notes:
 
@@ -118,7 +117,6 @@ being proportional, with a proportionality constant of 25 estimated in the AR5.
 
 --
 
-<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-color="#001928" -->
 
 Using a linear operator to describe temperature fluctuations:
@@ -160,13 +158,17 @@ represent the amplitude of a given volcanic event arriving at time 𝑡_𝑘.
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="./attachments/egu2023/ens-plts/temperature-all-strengths.webp" -->
 
-Notes:
+--
 
-The temperature response from the three different eruption magnitudes. The weakest
-volcano was created from an equatorial eruption injecting 26 Tg (tera gram), 400 Tg and
-1629 Tg of SO2 into the atmosphere between 18 and 20 km height.
+<!-- .slide: data-background-color="#001928" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod-all-strengths.webp" -->
 
-> For similar plots of aerosol optical depth, see the supplementary.
+--
+
+<!-- .slide: data-background-color="#001928" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/toa-all-strengths.webp" -->
 
 --
 
@@ -190,11 +192,11 @@ thereof) of the temperature response.
 
 --
 
-<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
-<!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background-opacity="0.1" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background-repeat="no-repeat" -->
 
 `$$
 \Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
@@ -399,13 +401,11 @@ Aerosol optical depth versus temperature on semilog-x axis
 
 --
 
-<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_toa.webp" -->
 
 --
 
-<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="./attachments/egu2023/ens-plts/toa_vs_temperature.webp" -->
 
