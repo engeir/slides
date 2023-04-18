@@ -41,15 +41,8 @@ to the magnitude of volcanic eruptions".
 
 ## Motivation
 
-See to the abstract, pull out some of it to mention here.
-
 <!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-visibility="hidden" -->
-
-Notes:
-
-The reason we are visiting this topic is that there have been several attempts to do
-[this], many of which focus on or assume [something about linearity maybe].
 
 --
 
@@ -88,75 +81,6 @@ Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), fi
 --
 
 <!-- .slide: data-background-color="#001928" -->
-
-<!-- .slide: data-visibility="hidden" -->
-
-From Gregory et al. (2016):
-
-> It would be useful for investigation of volcanic forcing and feedback in CMIP6 if
-> ensemble experiments were conducted with historical volcanic aerosol as the only
-> forcing agent in each AOGCM, to diagnose the climate response, and with the
-> corresponding AGCMs with prescribed sea surface conditions, to diagnose the radiative
-> forcing. This would reveal whether other models also exhibit a cloud adjustment and a
-> lower climate sensitivity for volcanic forcing, and offer the opportunity for analysis
-> of the processes involved.
-
-<!-- .element: style="font-size:20pt" -->
-
-Expect $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto
-M\_\{k,\\,\mathrm\{TOA\}\}^\max,\\,\mathrm{AOD}\in (0,0.15)$
-
-<a href="https://doi.org/10.1007/s00382-016-3055-1"
-data-citation-key="@gregory2016">Gregory et al. (2016)</a>
-
-<!-- .element: style="font-size:13pt" -->
-
-Notes:
-
-One note to make about the AOD and radiative imbalance is that they are often assumed as
-being proportional, with a proportionality constant of 25 estimated in the AR5.
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-color="#001928" -->
-
-Using a linear operator to describe temperature fluctuations:
-
-$$
-\Delta T(t)=\hat{L}[f_K(t)]
-$$
-
-$$
-\Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
-$$
-
-<!-- .element: class="fragment" -->
-
-Notes:
-
-Previous efforts of estimating a temperature response function from forcing data have
-often been to use a linear operator to describe temperature fluctuations in response to
-a forcing. Some studies also assume the forcing from different agents to be similar,
-although this have been disputed by several studies.
-
-The equation is depicting the linear relation between some forcing 𝑓(𝑡) and the
-deterministic temperature fluctuation due to the forcing.
-
-We wish to look further into the linearity assumption in relation to volcanoes over a
-large range of eruption magnitudes. With magnitude, we here mean the total sulphur
-aerosol mass.
-
-In particular; is it reasonable to write up the temperature response to volcanic
-eruptions as a convolution between the forcing and some general shape function, here
-represented by the letter 𝜙.
-
-The forcing is here consisting only of forcing due to episodic volcanoes, where 𝐴
-represent the amplitude of a given volcanic event arriving at time 𝑡_𝑘.
-
---
-
-<!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="./attachments/egu2023/ens-plts/temperature-all-strengths.webp" -->
 
@@ -188,53 +112,6 @@ From this initial simulation of overlapping pulses, the superposing of temperatu
 responses is relatively good, motivating further analysis of the linearity (or lack
 thereof) of the temperature response.
 
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-color="#001928" -->
-<!-- .slide: data-background="./attachments/egu2023/double-overlap-superpose.webp" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background-opacity="0.1" -->
-
-`$$
-\Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
-$$`
-
-`$$
-A_k\left\{
-\begin{aligned}
-&\overset{?}{=}g(M_k^{\max})\\
-&\overset{?}{=}M_k^{\max}
-\end{aligned}
-\right.,\,
-M=\left\{
-\begin{aligned}
-&\mathrm{SO_2\,[Tg]}\\
-&\mathrm{AOD\,[1]}\\
-&\mathrm{TOA\,[W/m^2]}
-\end{aligned}
-\right.
-$$`
-
-<!-- .element: class="fragment" data-fragment-index="1" -->
-
-where `$M_k^{\max}$` is the peak magnitude of event `$k$`.
-
-<!-- .element: class="fragment" data-fragment-index="1" -->
-<!-- .element: style="font-size:20pt" -->
-
-Notes:
-
-The question then become, can we convolve a general response function with some forcing
-representation to obtain temperature fluctuations? Or do we perhaps need a non-linear
-transformation of the forcing to be able to get temperature from convolutions?
-
-We consider three different sources to describe the forcing; total injected SO2 in Tg,
-the aerosol optical depth and forcing as top-of-the-atmosphere radiative imbalance.
-
-(Injected SO2 is used as model input to simulate the volcanoes, while both AOD and
-radiative imbalance are output variables of the model.)
-
 ---
 
 ## Results
@@ -252,14 +129,14 @@ _Legend description for the forthcoming figures._
 | C2W        | CESM2(WACCM6)                |
 | C2WN       | CESM2(WACCM6), high latitude |
 | C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
 | P          | Pinatubo, observational      |
 | P100       | 100 times Pinatubo           |
-| V1         | VolMIP, version 1            |
-| V2         | VolMIP, version 2            |
+| VT         | VolMIP, Tambora              |
 
 <!-- .element: class_="fragment animated move-to scale-down" data-animated-move-to-left="-15vw" data-animated-move-to-top="10vh" -->
 <!-- .element: style="font-size:15pt" -->
+
+
 
 Notes:
 
@@ -273,89 +150,29 @@ volcanic eruptions of three different sizes:
 
 --
 
-<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_temperature.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_temperature_logscale.webp" -->
 
 Notes:
 
-Temperature anomaly against injected SO2.
+Aerosol optical depth versus temperature on semilog-x axis.
 
-Note that the green asterisk, C2C, is NOT part of the inset, but has the same AOD value
-as the orange circle (C2WN), and the most extreme C2W point.
+This plot is showing the peak values of the three individual CESM2(WACCM6) runs, the
+CESM2(WACCM6) run that is the same as the largest individual, but placed at 56 degree
+north, as well as data from the Mount Pinatubo eruption, Pinatubo times 100 simulation
+and Mount Tambora Eruption.
+
+The C2W temperature data show close to logarithmic dependence on AOD, while data from
+other sources than CESM2 fall slightly off this, with especially the Pinatubo times 100
+simulation having a large temperature response.
 
 | Short Name | Long Name                    |
 | :--------- | :--------------------------- |
 | C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
+| C2WN⬆️      | CESM2(WACCM6), high latitude |
+| P          | Pinatubo                     |
 | P100       | 100 times Pinatubo           |
-| V          | VolMIP                       |
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_temperature_logscale.webp" -->
-
-Notes:
-
-Same as the previous: temperature anomaly against injected SO2, but on a logarithmic
-axis for the injected SO2.
-
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
-| P100       | 100 times Pinatubo           |
-| V          | VolMIP                       |
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_aod.webp" -->
-
-Notes:
-
-Injection versus aerosol optical depth
-
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
-| P100       | 100 times Pinatubo           |
-| V1         | VolMIP, version 1            |
-| V2         | VolMIP, version 2            |
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_aod_logscale.webp" -->
-
-Notes:
-
-Injection versus aerosol optical depth on log-log axis
-
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
-| P100       | 100 times Pinatubo           |
-| V1         | VolMIP, version 1            |
-| V2         | VolMIP, version 2            |
+| VT         | VolMIP, Tambora              |
 
 --
 
@@ -364,50 +181,21 @@ Injection versus aerosol optical depth on log-log axis
 
 Notes:
 
-Aerosol optical depth versus temperature
+Plotting this on linear axis makes it more clear that the biggest outlier is the
+Pinatubo times 100 simulation, while the Pinatubo and Tambora data lie close to the
+weakest CESM2 simulation.
+
+A similar plot can be made with temperature anomaly against injected SO2 (input field to
+the CESM2 simulations), but this is not shown here since it is close to a simple scaling
+of the x-axis.
 
 | Short Name | Long Name                    |
 | :--------- | :--------------------------- |
 | C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
+| C2WN⬆️      | CESM2(WACCM6), high latitude |
+| P          | Pinatubo                     |
 | P100       | 100 times Pinatubo           |
-| V1         | VolMIP, version 1            |
-| V2         | VolMIP, version 2            |
-
---
-
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_temperature_logscale.webp" -->
-
-Notes:
-
-Aerosol optical depth versus temperature on semilog-x axis
-
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo, observational      |
-| P100       | 100 times Pinatubo           |
-| V1         | VolMIP, version 1            |
-| V2         | VolMIP, version 2            |
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/injection_vs_toa.webp" -->
-
---
-
-<!-- .slide: data-visibility="hidden" -->
-<!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/toa_vs_temperature.webp" -->
+| VT         | VolMIP, Tambora              |
 
 --
 
@@ -416,9 +204,37 @@ Aerosol optical depth versus temperature on semilog-x axis
 
 Notes:
 
-Annual mean of radiative forcing against aerosol optical depth. All simulations are with
-the CESM2 climate model and dynamic ocean, one was run with CAM6 while the rest was
-using WACCM6 in the middle atmosphere configuration.
+Similar plot to the one shown from Gregory et al. (2016), of annual mean radiative
+forcing against aerosol optical depth.
+
+All C2W-labels are simulations with the CESM2 climate model and dynamic ocean using
+WACCM6 in the middle atmosphere configuration. Blue, downward pointing triangles
+indicate annual means from the simulation with the weakest eruption (similar to Mt.
+Pinatubo); orange diamond indicate the medium-sized eruption simulation and green upward
+pointing arrow indicate means from the strongest eruption simulation. The peak values
+from the three simulations are shown as the red circles.
+
+The two largest (green and orange) line up quite well, the medium with a steeper
+gradient than the strong, but where the strong have some points among the medium
+eruption (along the -4 gradient line) stemming from the initial rise/descent of the
+eruption. The decaying part last longer, thus more points come from the decay, and they
+line up close to on a gradient of -1.
+
+Also shown is the double and overlapping simulation where two medium-sized eruptions
+were used. The points from this simulation, shown by the red thin diamonds, places
+themselves among the points coming from the medium-sized individual simulation, as
+expected.
+
+The brown triplet shows an individual eruption simulation using the strongest eruption,
+but placed at 56 degrees north. The response is not as strong as for the equatorial
+eruption, but still the annual means fall in line with the path draw by the green
+triangles.
+
+The peak values from the Pinatubo times 100 simulation is shown with a pink square. This
+simulation incidently falls on the same gradient line as the medium-sized eruption.
+
+For comparison, the HadCM3 data points from the figure by Gregory et al. (2016) is also
+shown in grey "x"-es.
 
 | Short Name | Long Name                                              |
 | :--------- | :----------------------------------------------------- |
