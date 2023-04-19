@@ -32,10 +32,9 @@ layer"___
 
 Notes:
 
-Hi, and thanks for showing up to my talk here today. My name is Eirik Enger, and I'm a
-PhD candidate at UiT the Arctic University of Norway. My work focus on how volcanoes
-affect climate, and today we will look at "Insensitivity of global temperature response
-to the magnitude of volcanic eruptions".
+My name is Eirik Enger, and I'm a PhD candidate at UiT the Arctic University of Norway.
+My work focus on how volcanoes affect climate, and today we will look at "Insensitivity
+of global temperature response to the magnitude of volcanic eruptions".
 
 ---
 
@@ -48,7 +47,7 @@ to the magnitude of volcanic eruptions".
 
 <!-- .slide: data-background-color="#001928" -->
 
-Figure from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1)
+_Figure from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1)_
 
 <!-- .element: style="font-size:13pt" -->
 
@@ -76,7 +75,29 @@ or is it a shortcoming on the model's side?
 Can we make a similar comparison of the peak values, for example in daily resolution (as
 opposed to averaging over the whole year before comparing)?
 
-Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), figure 4.
+> Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), figure
+> 4.
+
+--
+
+<!-- .slide: data-state="blur" -->
+<!-- .slide: data-background-color="#001928" -->
+
+### Simulations
+
+- CESM2 (Community Earth System Model, version 2.1.3) <!-- .element: class="fragment"
+  -->
+- WACCM6 atmosphere <!-- .element: class="fragment" -->
+- <!-- .element: class="fragment" --> Dynamic ocean and constant sea-surface conditions
+  (AOGCM & AGCM)
+
+Notes:
+
+Simulations are carried out with the Community Earth System Model, version 2.1.3, and
+using the WACCM6 high-top atmosphere component, specifically in a nominal two degree
+resolution and the "middle atmosphere" component setting. Both simulations with a
+dynamic ocean (i.e., running the model as an AOGCM) and constant sea-surface conditions
+(i.e., a AGCM) have been done.
 
 --
 
@@ -86,11 +107,39 @@ Plot from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), fi
 
 Notes:
 
-The temperature response from the three different eruption magnitudes. The weakest
-volcano was created from an equatorial eruption injecting 26 Tg (tera gram), 400 Tg and
-1629 Tg of SO2 into the atmosphere between 18 and 20 km height.
+We here see the three main simulations that have been run, of individual volcanic
+eruptions at the equator with three different magnitudes defined by inputting different
+amounts of SO2 into the atmosphere.
 
-> For similar plots of aerosol optical depth, see the supplementary.
+We are specifically looking at the temperature response from the three different
+eruption magnitudes, where the notation of a downward arrow, horizontal line and upward
+arrow will be used to indicate the different magnitudes of a weak, medium and strong
+eruption, respectively.
+
+> For similar plots of aerosol optical depth and radiative forcing, see the
+> supplementary.
+
+--
+
+<!-- .slide: data-state="blur" -->
+<!-- .slide: data-background-color="#001928" -->
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/temperature-all-strengths.webp" -->
+<!-- .slide: data-background-opacity="0.15" -->
+
+- <!-- .element: style="font-size=25pt" --> At the equator, at $18$–$20$
+  `$\mathrm{km}$` altitude
+- <!-- .element: class="fragment" style="font-size:25pt" --> $\mathrm{SO_2}$ amounts:
+  `$26\,\mathrm{Tg}$`(↓), `$400\,\mathrm{Tg}$`(—) and `$1629\,\mathrm{Tg}$`(↑)
+
+Notes:
+
+The volcanoes were created from an equatorial eruption, with the SO2 injected between 18
+and 20 km altitude. The amounts of injected SO2 were 26 Tg (similar to Mt. Pinatubo),
+400 Tg and 1629 Tg (same order of magnitude as young Toba Tuff ~74 ky ago) of SO2 into
+the atmosphere between 18 and 20 km height.
+
+> Tg = tera gram = Mt = mega tons = 1e12 grams
 
 --
 
@@ -100,16 +149,15 @@ volcano was created from an equatorial eruption injecting 26 Tg (tera gram), 400
 
 Notes:
 
-Results from running CESM2(WACCM6) with a 400 Tg volcanic event occurring once (Single
-event, orange) and occurring twice four years apart (Double event, blue). "Superposed"
-in green is two copies of the single event superposed. The single event is copied and
-shifted in time, where the shadings mark the two regions of the single events.
+Results from running with a 400 Tg volcanic event occurring once (Single event, orange)
+and occurring twice four years apart (Double event, blue). "Superposed" in green is two
+copies of the single event superposed. The single event is copied and shifted in time,
+where the shadings mark the two regions of the single events.
 
-The volcano erupted on 15. February 1853 and on the same day in 1857, located at the
-equator (1 degree east).
+The volcano erupted on 15. February 1853 and on the same day in 1857.
 
 From this initial simulation of overlapping pulses, the superposing of temperature
-responses is relatively good, motivating further analysis of the linearity (or lack
+response is relatively good, motivating further analysis of the linearity (or lack
 thereof) of the temperature response.
 
 ---
@@ -124,19 +172,17 @@ _Legend description for the forthcoming figures._
 
 <!-- .element: style="font-size:20pt" -->
 
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN       | CESM2(WACCM6), high latitude |
-| C2C        | CESM2(CAM6)                  |
-| P          | Pinatubo, observational      |
-| P100       | 100 times Pinatubo           |
-| VT         | VolMIP, Tambora              |
+| Short Name | Long Name                             |
+| :--------- | :------------------------------------ |
+| C2W        | CESM2(WACCM6)                         |
+| C2WN↑      | CESM2(WACCM6), high latitude, north   |
+| C2WDO—     | CESM2(WACCM6), double and overlapping |
+| P          | Pinatubo                              |
+| P100       | Pinatubo times 100                    |
+| T          | Tambora                               |
 
 <!-- .element: class_="fragment animated move-to scale-down" data-animated-move-to-left="-15vw" data-animated-move-to-top="10vh" -->
 <!-- .element: style="font-size:15pt" -->
-
-
 
 Notes:
 
@@ -166,13 +212,13 @@ The C2W temperature data show close to logarithmic dependence on AOD, while data
 other sources than CESM2 fall slightly off this, with especially the Pinatubo times 100
 simulation having a large temperature response.
 
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN⬆️      | CESM2(WACCM6), high latitude |
-| P          | Pinatubo                     |
-| P100       | 100 times Pinatubo           |
-| VT         | VolMIP, Tambora              |
+| Short Name | Long Name                             |
+| :--------- | :------------------------------------ |
+| C2W        | CESM2(WACCM6)                         |
+| C2WN↑      | CESM2(WACCM6), high latitude, north   |
+| P          | Pinatubo                              |
+| P100       | Pinatubo times 100                    |
+| T          | Tambora                               |
 
 --
 
@@ -189,18 +235,18 @@ A similar plot can be made with temperature anomaly against injected SO2 (input 
 the CESM2 simulations), but this is not shown here since it is close to a simple scaling
 of the x-axis.
 
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C2WN⬆️      | CESM2(WACCM6), high latitude |
-| P          | Pinatubo                     |
-| P100       | 100 times Pinatubo           |
-| VT         | VolMIP, Tambora              |
+| Short Name | Long Name                             |
+| :--------- | :------------------------------------ |
+| C2W        | CESM2(WACCM6)                         |
+| C2WN↑      | CESM2(WACCM6), high latitude, north   |
+| P          | Pinatubo                              |
+| P100       | Pinatubo times 100                    |
+| T          | Tambora                               |
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_toa_avg.webp" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_toa_avg_inset.webp" -->
 
 Notes:
 
@@ -236,14 +282,21 @@ simulation incidently falls on the same gradient line as the medium-sized erupti
 For comparison, the HadCM3 data points from the figure by Gregory et al. (2016) is also
 shown in grey "x"-es.
 
-| Short Name | Long Name                                              |
-| :--------- | :----------------------------------------------------- |
-| C2W⬆️       | CESM2(WACCM6), strong eruption                         |
-| C2W—       | CESM2(WACCM6), medium eruption                         |
-| C2W⬇️       | CESM2(WACCM6), weak eruption                           |
-| C2WN⬆️      | CESM2(WACCM6), high latitude, strong eruption          |
-| C2DO—      | CESM2(WACCM6), double and overlapping, medium eruption |
-| C2C⬆️       | CESM2(CAM6), strong eruption                           |
+| Short Name            | Long Name                                                |
+| :-------------------- | :------------------------------------------------------- |
+| C2W↓                  | CESM2(WACCM6), weak eruption                             |
+| C2W—                  | CESM2(WACCM6), medium eruption                           |
+| C2W↑                  | CESM2(WACCM6), strong eruption                           |
+| C2W Peaks\*           | CESM2(WACCM6), peak values                               |
+| C2WDO—                | CESM2(WACCM6), double and overlapping, medium eruption   |
+| C2WN↑                 | CESM2(WACCM6), high latitude, north, strong eruption     |
+| P100 Peak\*           | Pinatubo times 100, peak value                           |
+| Gregory et al. (2016) | Values from HadCM3 sstPiHistvol by Gregory et al. (2016) |
+
+--
+
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide: data-background="./attachments/egu2023/ens-plts/aod_vs_toa_avg_full.webp" -->
 
 ---
 
