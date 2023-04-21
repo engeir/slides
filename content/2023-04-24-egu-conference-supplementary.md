@@ -34,36 +34,6 @@ layer"**_
 --
 
 <!-- .slide: data-background-color="#001928" -->
-<!-- .slide: data-visibility="hidden" -->
-
-From Gregory et al. (2016):
-
-> It would be useful for investigation of volcanic forcing and feedback in CMIP6 if
-> ensemble experiments were conducted with historical volcanic aerosol as the only
-> forcing agent in each AOGCM, to diagnose the climate response, and with the
-> corresponding AGCMs with prescribed sea surface conditions, to diagnose the radiative
-> forcing. This would reveal whether other models also exhibit a cloud adjustment and a
-> lower climate sensitivity for volcanic forcing, and offer the opportunity for analysis
-> of the processes involved.
-
-<!-- .element: style="font-size:20pt" -->
-
-Expect $M\_\{k,\\,\mathrm\{AOD\}\}^\max\propto
-M\_\{k,\\,\mathrm\{TOA\}\}^\max,\\,\mathrm{AOD}\in (0,0.15)$
-
-<a href="https://doi.org/10.1007/s00382-016-3055-1"
-data-citation-key="@gregory2016">Gregory et al. (2016)</a>
-
-<!-- .element: style="font-size:13pt" -->
-
-Notes:
-
-One note to make about the AOD and radiative imbalance is that they are often assumed as
-being proportional, with a proportionality constant of 25 estimated in the AR5.
-
---
-
-<!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/aod-all-strengths.webp" -->
 
