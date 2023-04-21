@@ -7,7 +7,6 @@ lang: en-GB
 revealOptions:
   transition: "none"
   allottedTime: 480_000
-  showNotes: separate-page
   pdfSeparateFragments: false
 ---
 

@@ -4,6 +4,7 @@ event: EGU General Assembly 2023
 author: Eirik R. Enger
 date: "2023-04-24"
 lang: en-GB
+hidden: true
 revealOptions:
   transition: "none"
   showNotes: separate-page
