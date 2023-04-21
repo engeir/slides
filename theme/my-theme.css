@@ -401,14 +401,22 @@ nav.flexbox a:hover::before {
   width: 100%; }
 
 a:link {
-  color: #038a59;
+  color: #f28d24;
   background-color: transparent;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:visited {
-  color: #025839;
+  color: #c76c0c;
   background-color: transparent;
-  text-decoration: none; }
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8dcffc;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 table.center {
   border-collapse: collapse;
