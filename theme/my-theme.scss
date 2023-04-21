@@ -1,7 +1,7 @@
-// Import the theme for the slides ---------------------------------------------------- //
+// Import the theme for the slides -------------------------------------------------- //
 @import 'source/mytheme.scss';
 
-// Changes to site styles ------------------------------------------------------------- //
+// Changes to site styles ----------------------------------------------------------- //
 $mywhite: #ddd;
 $mygray: #505050;
 $myred: #ff0000;
@@ -15,7 +15,7 @@ body {
   font-size: 25px;
 }
 
-// Navigation menu from home page ----------------------------------------------------- //
+// Navigation menu from home page --------------------------------------------------- //
 .topnav {
   border-bottom: 1px solid #333333;
   border-width: 2px 0;
@@ -130,7 +130,7 @@ a:visited {
   text-decoration: none;
 }
 
-// Table ------------------------------------------------------------------------------ //
+// Table ---------------------------------------------------------------------------- //
 table.center {
   border-collapse: collapse;
   width: 80%;
