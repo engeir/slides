@@ -20,10 +20,10 @@ layer"**_
 
 <!-- .element: style="font-size:18pt" -->
 
-<img src="https://raw.githubusercontent.com/engeir/presentations/8c373c6/2023/egu23/assets/UiT_Logo_Eng_2l_Hvit.png" width="auto" height="110px" />
+<img src="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/UiT_Logo_Eng_2l_Hvit.png" width="auto" height="110px" />
 <img src="https://egu23.eu/EGU22-sharing-is-encouraged.png" width="auto" height="110px" />
 <a href="https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html" target="_blank">
-<img src="https://raw.githubusercontent.com/engeir/presentations/8c373c6/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /> </a>
+<img src="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /> </a>
 
 ---
 
@@ -36,19 +36,21 @@ layer"**_
 
 <!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/aod-all-strengths.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod-all-strengths.webp" -->
 
 --
 
 <!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/toa-all-strengths.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/toa-all-strengths.webp" -->
 
 --
 
 <!-- .slide: data-background-color="#001928" -->
 
 Using a linear operator to describe temperature fluctuations:
+
+<!-- dprint-ignore-start -->
 
 $$
 \Delta T(t)=\hat{L}[f_K(t)]
@@ -57,6 +59,8 @@ $$
 $$
 \Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
 $$
+
+<!-- dprint-ignore-end -->
 
 Notes:
 
@@ -75,6 +79,8 @@ represent the amplitude of a given volcanic event arriving at time 𝑡_𝑘.
 --
 
 <!-- .slide: data-background-color="#001928" -->
+
+<!-- dprint-ignore-start -->
 
 `$$
 \Delta T(t)=\phi\ast f_K(t)=\phi\ast\sum_k A_k\delta(t-t_k)
@@ -95,6 +101,8 @@ M=\left\{
 \end{aligned}
 \right.
 $$`
+
+<!-- dprint-ignore-end -->
 
 where `$M_k^{\max}$` is the peak magnitude of event `$k$`.
 
@@ -121,7 +129,7 @@ radiative forcing are output variables of the model.)
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/injection_vs_temperature.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/injection_vs_temperature.webp" -->
 
 Notes:
 
@@ -138,12 +146,13 @@ Temperature anomaly against injected SO2.
 | T          | Tambora                      |
 
 > C1C data from
-> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>.
+> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner
+> et al. (2016)</a>.
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/injection_vs_temperature_logscale.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/injection_vs_temperature_logscale.webp" -->
 
 Notes:
 
@@ -160,12 +169,13 @@ Temperature anomaly against injected SO2.
 | T          | Tambora                      |
 
 > C1C data from
-> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>.
+> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner
+> et al. (2016)</a>.
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/injection_vs_aod.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/injection_vs_aod.webp" -->
 
 Notes:
 
@@ -183,7 +193,7 @@ Aerosol optical depth versus injected SO2.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/injection_vs_aod_logscale.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/injection_vs_aod_logscale.webp" -->
 
 Notes:
 
@@ -201,7 +211,7 @@ Aerosol optical depth versus injected SO2.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/aod_vs_temperature.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod_vs_temperature.webp" -->
 
 Notes:
 
@@ -218,7 +228,7 @@ Temperature versus aerosol optical depth.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/aod_vs_temperature_logscale.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod_vs_temperature_logscale.webp" -->
 
 Notes:
 
@@ -235,46 +245,48 @@ Temperature versus aerosol optical depth.
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/injection_vs_toa.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/injection_vs_toa.webp" -->
 
 Notes:
 
 Radiative forcing versus injected SO2.
 
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo                     |
-| P100       | Pinatubo times 100           |
+| Short Name | Long Name          |
+| :--------- | :----------------- |
+| C2W        | CESM2(WACCM6)      |
+| C1C        | CESM1(CAM5)        |
+| P          | Pinatubo           |
+| P100       | Pinatubo times 100 |
 
 > C1C data from
-> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>.
+> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner
+> et al. (2016)</a>.
 
 --
 
 <!-- .slide: data-background-size="contain" -->
-<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/toa_vs_temperature.webp" -->
+<!-- .slide: data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/toa_vs_temperature.webp" -->
 
 Notes:
 
 Temperature versus radiative forcing.
 
-| Short Name | Long Name                    |
-| :--------- | :--------------------------- |
-| C2W        | CESM2(WACCM6)                |
-| C1C        | CESM1(CAM5)                  |
-| P          | Pinatubo                     |
-| P100       | Pinatubo times 100           |
+| Short Name | Long Name          |
+| :--------- | :----------------- |
+| C2W        | CESM2(WACCM6)      |
+| C1C        | CESM1(CAM5)        |
+| P          | Pinatubo           |
+| P100       | Pinatubo times 100 |
 
 > C1C data from
-> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>.
+> <a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner
+> et al. (2016)</a>.
 
 --
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/6311f98/2023/egu23/assets/aod_vs_toa_avg_scaled.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod_vs_toa_avg_scaled.webp"
 -->
 
 Notes:
@@ -295,14 +307,23 @@ coincide.
 
 ### Links
 
+<!-- dprint-ignore-start -->
+
 ----
 
-Go to [html version](https://slides.eirikenger.xyz/2023-04-24-egu-conference-supplementary?showNotes=separate-page).
+<!-- dprint-ignore-end -->
+
+Go to
+[html version](https://slides.eirikenger.xyz/2023-04-24-egu-conference-supplementary?showNotes=separate-page).
 
 [Link](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html) and QR code to the
 conference abstract information:
 
 <a href="https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html" target="_blank">
-<img src="https://raw.githubusercontent.com/engeir/presentations/2f2ca25/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /> </a>
+<img src="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /> </a>
+
+<!-- dprint-ignore-start -->
 
 ----
+
+<!-- dprint-ignore-end -->
