@@ -4,6 +4,8 @@ on:
     branches: [ main ]
 jobs:
   build:
+    # Only run the deployment if the owner initiated the workflow.
+    if: github.actor == github.repository_owner
     runs-on: ubuntu-latest
 
     steps:
