@@ -13,7 +13,7 @@
     },
     "devDependencies": {
         "cz-conventional-changelog": "^1.0.1",
-        "patch-package": "^6.0.2"
+        "patch-package": "^7.0.2"
     },
     "config": {
         "commitizen": {
