@@ -72,7 +72,7 @@ jobs:
     # release-drafter ran successfully and if a new version tag was detected.
     if: github.actor == github.repository_owner
     needs: update_release_draft
-    if: ${{ needs.update_release_draft.outputs.deploy }}
+    if: ${{ needs.update_release_draft.outputs.deploy }} == true
 
     steps:
     - uses: actions/checkout@v3
