@@ -84,6 +84,7 @@ jobs:
         with:
           # persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Generate static presentations site
         uses: actions/setup-node@v3
@@ -105,7 +106,8 @@ jobs:
       - name: Force push to destination branch
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           force: true
           directory: ./docs/
