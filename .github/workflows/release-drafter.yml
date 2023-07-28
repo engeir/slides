@@ -76,10 +76,10 @@ jobs:
     steps:
       - name: Echo
         run: |
-          echo needs.update_release_draft.outputs.deploy == true && github.actor == github.repository_owner
           echo needs.update_release_draft.outputs.deploy
-          echo github.actor
-          echo github.repository_owner
+          echo needs.update_release_draft.outputs.deploy == true && ${{ github.actor == github.repository_owner }}
+          echo ${{ github.actor }}
+          echo ${{ github.repository_owner }}
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
