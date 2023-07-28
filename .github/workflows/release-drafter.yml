@@ -1,4 +1,4 @@
-name: Publisher
+name: Release Drafter
 
 on:
   push:
@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   update_release_draft:
-    name: Release
+    # name: Release
     permissions:
       # write permission is required to create a github release
       contents: write
