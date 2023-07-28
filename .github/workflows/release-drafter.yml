@@ -77,9 +77,9 @@ jobs:
       - name: Echo
         run: |
           echo ${{ needs.update_release_draft.outputs.deploy }}
-          echo ${{ needs.update_release_draft.outputs.deploy == true }}
+          echo ${{ needs.update_release_draft.outputs.deploy == 'true' }}
           echo ${{ github.actor == github.repository_owner }}
-          echo ${{ needs.update_release_draft.outputs.deploy == true }} && ${{ github.actor == github.repository_owner }}
+          echo ${{ needs.update_release_draft.outputs.deploy == 'true' }} && ${{ github.actor == github.repository_owner }}
           echo ${{ github.actor }}
           echo ${{ github.repository_owner }}
       - uses: actions/checkout@v3
