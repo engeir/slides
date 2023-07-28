@@ -1,4 +1,4 @@
-name: Release Drafter
+name: Publisher
 
 on:
   push:
@@ -62,6 +62,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    outputs:
+      deploy: ${{ steps.check-version.outputs.tag != '' }}
+
   deploy:
     name: Deploy to GitHub pages
     runs-on: ubuntu-latest
@@ -69,7 +72,7 @@ jobs:
     # release-drafter ran successfully and if a new version tag was detected.
     if: github.actor == github.repository_owner
     needs: update_release_draft
-    if: needs.update_release_draft.steps.check-version.outputs.tag
+    if: needs.update_release_draft.outputs.deploy
 
     steps:
     - uses: actions/checkout@v3
@@ -101,4 +104,3 @@ jobs:
         branch: gh-pages
         force: true
         directory: ./docs/
-
