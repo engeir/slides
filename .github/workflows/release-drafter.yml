@@ -18,6 +18,7 @@ permissions:
 
 jobs:
   update_release_draft:
+    name: Release
     permissions:
       # write permission is required to create a github release
       contents: write
@@ -60,3 +61,44 @@ jobs:
           tag: ${{ steps.check-version.outputs.tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    name: Deploy to GitHub pages
+    runs-on: ubuntu-latest
+    # Only run the deployment if the owner initiated the workflow, if the
+    # release-drafter ran successfully and if a new version tag was detected.
+    if: github.actor == github.repository_owner
+    needs: update_release_draft
+    if: needs.update_release_draft.steps.check-version.outputs.tag
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
+    - name: Generate static presentations site
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm ci
+    - run: npm run build
+
+    - name: Init new repo in dist folder and commit generated files
+      run: |
+        cd docs/
+        [[ ${{ github.actor }} == "engeir" ]] && echo "slides.eirikenger.xyz" > CNAME
+        git init
+        git add -A
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "Add changes"
+
+    - name: Force push to destination branch
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        force: true
+        directory: ./docs/
+
