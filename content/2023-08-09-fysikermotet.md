@@ -1,8 +1,8 @@
 ---
-title: Insensitivity of global temperature response to the magnitude of volcanic eruptions
+title: Aerosol optical depth dependency from a large range of volcanic eruption strengths
 event: Fysikermøtet 2023
 author: Eirik R. Enger
-date: "2023-08-09"
+date: "2023-08-10"
 lang: en-GB
 revealOptions:
   transition: "none"
@@ -15,7 +15,7 @@ Color is from https://uit.no/ressurs/uit/profil2019/examples/fargekart.png, but 
 darker luminosity.
 -->
 
-# Insensitivity of global temperature response to the magnitude of volcanic eruptions
+# Aerosol optical depth dependency from a large range of volcanic eruption strengths
 
 <!-- .element: style="font-size:50pt" -->
 
@@ -30,15 +30,16 @@ width="auto" height="110px" />
 Notes:
 
 My name is Eirik Enger, and I'm a PhD candidate at UiT the Arctic University of Norway.
-My work focus on how volcanoes affect climate, and today we will look at "Insensitivity
-of global temperature response to the magnitude of volcanic eruptions".
+My work focus on how volcanoes affect climate, and today we will look at "Aerosol
+optical depth dependency from a large range of volcanic eruption strengths".
 
 --
 
 ## Background
 
-Volcanic eruptions are <span style="color:red;">short-lived</span> and give
-<span style="color:red;">big perturbations</span> on global mean surface temperature.
+Volcanic eruptions are <span style="color:yellow;">short-lived</span> and results in
+<span style="color:yellow;">large perturbations</span> on global mean surface
+temperature.
 
 Notes:
 
@@ -83,7 +84,8 @@ This plot is from Gregory et al. (2016), and it's showing radiative forcing agai
 aerosol optical depth. Two simulations were done by the authors using the HadCM3 climate
 model, one simulation by [Andrews (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1)
 used the HadGEM2 climate model while the AR5 data points are from the Fifth Assessment
-report of the IPCC (intergovernmental panel on climate change).
+report of the IPCC (intergovernmental panel on climate change). Gradient lines have
+slopes of -25, -24.6, -19, -17.
 
 This show a proportionality between annual mean values of AOD and radiative forcing, but
 only for AOD values up to 0.15, roughly equivalent to the peak of the 1991 Mt. Pinatubo
@@ -414,11 +416,11 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 
 --
 
-![](./tmp/aod_arrays_normalized.webp)
+![](./tmp/toa_arrays_normalized.webp)
 
 --
 
-![](./tmp/toa_arrays_normalized.webp)
+![](./tmp/aod_arrays_normalized.webp)
 
 ---
 
