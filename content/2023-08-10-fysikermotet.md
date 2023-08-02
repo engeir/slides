@@ -232,6 +232,7 @@ volcanic eruptions of three different sizes:
 
 --
 
+<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
 data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod_vs_temperature_logscale.webp"
@@ -270,6 +271,7 @@ simulation having a large temperature response.
 
 --
 
+<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
 data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/aod_vs_temperature.webp"
@@ -408,19 +410,31 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 
 --
 
-![](./tmp/aod_vs_toa_avg_loop.webp)
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide:
+data-background="./tmp/aod_vs_toa_avg_loop.webp"
+-->
 
 --
 
-![](./tmp/aod_vs_toa_avg_loop_ratio.webp)
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide:
+data-background="./tmp/aod_vs_toa_avg_loop_ratio.webp"
+-->
 
 --
 
-![](./tmp/toa_arrays_normalized.webp)
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide:
+data-background="./tmp/toa_arrays_normalized.webp"
+-->
 
 --
 
-![](./tmp/aod_arrays_normalized.webp)
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide:
+data-background="./tmp/aod_arrays_normalized.webp"
+-->
 
 ---
 
