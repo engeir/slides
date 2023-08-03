@@ -1,23 +1,23 @@
 {
-    "scripts": {
-        "start": "reveal-md content/ -w --template theme/my-reveal.html --theme theme/my-theme.css --disable-auto-open --listing-template theme/my-site.html",
-        "build": "rm -rf docs && reveal-md content/ --static docs --static-dirs=content/attachments --template theme/my-reveal.html --theme theme/my-theme.css --listing-template theme/my-site.html && mv docs/_assets docs/assets && find docs/*html | xargs sed -i.bak \"s/\\/_assets/\\.\\/assets/g\" && rm docs/*html.bak",
-        "preexport:topdf": "cp $npm_config_file 2print.md && replace-in-file '/class=\"fragment\"/g' ' ' 2print.md --isRegex",
-        "export:topdf": "reveal-md 2print.md --theme theme/my-theme.css --print presentation.pdf",
-        "postexport:topdf": "rm 2print.md",
-        "postinstall": "patch-package"
-    },
-    "dependencies": {
-        "replace-in-file": "^7.0.1",
-        "reveal-md": "^5.5.1"
-    },
-    "devDependencies": {
-        "cz-conventional-changelog": "^3.3.0",
-        "patch-package": "^8.0.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+  "scripts": {
+    "start": "reveal-md content/ -w --template theme/my-reveal.html --theme theme/my-theme.css --disable-auto-open --listing-template theme/my-site.html",
+    "build": "rm -rf docs && reveal-md content/ --static docs --static-dirs=content/attachments --template theme/my-reveal.html --theme theme/my-theme.css --listing-template theme/my-site.html && mv docs/_assets docs/assets && find docs/*html | xargs sed -i.bak \"s/\\/_assets/\\.\\/assets/g\" && rm docs/*html.bak",
+    "preexport:topdf": "cp $npm_config_file 2print.md && replace-in-file '/class=\"fragment\"/g' ' ' 2print.md --isRegex",
+    "export:topdf": "reveal-md 2print.md --theme theme/my-theme.css --print presentation.pdf",
+    "postexport:topdf": "rm 2print.md",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "replace-in-file": "^7.0.1",
+    "reveal-md": "^5.5.1"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "patch-package": "^8.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }

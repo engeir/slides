@@ -5,9 +5,11 @@ author: Eirik R. Enger
 date: "2023-08-10"
 lang: en-GB
 revealOptions:
-  transition: "none"
-  allottedTime: 480_000
+  allottedTime: 900_000  # 15 min
+  backgroundTransition: none
   pdfSeparateFragments: false
+  showNotes: true
+  transition: none
 ---
 
 <!--
@@ -19,7 +21,8 @@ darker luminosity.
 
 <!-- .element: style="font-size:50pt" -->
 
-_**Eirik Rolland Enger**, Audun Theodorsen, Maria Rugenstein, Rune Graversen_
+_**[Eirik Rolland Enger](mailto:eirik.r.enger@uit.no)**, Audun Theodorsen, Maria
+Rugenstein, Rune Graversen_
 
 <!-- .element: style="font-size:18pt" -->
 
@@ -35,10 +38,14 @@ optical depth dependency from a large range of volcanic eruption strengths".
 
 --
 
+<!-- .slide: data-visibility="hidden" -->
+
 ## Background
 
+--
+
 Volcanic eruptions are <span style="color:yellow;">short-lived</span> and results in
-<span style="color:yellow;">large perturbations</span> on global mean surface
+<span style="color:yellow;">large perturbations</span> in global mean surface
 temperature.
 
 Notes:
@@ -57,12 +64,23 @@ _Figure from
 
 ![Sigl et al. (2015)](./tmp/2015-sigl-volcanoes-swap.png)
 
+Notes:
+
+This figure is from
+<a href="https://doi.org/10.1038/nature14565" data-citation-key="@sigl2015">Sigl et al.
+(2015)</a>, and is showing global volcanic aerosol forcing and Northern Hemisphere
+temperature variations over the last $2500$ years.
+
+One can clearly spot the impact on temperature the largest volcanic eruptions had,
+giving temperature perturbations well above the noise floor. The temperature then
+reverts to its equilibrium state within few years.
+
 ---
 
 ## Motivation
 
 <!-- .slide: data-background-color="#001928" -->
-<!-- .slide: data-visibility="hiden" -->
+<!-- .slide: data-visibility="hidden" -->
 
 --
 
@@ -80,12 +98,16 @@ et al. (2016)</a>_
 
 Notes:
 
-This plot is from Gregory et al. (2016), and it's showing radiative forcing against
-aerosol optical depth. Two simulations were done by the authors using the HadCM3 climate
-model, one simulation by [Andrews (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1)
-used the HadGEM2 climate model while the AR5 data points are from the Fifth Assessment
-report of the IPCC (intergovernmental panel on climate change). Gradient lines have
-slopes of -25, -24.6, -19, -17.
+This plot is from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1),
+and it's showing radiative forcing against aerosol optical depth, where radiative
+forcing is a measure of the energy imbalance of the Earth and AOD is a measure of the
+opacity of the stratosphere
+([Marshall et al. 2020](https://doi.org/10.1029/2020GL090241)). Two simulations were
+done by the authors using the HadCM3 climate model, one simulation by
+[Andrews (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1) used the HadGEM2 climate
+model while the AR5 data points are from the Fifth Assessment report of the IPCC
+(intergovernmental panel on climate change). Gradient lines have slopes of -26.6, -24.6,
+-19, -17.
 
 This show a proportionality between annual mean values of AOD and radiative forcing, but
 only for AOD values up to 0.15, roughly equivalent to the peak of the 1991 Mt. Pinatubo
@@ -94,7 +116,7 @@ comparable to the Young Toba Tuff eruption 74ky ago, is of interest to us. Such 
 volcano would have roughly one hundred times the AOD values as Mt. Pinatubo, but
 previous simulations indicate radiative forcing values that are only about twenty times
 that of Mt. Pinatubo. Is this because the linearity does not hold for this large values,
-or is it a shortcoming on the model's side?
+or is it a **shortcoming on the model's side**?
 
 Can we make a similar comparison of the peak values, for example in daily resolution (as
 opposed to averaging over the whole year before comparing)?
@@ -141,7 +163,8 @@ eruption magnitudes, where the notation of a downward arrow, horizontal line and
 arrow will be used to indicate the different magnitudes of a weak, medium and strong
 eruption, respectively.
 
-> For similar plots of aerosol optical depth and radiative forcing, see the
+> <span style="color:red;">FIXME:</span> For similar plots of aerosol optical depth and
+> radiative forcing, see the
 > [supplementary](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html).
 
 --
@@ -155,24 +178,30 @@ data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/
 <!-- .slide: data-background-opacity="0.15" -->
 
 - At the equator
-- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$
+- <!-- .element: class="fragment" data-fragment-index="1" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$
   `$\mathrm{km}$` altitude
-- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ amounts:
+- <!-- .element: class="fragment" data-fragment-index="2" -size:29pt" --> $\mathrm{SO_2}$ amounts:
   - `$26\,\mathrm{Tg}$`(↓)
   - `$400\,\mathrm{Tg}$`(—)
   - `$1629\,\mathrm{Tg}$`(↑)
+
+> Tg = tera gram = Mt = mega tons = $10^{12}$ grams
+
+<!-- .element: style="font-size:20pt" -->
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
 Notes:
 
 The volcanoes were created from an equatorial eruption, with the SO2 injected between 18
 and 20 km altitude. The amounts of injected SO2 were 26 Tg (similar to Mt. Pinatubo),
-400 Tg and 1629 Tg (same order of magnitude as Young Toba Tuff ~74 ky ago) of SO2 into
-the atmosphere between 18 and 20 km height.
+400 Tg (similar to the 1257 Samalas eruption) and 1629 Tg (same order of magnitude as
+Young Toba Tuff ~74 ky ago) of SO2 into the atmosphere between 18 and 20 km height.
 
 > Tg = tera gram = Mt = mega tons = 1e12 grams
 
 --
 
+<!-- .slide: data-visibility="hidden" -->
 <!-- .slide: data-background-color="#001928" -->
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
@@ -198,14 +227,14 @@ does indeed respond linearly to _some representation_ of the radiative forcing.
 
 ## Results
 
-<!-- .slide: data-visibility="hiden" -->
+<!-- .slide: data-visibility="hidden" -->
 
 --
 
 _Legend description for the forthcoming figures._
 
 <!-- .element: style="font-size:20pt" -->
-<!-- .slide: data-visibility="hiden" -->
+<!-- .slide: data-visibility="hidden" -->
 
 | Short Name | Long Name                             |
 | :--------- | :------------------------------------ |
@@ -226,6 +255,7 @@ We have run the CESM2 as an AOGCM and AGCM with prescribed SST conditions with m
 volcanic eruptions of three different sizes:
 
 - the smallest volcano is comparable to the Mt. Pinatubo eruption
+- the intermediate volcano is comparable to the Samalas eruption
 - the largest volcano is comparable to the Young Toba Tuff eruption (i.e., roughly 100
   times Mt. Pinatubo)
 - the third sits in the middle between the two extremes.
@@ -316,6 +346,35 @@ of the x-axis.
 data-background="./tmp/aod_vs_toa_avg_inset_sparse.webp"
 -->
 
+Notes:
+
+Similar plot to the one shown from
+[Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1), of annual mean
+radiative forcing against aerosol optical depth. This uses the same ratio on the axes,
+but somewhat zoomed out.
+
+Only the data from the simulation carried out by the authors of
+[Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1) is included here as
+the grey x-es, which was from the HadCM3 model. The gradient lines are the same as those
+from the earlier figure. We here first show the data from the smallest volcanic eruption
+that we simulated (blue downward pointing triangles), which we find to be well aligned
+with the data obtained by
+[Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-3055-1). The yellow plus-sign
+show for reference the peak values after the 1815 Mt. Tambora eruption while the purple
+star show the peak values after the 1991 Mt. Pinatubo eruption.
+
+This works as a nice test that the data output from the CESM2 model is comparable with
+previous results.
+
+Let us fill out this plot more with data from the stronger volcanic eruptions as well.
+
+| Short Name            | Long Name                                                |
+| :-------------------- | :------------------------------------------------------- |
+| T Peak\*              | Tambora, peak value                                      |
+| C2W↓                  | CESM2(WACCM6), weak eruption                             |
+| P Peak\*              | Pinatubo, peak value                                     |
+| Gregory et al. (2016) | Values from HadCM3 sstPiHistvol by Gregory et al. (2016) |
+
 --
 
 <!-- .slide: data-background-size="contain" -->
@@ -325,33 +384,23 @@ data-background="./tmp/aod_vs_toa_avg_inset.webp"
 
 Notes:
 
-Similar plot to the one shown from Gregory et al. (2016), of annual mean radiative
-forcing against aerosol optical depth. This uses the same ratio on the axes, but
-somewhat zoomed out.
+We now also include annual means from the medium-sized tropical eruption (orange
+diamonds) and the strongest tropical eruption, in addition to annual means from a
+Northern Hemisphere strong eruption (brown upward pointing tri-star) and a simulation of
+two tropical eruptions that followed four years apart (red narrow diamonds).
 
-All C2W-labels are simulations with the CESM2 climate model and WACCM6 in the middle
-atmosphere configuration. Blue, downward pointing triangles indicate annual means from
-the simulation with the weakest eruption (similar to Mt. Pinatubo); orange diamonds
-indicate the medium-sized eruption simulation and green upward pointing triangles
-indicate means from the strongest eruption simulation.
-
-For comparison, the HadCM3 data points from the figure by Gregory et al. (2016) is also
-shown in grey "x"-es, as well as annual means from the double and overlapping simulation
-(red diamonds) and the peak values from both Pinatubo and Tambora.
-
-There is still substantial noise in the C2W data, but ~~no years across the whole
-ensemble~~ _only the weak eruption data points (as well as two individual data points
-from the intermediate and strong)_ fall below the "-19" gradient line for AOD values of
-only 0.02 and higher.
+Now we find that among the C2W data, _only the weak eruption data points_ fall below the
+"-19" gradient line for AOD values of 0.1 and higher.
 
 | Short Name            | Long Name                                                |
 | :-------------------- | :------------------------------------------------------- |
 | T Peak\*              | Tambora, peak value                                      |
-| C2W↓                  | CESM2(WACCM6), weak eruption                             |
-| C2W—                  | CESM2(WACCM6), medium eruption                           |
 | C2W↑                  | CESM2(WACCM6), strong eruption                           |
+| C2W—                  | CESM2(WACCM6), medium eruption                           |
+| C2W↓                  | CESM2(WACCM6), weak eruption                             |
 | P Peak\*              | Pinatubo, peak value                                     |
-| C2WDO—                | CESM2(WACCM6), double and overlapping, medium eruption   |
+| C2WN↑                 | CESM2(WACCM6), northern hemisphere, strong eruption      |
+| C2WDO—                | CESM2(WACCM6), double, and overlapping, medium eruption  |
 | Gregory et al. (2016) | Values from HadCM3 sstPiHistvol by Gregory et al. (2016) |
 
 --
@@ -366,25 +415,21 @@ Notes:
 If we zoom out to include all data points, it is evident that the two largest eruption
 simulations follow a way less steep gradient than the HadCM3 data does.
 
-The two largest (green and orange) ~~line up quite well, but on different slopes; the
-medium with a steeper gradient than the strong, but where the strong have some points
-among the medium eruption (along the -4 gradient line) stemming from the initial rise of
-the eruption. The decaying part last longer, thus more points come from the decay, and
-they line up close to on a gradient of -1.~~ _start off similarly, but on a loop
-trajectory, where the intermediate data points loop cuts off short and thus get on
-average a steeper graient than the strong eruption points._
+The two largest (green and orange) start off similarly, but on a loop trajectory, where
+the intermediate data points loop cuts off short and thus get on average a steeper
+graient than the strong eruption points (close to -10 and -4).
 
 The points from double and overlapping simulation, shown by the red thin diamonds,
 places themselves among the points coming from the medium-sized individual simulation,
-as expected.
+as expected, and so does the data from the strong, high latitude eruption.
 
 The peak values from the three main equatorial simulations are shown as the red circles.
-The peak value from the Pinatubo times 100 simulation (from Jones et al. (2005)) is
-shown with a pink square. This simulation incidently falls on the same gradient line as
-the medium-sized eruption. While the magnitude of the radiative forcing obtained from
-this simulation of a super-eruption seems to be too small when compared to the "-19"
-gradient line, compared to the simulations done here with CESM2, its radiative forcing
-magnitude seems too big.
+The peak value from the Pinatubo times 100 simulation (from
+[Jones et al. (2005)](https://doi.org/10.1007/s00382-005-0066-8)) is shown with a pink
+square. While the magnitude of the radiative forcing obtained from this simulation of a
+super-eruption seems to be too small when compared to the "-19" gradient line, compared
+to the simulations done here with CESM2, it fits in well with how an even stronger
+eruptions loop trajectory might look like.
 
 Filling out this radiative forcing-AOD space may give a clearer answer to whether there
 is a linear relation to be found, and possibly its range of validity. And even if there
@@ -396,11 +441,12 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 | :-------------------- | :------------------------------------------------------- |
 | C2W Peaks\*           | CESM2(WACCM6), peak values                               |
 | T Peak\*              | Tambora, peak value                                      |
-| C2W↓                  | CESM2(WACCM6), weak eruption                             |
-| C2W—                  | CESM2(WACCM6), medium eruption                           |
 | C2W↑                  | CESM2(WACCM6), strong eruption                           |
+| C2W—                  | CESM2(WACCM6), medium eruption                           |
+| C2W↓                  | CESM2(WACCM6), weak eruption                             |
 | P100 Peak\*           | Pinatubo times 100, peak value                           |
 | P Peak\*              | Pinatubo, peak value                                     |
+| C2WN↑                 | CESM2(WACCM6), northern hemisphere, strong eruption      |
 | C2WDO—                | CESM2(WACCM6), double and overlapping, medium eruption   |
 | Gregory et al. (2016) | Values from HadCM3 sstPiHistvol by Gregory et al. (2016) |
 
@@ -415,12 +461,57 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 data-background="./tmp/aod_vs_toa_avg_loop.webp"
 -->
 
+Notes:
+
+To look further into what is happening with the loop, we take all our simulations of
+single volcanic eruptions, align then so that the eruption day is at time zero, and
+compute seasonal means to increase the temporal resolution.
+
+The data is in this case plotted with the same shape as before, but the colour now
+indicate the time after the eruption. From this view, one clearly finds that the start
+is the lower branch of the loop while the decay is the upper branch.
+
+The lower branch occurs over at time of approximately $0$ to $1.2$ years after the
+eruption at which point both AOD and forcing reach its peak values. From about $1.2$ to
+$3$ years after the eruption the upper branch of decay occur.
+
+This give a slight indication that the lower branch bends and therefore have a varying
+ratio of forcing to AOD, while the upper branch is close to linear with a constant
+ratio.
+
+| Short Name | Long Name                                           |
+| :--------- | :-------------------------------------------------- |
+| C2WN↑      | CESM2(WACCM6), northern hemisphere, strong eruption |
+| C2W↑       | CESM2(WACCM6), strong eruption                      |
+| C2W—       | CESM2(WACCM6), medium eruption                      |
+| C2W↓       | CESM2(WACCM6), weak eruption                        |
+
 --
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
 data-background="./tmp/aod_vs_toa_avg_loop_ratio.webp"
 -->
+
+Notes:
+
+We next plot the ratio of radiative forcing to AOD, and split this into before the peak
+and after the peak, that is, from (after) $0$ to $1.2$ years and from (after) $1.2$ to
+$3$ years.
+
+The values on the right side give the slopes of linear fits of the data, where the pairs
+of values follow the same order from top to bottom as the legend, and the upper value
+within a pair represent the first time period.
+
+There is a clear distinction between the two periods, which suggest that the dynamics
+happening shortly after the eruption and during the decay phase are different.
+
+| Short Name | Long Name                                           |
+| :--------- | :-------------------------------------------------- |
+| C2WN↑      | CESM2(WACCM6), northern hemisphere, strong eruption |
+| C2W↑       | CESM2(WACCM6), strong eruption                      |
+| C2W—       | CESM2(WACCM6), medium eruption                      |
+| C2W↓       | CESM2(WACCM6), weak eruption                        |
 
 --
 
@@ -429,6 +520,15 @@ data-background="./tmp/aod_vs_toa_avg_loop_ratio.webp"
 data-background="./tmp/toa_arrays_normalized.webp"
 -->
 
+Notes:
+
+By plotting the normalized radiative forcing time series, we find them to have very
+similar shapes across the whole ensemble of different strengths.
+
+One time series break the pattern more than the rest, which is one of the two Northern
+Hemisphere strong eruptions, but the general shape of the radiative forcing still is
+very consistent.
+
 --
 
 <!-- .slide: data-background-size="contain" -->
@@ -436,39 +536,24 @@ data-background="./tmp/toa_arrays_normalized.webp"
 data-background="./tmp/aod_arrays_normalized.webp"
 -->
 
+Notes:
+
+Looking instead at the normalized AOD time series, one thing stands out, which is that
+the early phase is steeper for the weaker eruptions, but that the decay still happen at
+a similar time and rate as the stronger eruptions. The weaker eruption has a longer
+plateau where it peaks, making the decaying phase being mostly similar in timing to the
+other eruptions AOD time series.
+
 ---
 
 <!-- .slide: data-background-color="#001928" -->
 
 ## Links
 
-<!-- dprint-ignore-start -->
+|                                                                                                                            [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                            |                                                                                                                        [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                        |                                                                                                                    [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf)                                                                                                                     |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
 
-----
-
-<!-- dprint-ignore-end -->
-
-<span style="color:red">UPDATE LINKS OR REMOVE</span>
-
-The slides can be viewed both with
-([HTML](https://slides.eirikenger.xyz/2023-04-24-egu-conference?showNotes=separate-page),
-[PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-separate-page.pdf))
-and without
-([HTML](https://slides.eirikenger.xyz/2023-04-24-egu-conference?showNotes=false),
-[PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-false.pdf))
-speaker notes.
-
-[Link](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf)
-and QR code to the conference abstract information:
-
-<a href="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf" target="_blank">
-<img src="./tmp/qr-fysikermotet-abstracts.png" width="auto" height="110px" /> </a>
-
-<!-- dprint-ignore-start -->
-
-----
-
-<!-- dprint-ignore-end -->
 <!-- dprint-ignore-start -->
 
 <!-- Start adding with revealjs-make-reflist -->
@@ -497,6 +582,10 @@ Raible, Christoph C., Stefan Brönnimann, Renate Auchmann, Philip Brohan, Thomas
 
 --
 
+- <!-- .element: style="font-size:20pt" -->
+<div class="csl-entry" id="ref-sigl2015" role="doc-biblioentry">
+Sigl, M., M. Winstrup, J. R. McConnell, K. C. Welten, G. Plunkett, F. Ludlow, U. Büntgen, et al. 2015. <span>“Timing and Climate Forcing of Volcanic Eruptions for the Past 2,500 Years.”</span> <em>Nature</em> 523 (7562): 543–49. <a href="https://doi.org/10.1038/nature14565">https://doi.org/10.1038/nature14565</a>.
+</div>
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-sukhodolov2018" role="doc-biblioentry">
 Sukhodolov, T., J.-X. Sheng, A. Feinberg, B.-P. Luo, T. Peter, L. Revell, A. Stenke, D. K. Weisenstein, and E. Rozanov. 2018. <span>“Stratospheric Aerosol Evolution After Pinatubo Simulated with a Coupled Size-Resolved Aerosol–Chemistry–Climate Model, <span>SOCOL</span>-<span> AER</span>v1.0.”</span> <em>Geoscientific Model Development</em> 11 (7): 2633–47. <a href="https://doi.org/10.5194/gmd-11-2633-2018">https://doi.org/10.5194/gmd-11-2633-2018</a>.
