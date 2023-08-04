@@ -506,6 +506,12 @@ within a pair represent the first time period.
 There is a clear distinction between the two periods, which suggest that the dynamics
 happening shortly after the eruption and during the decay phase are different.
 
+A second feature is the smaller magnitude of ratios we get for larger eruptions, i.e.,
+that the radiative forcing is smaller for the same amount of AOD the stronger the
+eruption is. This reduction of forcing efficiency has been reported in different studies
+before, some relating to geoengineering using aerosols to mitigate global warming
+([Marshall et al. 2019](https://doi.org/10.1029/2020GL090241) and references therein).
+
 | Short Name | Long Name                                           |
 | :--------- | :-------------------------------------------------- |
 | C2WN↑      | CESM2(WACCM6), northern hemisphere, strong eruption |
