@@ -84,6 +84,7 @@ included in this project:
 - [reveal-drawer]
 
 - [reveal-pointer]
+- [QR-code]
 
 ## Project specifics
 
@@ -116,5 +117,6 @@ Universal license, which can be found [here](./content/LICENSE).
 [reveal.js-elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
 [reveal.js]: https://revealjs.com
 [revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
+[QR-code]: https://github.com/bitjson/qr-code
 [source]: https://github.com/engeir/slides/blob/main/content/2022-02-08-demo.md?plain=1
 [built site]: https://slides.eirikenger.xyz/2022-02-08-demo.html
