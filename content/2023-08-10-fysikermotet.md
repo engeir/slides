@@ -1,5 +1,5 @@
 ---
-title: Aerosol optical depth dependency from a large range of volcanic eruption strengths
+title: Aerosol optical depth dependency from large volcanic eruptions
 event: Fysikermøtet 2023
 author: Eirik R. Enger
 date: "2023-08-10"
@@ -17,11 +17,13 @@ Color is from https://uit.no/ressurs/uit/profil2019/examples/fargekart.png, but 
 darker luminosity.
 -->
 
-# Aerosol optical depth dependency from a large range of volcanic eruption strengths
+~~Insensitivity of global temperature response to the magnitude of volcanic eruptions~~
+
+# Aerosol optical depth dependency from large volcanic eruptions
 
 <!-- .element: style="font-size:50pt" -->
 
-_**[Eirik Rolland Enger](mailto:eirik.r.enger@uit.no)**, Audun Theodorsen, Maria
+_[**Eirik Rolland Enger**](mailto:eirik.r.enger@uit.no), Audun Theodorsen, Maria
 Rugenstein, Rune Graversen_
 
 <!-- .element: style="font-size:18pt" -->
@@ -34,7 +36,11 @@ Notes:
 
 My name is Eirik Enger, and I'm a PhD candidate at UiT the Arctic University of Norway.
 My work focus on how volcanoes affect climate, and today we will look at "Aerosol
-optical depth dependency from a large range of volcanic eruption strengths".
+optical depth dependency from large volcanic eruptions".
+
+_(The abstract has the title "Insensitivity of global temperature response to the
+magnitude of volcanic eruptions", but the contents of this talk has been adjusted
+somewhat since the submission)._
 
 --
 
@@ -102,8 +108,10 @@ This plot is from [Gregory et al. (2016)](https://doi.org/10.1007/s00382-016-305
 and it's showing radiative forcing against aerosol optical depth, where radiative
 forcing is a measure of the energy imbalance of the Earth and AOD is a measure of the
 opacity of the stratosphere
-([Marshall et al. 2020](https://doi.org/10.1029/2020GL090241)). Two simulations were
-done by the authors using the HadCM3 climate model, one simulation by
+([Marshall et al. 2020](https://doi.org/10.1029/2020GL090241)) (also from
+[Niemeier and Schmidt (2017)](10.5194/acp-17-14871-2017), "a measure of turbidity and
+degradation of sunlight"). Two simulations were done by the authors using the HadCM3
+climate model, one simulation by
 [Andrews (2014)](http://dx.doi.org/10.1175/JCLI-D-13-00336.1) used the HadGEM2 climate
 model while the AR5 data points are from the Fifth Assessment report of the IPCC
 (intergovernmental panel on climate change). Gradient lines have slopes of -26.6, -24.6,
@@ -162,10 +170,6 @@ We are specifically looking at the temperature response from the three different
 eruption magnitudes, where the notation of a downward arrow, horizontal line and upward
 arrow will be used to indicate the different magnitudes of a weak, medium and strong
 eruption, respectively.
-
-> <span style="color:red;">FIXME:</span> For similar plots of aerosol optical depth and
-> radiative forcing, see the
-> [supplementary](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html).
 
 --
 
@@ -556,9 +560,9 @@ other eruptions AOD time series.
 
 ## Links
 
-|                                                                                                                            [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                            |                                                                                                                        [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                        |                                                                                                                    [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf)                                                                                                                     |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
+|                                                                                                                            [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                            |                                                                                                                        [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                        |                                                                                                                    [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5)                                                                                                                     |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
 
 <!-- dprint-ignore-start -->
 
