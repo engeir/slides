@@ -8,7 +8,6 @@ revealOptions:
   allottedTime: 900_000  # 15 min
   backgroundTransition: none
   pdfSeparateFragments: false
-  showNotes: true
   transition: none
 ---
 
@@ -68,7 +67,7 @@ _Figure from
 
 <!-- .element: style="font-size:13pt" -->
 
-![Sigl et al. (2015)](https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/2015-sigl-volcanoes-swap.png)
+![Sigl et al. (2015)](https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/2015-sigl-volcanoes-swap.png)
 
 Notes:
 
@@ -354,7 +353,7 @@ of the x-axis.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_inset_sparse.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_vs_toa_avg_inset_sparse.webp"
 -->
 
 Notes:
@@ -390,15 +389,16 @@ Let us fill out this plot more with data from the stronger volcanic eruptions as
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_inset.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_vs_toa_avg_inset.webp"
 -->
 
 Notes:
 
 We now also include annual means from the medium-sized tropical eruption (orange
 diamonds) and the strongest tropical eruption, in addition to annual means from a
-Northern Hemisphere strong eruption (brown upward pointing tri-star) and a simulation of
-two tropical eruptions that followed four years apart (red narrow diamonds).
+Northern Hemisphere strong eruption (brown upward pointing tri-star/tri-twig) and a
+simulation of two tropical eruptions that followed four years apart (red narrow
+diamonds).
 
 Now we find that among the C2W data, _only the weak eruption data points_ fall below the
 "-19" gradient line for AOD values of 0.1 and higher.
@@ -418,7 +418,7 @@ Now we find that among the C2W data, _only the weak eruption data points_ fall b
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_full.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_vs_toa_avg_full.webp"
 -->
 
 Notes:
@@ -469,13 +469,13 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_loop.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_vs_toa_avg_loop.webp"
 -->
 
 Notes:
 
 To look further into what is happening with the loop, we take all our simulations of
-single volcanic eruptions, align then so that the eruption day is at time zero, and
+single volcanic eruptions, align them so that the eruption day is at time zero, and
 compute seasonal means to increase the temporal resolution.
 
 The data is in this case plotted with the same shape as before, but the colour now
@@ -483,8 +483,8 @@ indicate the time after the eruption. From this view, one clearly finds that the
 is the lower branch of the loop while the decay is the upper branch.
 
 The lower branch occurs over at time of approximately $0$ to $1.2$ years after the
-eruption at which point both AOD and forcing reach its peak values. From about $1.2$ to
-$3$ years after the eruption the upper branch of decay occur.
+eruption. From about $1.2$ to $3$ years after the eruption the upper branch of decay
+occur.
 
 This give a slight indication that the lower branch bends and therefore have a varying
 ratio of forcing to AOD, while the upper branch is close to linear with a constant
@@ -501,7 +501,7 @@ ratio.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_loop_ratio.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_vs_toa_avg_loop_ratio.webp"
 -->
 
 Notes:
@@ -534,7 +534,7 @@ before, some relating to geoengineering using aerosols to mitigate global warmin
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/toa_arrays_normalized.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/toa_arrays_normalized.webp"
 -->
 
 Notes:
@@ -550,7 +550,7 @@ very consistent.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_arrays_normalized.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_arrays_normalized.webp"
 -->
 
 Notes:
@@ -565,7 +565,7 @@ other eruptions AOD time series.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_toa_arrays_normalized.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/aod_toa_arrays_normalized.webp"
 -->
 
 Notes:
@@ -586,7 +586,7 @@ So, what makes the AOD time series depend on eruption magnitude? Could be
      injections above ~22km increases the sedimentation rate and hence aerosol decay in
      the second phase
 
---
+---
 
 <!-- .slide: data-background-color="#001928" -->
 
@@ -594,7 +594,7 @@ So, what makes the AOD time series depend on eruption magnitude? Could be
 
 |                                                                                                                                                                      [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                                                                      |                                                                                                                                                                  [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                                                                  |                                                                                                                                                              [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5)                                                                                                                                                               |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
+| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/06b3795/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
 
 <!-- dprint-ignore-start -->
 
