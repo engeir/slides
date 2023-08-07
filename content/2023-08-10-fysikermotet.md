@@ -68,7 +68,7 @@ _Figure from
 
 <!-- .element: style="font-size:13pt" -->
 
-![Sigl et al. (2015)](./tmp/2015-sigl-volcanoes-swap.png)
+![Sigl et al. (2015)](https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/2015-sigl-volcanoes-swap.png)
 
 Notes:
 
@@ -81,6 +81,8 @@ One can clearly spot the impact on temperature the largest volcanic eruptions ha
 giving temperature perturbations well above the noise floor. The temperature then
 reverts to its equilibrium state within few years.
 
+> Plot from [Sigl et al. (2015)](https://doi.org/10.1038/nature14565), figure 3.
+
 ---
 
 ## Motivation
@@ -91,6 +93,7 @@ reverts to its equilibrium state within few years.
 --
 
 <!-- .slide: data-background-color="#001928" -->
+<!-- .slide: id="gregory" -->
 
 _Figure from
 <a href="https://doi.org/10.1007/s00382-016-3055-1" data-citation-key="@gregory2016">Gregory
@@ -179,7 +182,7 @@ eruption, respectively.
 <!-- .slide:
 data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/temperature-all-strengths.webp"
 -->
-<!-- .slide: data-background-opacity="0.15" -->
+<!-- .slide: data-background-opacity="0.10" -->
 
 - At the equator
 - <!-- .element: class="fragment" data-fragment-index="1" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$
@@ -193,6 +196,10 @@ data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/
 
 <!-- .element: style="font-size:20pt" -->
 <!-- .element: class="fragment" data-fragment-index="2" -->
+
+[_Back up_](#/gregory)
+
+<!-- .element: style="font-size:13pt" -->
 
 Notes:
 
@@ -347,7 +354,7 @@ of the x-axis.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_vs_toa_avg_inset_sparse.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_inset_sparse.webp"
 -->
 
 Notes:
@@ -383,7 +390,7 @@ Let us fill out this plot more with data from the stronger volcanic eruptions as
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_vs_toa_avg_inset.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_inset.webp"
 -->
 
 Notes:
@@ -411,7 +418,7 @@ Now we find that among the C2W data, _only the weak eruption data points_ fall b
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_vs_toa_avg_full.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_full.webp"
 -->
 
 Notes:
@@ -462,7 +469,7 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_vs_toa_avg_loop.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_loop.webp"
 -->
 
 Notes:
@@ -494,7 +501,7 @@ ratio.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_vs_toa_avg_loop_ratio.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_vs_toa_avg_loop_ratio.webp"
 -->
 
 Notes:
@@ -527,7 +534,7 @@ before, some relating to geoengineering using aerosols to mitigate global warmin
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/toa_arrays_normalized.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/toa_arrays_normalized.webp"
 -->
 
 Notes:
@@ -543,7 +550,7 @@ very consistent.
 
 <!-- .slide: data-background-size="contain" -->
 <!-- .slide:
-data-background="./tmp/aod_arrays_normalized.webp"
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_arrays_normalized.webp"
 -->
 
 Notes:
@@ -554,15 +561,40 @@ a similar time and rate as the stronger eruptions. The weaker eruption has a lon
 plateau where it peaks, making the decaying phase being mostly similar in timing to the
 other eruptions AOD time series.
 
----
+--
+
+<!-- .slide: data-background-size="contain" -->
+<!-- .slide:
+data-background="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/aod_toa_arrays_normalized.webp"
+-->
+
+Notes:
+
+AOD and RF normalized in the same figure, where time series with peaks at negative one
+are RF while positive one are AOD.
+
+So, what makes the AOD time series depend on eruption magnitude? Could be
+([Marshall et al. 2019](https://doi.org/10.1029/2020GL090241)):
+
+1. Growth phase
+   - Particles grow and coagulate
+   - Aerosol removal mainly dependant on latitude rather than SO2 emission
+2. Sedimentation phase
+   - Occurs "after several months" when particle growth has slowed
+   - Sedimentation becomes relatively more important
+   - Longer air residence time and subsequent growth to larger particles for SO2
+     injections above ~22km increases the sedimentation rate and hence aerosol decay in
+     the second phase
+
+--
 
 <!-- .slide: data-background-color="#001928" -->
 
 ## Links
 
-|                                                                                                                            [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                            |                                                                                                                        [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                        |                                                                                                                    [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5)                                                                                                                     |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="./tmp/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
+|                                                                                                                                                                      [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                                                                      |                                                                                                                                                                  [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                                                                  |                                                                                                                                                              [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5)                                                                                                                                                               |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/5de2e6f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
 
 <!-- dprint-ignore-start -->
 
