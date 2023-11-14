@@ -84,6 +84,8 @@ included in this project:
 - [reveal-drawer]
 
 - [reveal-pointer]
+- [reveal.js-attribution]
+- [reveal.js-fullscreen]
 - [QR-code]
 
 ## Project specifics
@@ -115,6 +117,8 @@ Universal license, which can be found [here](./content/LICENSE).
 [reveal-pointer]: https://github.com/burnpiro/reveal-pointer
 [reveal.js-copycode]: https://github.com/Martinomagnifico/reveal.js-copycode
 [reveal.js-elapsed-time-bar]: https://github.com/tkrkt/reveal.js-elapsed-time-bar
+[reveal.js-attribution]: https://github.com/rschmehl/reveal-plugins/tree/main/attribution
+[reveal.js-fullscreen]: https://github.com/rajgoel/reveal.js-plugins/tree/master/fullscreen
 [reveal.js]: https://revealjs.com
 [revealjs-animated]: https://github.com/rogeralmeida/revealjs-animated
 [QR-code]: https://github.com/bitjson/qr-code
