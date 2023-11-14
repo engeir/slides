@@ -18,9 +18,11 @@
     <link rel="stylesheet" href="{{{base}}}/dist/reveal.css" />
     <link rel="stylesheet" href="{{{themeUrl}}}" id="theme" />
     <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
+    <!-- My added plugin stylecheets -->
     <link rel="stylesheet" href="{{{base}}}/plugin/drawer/drawer.css" />
     <link rel="stylesheet" href="{{{base}}}/plugin/pointer/pointer.css" />
     <link rel="stylesheet" href="{{{base}}}/plugin/copycode/copycode.css" />
+    <link rel="stylesheet" href="{{{base}}}/plugin/attribution/attribution.css" />
     <link rel="stylesheet" href="{{{base}}}/plugin/highlight/gruvbox-dark-medium.css" />
 
     {{#cssPaths}}
@@ -50,10 +52,12 @@
     <script src="{{{base}}}/plugin/zoom/zoom.js"></script>
     <script src="{{{base}}}/plugin/notes/notes.js"></script>
     <script src="{{{base}}}/plugin/math/math.js"></script>
+    <!-- My added plugins -->
     <script src="{{{base}}}/plugin/drawer/drawer.js"></script>
     <script src="{{{base}}}/plugin/pointer/pointer.js"></script>
     <script src="{{{base}}}/plugin/copycode/copycode.js"></script>
     <script src="{{{base}}}/plugin/animated/revealjs-animated.js"></script>
+    <script src="{{{base}}}/plugin/attribution/plugin.js"></script>
     <script src="{{{base}}}/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
     <script src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"></script>
     <script>
@@ -83,9 +87,11 @@
                 RevealZoom,
                 RevealNotes,
                 RevealMath,
+                // My added plugins
                 CopyCode,
                 RevealPointer,
-                RevealDrawer
+                RevealDrawer,
+                RevealAttribution,
             ]
         };
 
