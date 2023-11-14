@@ -88,6 +88,9 @@ included in this project:
 - [reveal.js-fullscreen]
 - [QR-code]
 
+There is also support for font-awesome icons, which can be searched for
+[here](https://fontawesome.com/search).
+
 ## Project specifics
 
 This project makes a few changes to the original packages [reveal.js] and [reveal-md].
