@@ -8,7 +8,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "replace-in-file": "^7.0.1",
+    "replace-in-file": "^7.1.0",
     "reveal-md": "^6.0.0"
   },
   "devDependencies": {
