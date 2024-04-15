@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "replace-in-file": "^7.1.0",
-    "reveal-md": "^6.1.0"
+    "reveal-md": "^6.1.1"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
