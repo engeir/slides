@@ -1,0 +1,12 @@
+diff --git a/node_modules/reveal-md/lib/listing.js b/node_modules/reveal-md/lib/listing.js
+index 664521f..27b2b47 100644
+--- a/node_modules/reveal-md/lib/listing.js
++++ b/node_modules/reveal-md/lib/listing.js
+@@ -32,6 +32,7 @@ export const renderListFile = async filePaths => {
+   const themeUrl = getThemeUrl(theme, assetsDir, '.');
+   let files = await Promise.all(filePaths.map(getFileMeta));
+   files.sort((a, b) => a.fileName.localeCompare(b.fileName));
++  files.reverse();
+   return Mustache.render(template, {
+     base: '',
+     themeUrl,
