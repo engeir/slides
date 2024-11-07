@@ -3,7 +3,10 @@
     "separator": "\n---\n",
     "verticalSeparator": "\n--\n",
     "revealOptions": {
-        "auto-animate": true
+        "auto-animate": true,
+        "slideNumber": false,
+        "scrollProgress": true,
+        "view": "vertical"
     },
     "scripts": [
         "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"
