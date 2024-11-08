@@ -90,7 +90,7 @@ jobs:
       - name: Init new repo in dist folder and commit generated files
         run: |
           cd docs/
-          [[ ${{ github.actor }} == "engeir" ]] && echo "slides.eirikenger.xyz" > CNAME
+          [[ ${{ github.actor }} == "engeir" ]] && echo "slides.eirik.re" > CNAME
           git init
           git add -A
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"

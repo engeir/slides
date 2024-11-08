@@ -394,10 +394,10 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 <!-- dprint-ignore-end -->
 
 The slides can be viewed both with
-([HTML](https://slides.eirikenger.xyz/2023-04-24-egu-conference?showNotes=separate-page),
+([HTML](https://slides.eirik.re/2023-04-24-egu-conference?showNotes=separate-page),
 [PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-separate-page.pdf))
 and without
-([HTML](https://slides.eirikenger.xyz/2023-04-24-egu-conference?showNotes=false),
+([HTML](https://slides.eirik.re/2023-04-24-egu-conference?showNotes=false),
 [PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-false.pdf))
 speaker notes.
 
