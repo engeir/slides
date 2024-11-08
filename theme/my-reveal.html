@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -41,12 +41,12 @@
     {{/cssPaths}} {{#watch}}
 
     <script>
-      document.write(
-        '<script src="http://' +
-          (location.host || "localhost").split(":")[0] +
-          ':35729/livereload.js?snipver=1"></' +
-          "script>",
-      );
+    document.write(
+      '<script src="http://' +
+        (location.host || "localhost").split(":")[0] +
+        ':35729/livereload.js?snipver=1"></' +
+        "script>",
+    );
     </script>
     {{/watch}}
   </head>
@@ -56,7 +56,8 @@
         <section data-markdown {{{slidifyAttributes}}}>
           <textarea data-template>
             {{{markdown}}}
-          </textarea>
+          </textarea
+          >
         </section>
       </div>
     </div>
@@ -77,55 +78,61 @@
     <script src="{{{base}}}/plugin/attribution/plugin.js"></script>
     <script src="{{{base}}}/plugin/copycode/copycode.js"></script>
     <script src="{{{base}}}/plugin/drawer/drawer.js"></script>
-    <script src="{{{base}}}/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+    <script
+      src="{{{base}}}/plugin/elapsed-time-bar/elapsed-time-bar.js"
+    ></script>
     <script src="{{{base}}}/plugin/fullscreen/plugin.js"></script>
     <script src="{{{base}}}/plugin/pointer/pointer.js"></script>
-    <script src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script
+      src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    ></script>
     <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
+    function extend() {
+      var target = {};
+      for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
           }
         }
-        return target;
       }
+      return target;
+    }
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath,
-          // My added plugins
-          CopyCode,
-          RevealAttribution,
-          RevealDrawer,
-          RevealFullscreen,
-          RevealPointer,
-        ]
-      };
+    // default options to init reveal.js
+    var defaultOptions = {
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'default', // none/fade/slide/convex/concave/zoom
+      slideNumber: true,
+      highlight: {
+        highlightOnLoad: false
+      },
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealZoom,
+        RevealNotes,
+        RevealMath,
+        // My added plugins
+        CopyCode,
+        RevealAttribution,
+        RevealDrawer,
+        RevealFullscreen,
+        RevealPointer,
+      ]
+    };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+    // options from URL query string
+    var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
+    var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
     </script>
 
     {{#scriptPaths}}
@@ -133,27 +140,27 @@
     {{/scriptPaths}}
 
     <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener("ready", function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll(
-          "pre code:not(.mermaid)",
-        );
-        const hlp = Reveal.getPlugin("highlight");
-        blocks.forEach(hlp.highlightBlock);
-      });
+    Reveal.initialize(options);
+    Reveal.addEventListener("ready", function (event) {
+      const blocks = Reveal.getRevealElement().querySelectorAll(
+        "pre code:not(.mermaid)",
+      );
+      const hlp = Reveal.getPlugin("highlight");
+      blocks.forEach(hlp.highlightBlock);
+    });
     </script>
 
     {{#mermaidOptionsStr}}
     <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {{{mermaidOptionsStr}}});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
+    const mermaidOptions = extend({ startOnLoad: false }, {{{mermaidOptionsStr}}});
+    mermaid.startOnLoad = false;
+    mermaid.initialize(mermaidOptions);
+    const cb = function (event) {
+      mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+      mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+    }
+    Reveal.addEventListener('ready', cb);
+    Reveal.addEventListener('slidetransitionend', cb);
     </script>
     {{/mermaidOptionsStr}}
   </body>

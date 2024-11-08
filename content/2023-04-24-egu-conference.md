@@ -136,15 +136,12 @@ data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/
 -->
 <!-- .slide: data-background-opacity="0.15" -->
 
-<!-- dprint-ignore-start -->
 - At the equator
 - <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$ `$\mathrm{km}$` altitude
-- <!-- .element: class="fragment" -size:29pt" -->
-$\mathrm{SO_2}$ amounts:
+- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ amounts:
   - `$26\,\mathrm{Tg}$`(↓)
   - `$400\,\mathrm{Tg}$`(—)
   - `$1629\,\mathrm{Tg}$`(↑)
-<!-- dprint-ignore-end -->
 
 Notes:
 
