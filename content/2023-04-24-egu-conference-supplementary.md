@@ -314,7 +314,7 @@ coincide.
 <!-- dprint-ignore-end -->
 
 Go to
-[html version](https://slides.eirikenger.xyz/2023-04-24-egu-conference-supplementary?showNotes=separate-page).
+[html version](https://slides.eirik.re/2023-04-24-egu-conference-supplementary?showNotes=separate-page).
 
 [Link](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html) and QR code to the
 conference abstract information:
