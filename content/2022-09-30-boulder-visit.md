@@ -78,7 +78,8 @@ $$
 
 <a href="https://doi.org/" data-citation-key="@richardson1972">Richardson (1972)</a>,
 <a href="https://doi.org/10.1086/111605" data-citation-key="@lucy1974">Lucy (1974)</a>,
-<a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto et al. (2009)</a>
+<a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto
+et al. (2009)</a>
 
 <!-- .element: style="font-size:13pt" -->
 
@@ -98,7 +99,8 @@ $$
 ### Model setup
 
 1. Synthetic eruptions are given to CESM2
-2. Run using the BWma1850 compset <!-- .element: class="fragment" data-fragment-index="1" -->
+2. Run using the BWma1850 compset
+   <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
 width="80%"
@@ -118,9 +120,8 @@ convert from the source files.
 
 The middle atmosphere (MA) chemistry is capable of calculating the evolution of
 stratospheric aerosol from SO2 emissions from large volcanic eruptions. WACCM with MA
-can only run at nominal 2° resolution, while the more expensive TSMLT1
-(troposphere, stratosphere, mesosphere and lower thermosphere) can go down to nominal
-1° resolution.
+can only run at nominal 2° resolution, while the more expensive TSMLT1 (troposphere,
+stratosphere, mesosphere and lower thermosphere) can go down to nominal 1° resolution.
 
 ---
 
@@ -140,9 +141,11 @@ can only run at nominal 2° resolution, while the more expensive TSMLT1
 
 <!-- .slide: data-transition="fade-in fade-out" -->
 
+<!-- dprint-ignore-start -->
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/e9fbe3577899d750c61cb4478155ce0b48d48570/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                |                                                                                                                  $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                 $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                  |
+| $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> | $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> | $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> |
+<!-- dprint-ignore-end -->
 
 Notes:
 
@@ -171,9 +174,11 @@ stronger eruptions.
 
 <!-- .slide: data-transition="fade" -->
 
+<!-- dprint-ignore-start -->
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean1-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean3-trefht-strong.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4987583ac7a9a34e08bca2eda1392ae45090e128/assets/pic/volcano-zonal-mean/zonal-mean6-trefht-strong.png" ></div> |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                 $1\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                                                 $3\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                    $6\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" -->                                                                                    |
+| $1\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" --> | $3\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" --> | $6\\,\mathrm{yr}$ <!-- .element: style="font-size:20pt" --> |
+<!-- dprint-ignore-end -->
 
 Notes:
 
@@ -192,10 +197,14 @@ information we are looking for lies.
 
 <!-- .slide: data-transition="fade-in slide-out" -->
 
-<img width="49%" src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-may-medium.png">
-<img width="49%" src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-nov-medium.png">
-
-_Total aerosol optical depth in visible band_
+<img
+  width="49%"
+  src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-may-medium.png"
+/>
+<img
+  width="49%"
+  src="https://raw.githubusercontent.com/engeir/hack-md-notes/15d48cd3fe9d0abbb49c20d41d6ade6f8e4e7e27/assets/pic/volcano-zonal-mean/zonal-mean-aerodv-nov-medium.png"
+/> _Total aerosol optical depth in visible band_
 
 <!-- .element: style="font-size:20pt" -->
 
@@ -266,16 +275,44 @@ Problem: simulations are not long enough to have a periodic signal
 <!-- .slide: data-transition="fade" -->
 
 <div class="r-stack">
-  <p class="fragment animated move-to" data-animated-move-to-top="-200px" data-animated-move-to-left="0px" data-fragment-index="0" data-animated-duration="300" data-animated-iterations="1" data-animated-fill="forwards">
-  Using the <a style="color:#80ff80" target="_blank" href="https://www.cesm.ucar.edu/projects/community-projects/LME/">CESM LME</a> data set
+  <p
+    class="fragment animated move-to"
+    data-animated-move-to-top="-200px"
+    data-animated-move-to-left="0px"
+    data-fragment-index="0"
+    data-animated-duration="300"
+    data-animated-iterations="1"
+    data-animated-fill="forwards"
+  >
+    Using the
+    <a
+      style="color: #80ff80"
+      target="_blank"
+      href="https://www.cesm.ucar.edu/projects/community-projects/LME/"
+      >CESM LME</a
+    >
+    data set
   </p>
   <span>
-  <img class="fragment fade-in" data-fragment-index="0" src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_forcing.png" width="49%" >
-  <img class="fragment fade-in" data-fragment-index="0" src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_temperature.png" width="49%" >
+    <img
+      class="fragment fade-in"
+      data-fragment-index="0"
+      src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_forcing.png"
+      width="49%"
+    />
+    <img
+      class="fragment fade-in"
+      data-fragment-index="0"
+      src="https://raw.githubusercontent.com/engeir/hack-md-notes/6c20ab748912530c65e30e648c04b4e45a55b838/assets/pic/deconv-cesm-lme/cesm_lme_deconvolution_ensall_mean_temperature.png"
+      width="49%"
+    />
   </span>
 </div>
-
-<a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>
+<a
+  href="https://doi.org/10.1175/BAMS-D-14-00233.1"
+  data-citation-key="@ottobliesner2016"
+  >Otto-Bliesner et al. (2016)</a
+>
 
 <!-- .element: style="font-size:13pt" -->
 

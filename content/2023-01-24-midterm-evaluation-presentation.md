@@ -87,7 +87,8 @@ $$
 
 <a href="https://doi.org/" data-citation-key="@richardson1972">Richardson (1972)</a>,
 <a href="https://doi.org/10.1086/111605" data-citation-key="@lucy1974">Lucy (1974)</a>,
-<a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto et al. (2009)</a>
+<a href="https://doi.org/10.1088/0266-5611/26/2/025004" data-citation-key="@benvenuto2009">Benvenuto
+et al. (2009)</a>
 
 <!-- .element: style="font-size:13pt" -->
 
@@ -106,7 +107,8 @@ The hat on the forcing indicate that is uses negative times, i.e., F_hat(t)=F(-t
 ### Model setup
 
 1. Synthetic eruptions are given to CESM2
-2. Run using the BWma1850 compset <!-- .element: class="fragment" data-fragment-index="1" -->
+2. Run using the BWma1850 compset
+   <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <a href="https://github.com/engeir/volcano-cooking#volcano-cooking" target="_blank"><img
 width="80%"
@@ -126,9 +128,8 @@ convert from the source files.
 
 The middle atmosphere (MA) chemistry is capable of calculating the evolution of
 stratospheric aerosol from SO2 emissions from large volcanic eruptions. WACCM with MA
-can only run at nominal 2° resolution, while the more expensive TSMLT1
-(troposphere, stratosphere, mesosphere and lower thermosphere) can go down to nominal
-1° resolution.
+can only run at nominal 2° resolution, while the more expensive TSMLT1 (troposphere,
+stratosphere, mesosphere and lower thermosphere) can go down to nominal 1° resolution.
 
 ---
 
@@ -148,9 +149,11 @@ can only run at nominal 2° resolution, while the more expensive TSMLT1
 
 <!-- .slide: data-transition="fade-in fade-out" -->
 
+<!-- dprint-ignore-start -->
 | <div class="fragment grow" data-fragment-index="0"><div class="fragment shrink" data-fragment-index="1"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/medium-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="1"><div class="fragment shrink" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/medium-plus-waveform.png" ></div></div> | <div class="fragment grow" data-fragment-index="2"><img src="https://raw.githubusercontent.com/engeir/hack-md-notes/4c76fa84d73699f3dd51cf9a8234d9142e54e9d1/assets/pic/volcano-ensemble-waveforms/strong-waveform.png" ></div> |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                                $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                |                                                                                                                  $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                                                  |                                                                                 $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" -->                                                                                  |
+| $26\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> | $400\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> | $1629\\,\mathrm{Tg}$ <!-- .element: style="font-size:20pt" --> |
+<!-- dprint-ignore-end -->
 
 Notes:
 
@@ -234,7 +237,8 @@ Problem: simulations are not long enough to have a periodic signal
 
 CESM1 Last Millennium Ensemble
 
-<a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner et al. (2016)</a>
+<a href="https://doi.org/10.1175/BAMS-D-14-00233.1" data-citation-key="@ottobliesner2016">Otto-Bliesner
+et al. (2016)</a>
 
 <!-- .element: style="font-size:13pt" -->
 
@@ -429,8 +433,7 @@ Assessment of non-linear responses in the LongRunMIP ensemble
 <!-- .slide: data-transition="fade" -->
 
 - LongRunMIP: ensemble of $1000$–$6000$ year long simulations
-- Temperature anomaly as
-  $$
+- Temperature anomaly as $$
   \Delta T(t)=\int\_{\infty}^{t}\phi(t-s)\[f\_K(s)\mathrm{d}s+\sigma \mathrm{d}B(s)\]
   $$
   <!-- .element class="fragment" data-fragment-index="0" -->
@@ -456,6 +459,7 @@ demonstrated its use on climate data.
 
 <!-- Start adding with revealjs-make-reflist -->
 <!-- Generated by revealjs-make-reflist. Do not edit. -->
+<!-- dprint-ignore-start -->
 
 ---
 
@@ -463,25 +467,52 @@ demonstrated its use on climate data.
 
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-benvenuto2009" role="doc-biblioentry">
-Benvenuto, F, R Zanella, L Zanni, and M Bertero. 2009. <span>“Nonnegative Least-Squares Image Deblurring: Improved Gradient Projection Approaches.”</span> <em>Inverse Problems</em> 26 (2): 025004. <a href="https://doi.org/10.1088/0266-5611/26/2/025004">https://doi.org/10.1088/0266-5611/26/2/025004</a>.
+  Benvenuto, F, R Zanella, L Zanni, and M Bertero. 2009.
+  <span
+    >“Nonnegative Least-Squares Image Deblurring: Improved Gradient Projection
+    Approaches.”</span
+  >
+  <em>Inverse Problems</em> 26 (2): 025004.
+  <a href="https://doi.org/10.1088/0266-5611/26/2/025004"
+    >https://doi.org/10.1088/0266-5611/26/2/025004</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-lucy1974" role="doc-biblioentry">
-Lucy, L. B. 1974. <span>“<span class="nocase">An iterative technique for the rectification of observed distributions</span>.”</span> <em>The Astronomical Journal</em> 79 (6): 745. <a href="https://doi.org/10.1086/111605">https://doi.org/10.1086/111605</a>.
+  Lucy, L. B. 1974.
+  <span
+    >“<span class="nocase"
+      >An iterative technique for the rectification of observed
+      distributions</span
+    >.”</span
+  >
+  <em>The Astronomical Journal</em> 79 (6): 745.
+  <a href="https://doi.org/10.1086/111605">https://doi.org/10.1086/111605</a>.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-myrvollnilsen2020" role="doc-biblioentry">
-Myrvoll-Nilsen, E., S. H. Sørbye, H.-B. Fredriksen, H. Rue, and M. Rypdal. 2020. <span>“Statistical Estimation of Global Surface Temperature Response to Forcing Under the Assumption of Temporal Scaling.”</span> <em>Earth System Dynamics</em> 11 (2): 329–45. <a href="https://doi.org/10.5194/esd-11-329-2020">https://doi.org/10.5194/esd-11-329-2020</a>.
+  Myrvoll-Nilsen, E., S. H. Sørbye, H.-B. Fredriksen, H. Rue, and M. Rypdal.
+  2020.
+  <span
+    >“Statistical Estimation of Global Surface Temperature Response to Forcing
+    Under the Assumption of Temporal Scaling.”</span
+  >
+  <em>Earth System Dynamics</em> 11 (2): 329–45.
+  <a href="https://doi.org/10.5194/esd-11-329-2020"
+    >https://doi.org/10.5194/esd-11-329-2020</a
+  >.
 </div>
-
 --
-
-- <!-- .element: style="font-size:20pt" -->
-<div class="csl-entry" id="ref-ottobliesner2016" role="doc-biblioentry">
-Otto-Bliesner, Bette L., Esther C. Brady, John Fasullo, Alexandra Jahn, Laura Landrum, Samantha Stevenson, Nan Rosenbloom, Andrew Mai, and Gary Strand. 2016. <span>“Climate Variability and Change Since 850 <span>CE</span>: An Ensemble Approach with the Community Earth System Model.”</span> <em>Bulletin of the American Meteorological Society</em> 97 (5): 735–54. <a href="https://doi.org/10.1175/BAMS-D-14-00233.1">https://doi.org/10.1175/BAMS-D-14-00233.1</a>.
-</div>
-- <!-- .element: style="font-size:20pt" -->
-<div class="csl-entry" id="ref-richardson1972" role="doc-biblioentry">
-Richardson, W. H. 1972. <span>“<span class="nocase">Bayesian-Based Iterative Method of Image Restoration*</span>.”</span> <em>J. Opt. Soc. Am.</em> 62 (1): 55–59. <a href="http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55">http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55</a>.
-</div>
-<!-- End adding with revealjs-make-reflist -->
+-
+<!-- .element: style="font-size:20pt" -->
+  <div class="csl-entry" id="ref-ottobliesner2016" role="doc-biblioentry">
+  Otto-Bliesner, Bette L., Esther C. Brady, John Fasullo, Alexandra Jahn, Laura Landrum, Samantha Stevenson, Nan Rosenbloom, Andrew Mai, and Gary Strand. 2016. <span>“Climate Variability and Change Since 850 <span>CE</span>: An Ensemble Approach with the Community Earth System Model.”</span> <em>Bulletin of the American Meteorological Society</em> 97 (5): 735–54. <a href="https://doi.org/10.1175/BAMS-D-14-00233.1">https://doi.org/10.1175/BAMS-D-14-00233.1</a>.
+  </div>
+-
+<!-- .element: style="font-size:20pt" -->
+  <div class="csl-entry" id="ref-richardson1972" role="doc-biblioentry">
+  Richardson, W. H. 1972. <span>“<span class="nocase">Bayesian-Based Iterative Method of Image Restoration*</span>.”</span> <em>J. Opt. Soc. Am.</em> 62 (1): 55–59. <a href="http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55">http://www.osapublishing.org/abstract.cfm?URI=josa-62-1-55</a>.
+  </div>
+  <!-- End adding with revealjs-make-reflist -->

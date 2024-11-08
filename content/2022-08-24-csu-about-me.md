@@ -13,9 +13,9 @@ revealOptions:
 
 - _Eirik Rolland Enger_, visiting PhD candidate from Tromsø, Norway
 - Exited about exploring the nearby trails on my bike!
-<!-- .element: class="fragment" -->
+  <!-- .element: class="fragment" -->
 - Temperature response to volcanoes in CESM2
-<!-- .element: class="fragment" -->
+  <!-- .element: class="fragment" -->
 
 ---
 

@@ -136,13 +136,15 @@ data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/
 -->
 <!-- .slide: data-background-opacity="0.15" -->
 
+<!-- dprint-ignore-start -->
 - At the equator
-- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$
-  `$\mathrm{km}$` altitude
-- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ amounts:
+- <!-- .element: class="fragment" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$ `$\mathrm{km}$` altitude
+- <!-- .element: class="fragment" -size:29pt" -->
+$\mathrm{SO_2}$ amounts:
   - `$26\,\mathrm{Tg}$`(↓)
   - `$400\,\mathrm{Tg}$`(—)
   - `$1629\,\mathrm{Tg}$`(↑)
+<!-- dprint-ignore-end -->
 
 Notes:
 
@@ -396,16 +398,14 @@ slow decay to equilibrium when comparing radiative forcing and aerosol optical d
 The slides can be viewed both with
 ([HTML](https://slides.eirik.re/2023-04-24-egu-conference?showNotes=separate-page),
 [PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-separate-page.pdf))
-and without
-([HTML](https://slides.eirik.re/2023-04-24-egu-conference?showNotes=false),
+and without ([HTML](https://slides.eirik.re/2023-04-24-egu-conference?showNotes=false),
 [PDF](https://raw.githubusercontent.com/engeir/presentations-files/main/2023/egu23/2023-04-24-egu-conference-showNotes-false.pdf))
 speaker notes.
 
 [Link](https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html) and QR code to the
 conference abstract information:
 
-<a href="https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html" target="_blank">
-<img src="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /> </a>
+<a href="https://meetingorganizer.copernicus.org/EGU23/EGU23-3331.html" target="_blank"><img src="https://raw.githubusercontent.com/engeir/presentations/dd0a662/2023/egu23/assets/egu23-3331-qr.png" width="auto" height="110px" /></a>
 
 <!-- dprint-ignore-start -->
 
@@ -423,23 +423,52 @@ conference abstract information:
 
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-gregory2016" role="doc-biblioentry">
-Gregory, J. M., T. Andrews, P. Good, T. Mauritsen, and P. M. Forster. 2016. <span>“Small Global-Mean Cooling Due to Volcanic Radiative Forcing.”</span> <em>Climate Dynamics</em> 47 (December): 3979–91. <a href="https://doi.org/10.1007/s00382-016-3055-1">https://doi.org/10.1007/s00382-016-3055-1</a>.
+  Gregory, J. M., T. Andrews, P. Good, T. Mauritsen, and P. M. Forster. 2016.
+  <span>“Small Global-Mean Cooling Due to Volcanic Radiative Forcing.”</span>
+  <em>Climate Dynamics</em> 47 (December): 3979–91.
+  <a href="https://doi.org/10.1007/s00382-016-3055-1"
+    >https://doi.org/10.1007/s00382-016-3055-1</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-hansen1999" role="doc-biblioentry">
-Hansen, James, Reto Ruedy, J. Glascoe, and Makiko Sato. 1999. <span>“<span>GISS</span> Analysis of Surface Temperature Change.”</span> <em>Journal of Geophysical Research: Atmospheres</em> 104 (D24): 30997–1022. <a href="https://doi.org/10.1029/1999JD900835">https://doi.org/10.1029/1999JD900835</a>.
+  Hansen, James, Reto Ruedy, J. Glascoe, and Makiko Sato. 1999.
+  <span>“<span>GISS</span> Analysis of Surface Temperature Change.”</span>
+  <em>Journal of Geophysical Research: Atmospheres</em> 104 (D24): 30997–1022.
+  <a href="https://doi.org/10.1029/1999JD900835"
+    >https://doi.org/10.1029/1999JD900835</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-jones2005" role="doc-biblioentry">
-Jones, Gareth S., Jonathan M. Gregory, Peter A. Stott, Simon F. B. Tett, and Robert B. Thorpe. 2005. <span>“<span class="nocase">An <span>AOGCM</span> simulation of the climate response to a volcanic super-eruption</span>.”</span> <em>Climate Dynamics</em> 25 (7): 725–38. <a href="https://doi.org/10.1007/s00382-005-0066-8">https://doi.org/10.1007/s00382-005-0066-8</a>.
+  Jones, Gareth S., Jonathan M. Gregory, Peter A. Stott, Simon F. B. Tett, and
+  Robert B. Thorpe. 2005.
+  <span
+    >“<span class="nocase"
+      >An <span>AOGCM</span> simulation of the climate response to a volcanic
+      super-eruption</span
+    >.”</span
+  >
+  <em>Climate Dynamics</em> 25 (7): 725–38.
+  <a href="https://doi.org/10.1007/s00382-005-0066-8"
+    >https://doi.org/10.1007/s00382-005-0066-8</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-raible2016" role="doc-biblioentry">
-Raible, Christoph C., Stefan Brönnimann, Renate Auchmann, Philip Brohan, Thomas L. Frölicher, Hans-F. Graf, Phil Jones, et al. 2016. <span>“Tambora 1815 as a Test Case for High Impact Volcanic Eruptions: Earth System Effects.”</span> <em>WIREs Climate Change</em> 7 (4): 569–89. <a href="https://doi.org/10.1002/wcc.407">https://doi.org/10.1002/wcc.407</a>.
+  Raible, Christoph C., Stefan Brönnimann, Renate Auchmann, Philip Brohan,
+  Thomas L. Frölicher, Hans-F. Graf, Phil Jones, et al. 2016.
+  <span
+    >“Tambora 1815 as a Test Case for High Impact Volcanic Eruptions: Earth
+    System Effects.”</span
+  >
+  <em>WIREs Climate Change</em> 7 (4): 569–89.
+  <a href="https://doi.org/10.1002/wcc.407">https://doi.org/10.1002/wcc.407</a>.
 </div>
-
 --
-
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-sukhodolov2018" role="doc-biblioentry">
 Sukhodolov, T., J.-X. Sheng, A. Feinberg, B.-P. Luo, T. Peter, L. Revell, A. Stenke, D. K. Weisenstein, and E. Rozanov. 2018. <span>“Stratospheric Aerosol Evolution After Pinatubo Simulated with a Coupled Size-Resolved Aerosol–Chemistry–Climate Model, <span>SOCOL</span>-<span> AER</span>v1.0.”</span> <em>Geoscientific Model Development</em> 11 (7): 2633–47. <a href="https://doi.org/10.5194/gmd-11-2633-2018">https://doi.org/10.5194/gmd-11-2633-2018</a>.

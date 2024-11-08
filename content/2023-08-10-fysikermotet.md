@@ -183,13 +183,16 @@ data-background="https://raw.githubusercontent.com/engeir/presentations/dd0a662/
 -->
 <!-- .slide: data-background-opacity="0.10" -->
 
+<!-- dprint-ignore-start -->
 - At the equator
-- <!-- .element: class="fragment" data-fragment-index="1" -size:29pt" --> $\mathrm{SO_2}$ injected at $18$–$20$
-  `$\mathrm{km}$` altitude
-- <!-- .element: class="fragment" data-fragment-index="2" -size:29pt" --> $\mathrm{SO_2}$ amounts:
+- <!-- .element: class="fragment" data-fragment-index="1" -size:29pt" -->
+$\mathrm{SO_2}$ injected at $18$–$20$ `$\mathrm{km}$` altitude
+- <!-- .element: class="fragment" data-fragment-index="2" -size:29pt" -->
+$\mathrm{SO_2}$ amounts:
   - `$26\,\mathrm{Tg}$`(↓)
   - `$400\,\mathrm{Tg}$`(—)
   - `$1629\,\mathrm{Tg}$`(↑)
+<!-- dprint-ignore-end -->
 
 > Tg = tera gram = Mt = mega tons = $10^{12}$ grams
 
@@ -592,9 +595,11 @@ So, what makes the AOD time series depend on eruption magnitude? Could be
 
 ## Links
 
-|                                                                                                                                                                      [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false)                                                                                                                                                                      |                                                                                                                                                                  [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page)                                                                                                                                                                  |                                                                                                                                                              [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5)                                                                                                                                                               |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+<!-- dprint-ignore-start -->
+| [Slides](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=false) | [Slides & Notes](https://slides.eirikenger.xyz/2023-08-10-fysikermotet?showNotes=separate-page) | [Fysikermøtet Abstract](https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5) |
+| :------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | <qr-code contents="https://slides.eirik.re/2023-08-10-fysikermotet?showNotes=false" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/96eb73f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://slides.eirik.re/2023-08-10-fysikermotet?showNotes=separate-page" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/96eb73f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> | <qr-code contents="https://org.uib.no/ift-posten/Fysikermoete_2023/Abstracts%20for%20Space,%20Plasma%20and%20Climate%20Physics.pdf#page=5" module-color="#1c7d43" position-ring-color="#13532d" position-center-color="#70c559" mask-x-to-y-ratio="1.1" style="width: 280px; height: 280px; margin: 0em auto;"> <img src="https://raw.githubusercontent.com/engeir/presentations/96eb73f/2023/fysikermotet23/assets/safari-pinned-tab-white.svg" slot="icon" /> </qr-code> |
+<!-- dprint-ignore-end -->
 
 <!-- dprint-ignore-start -->
 
@@ -607,23 +612,52 @@ So, what makes the AOD time series depend on eruption magnitude? Could be
 
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-gregory2016" role="doc-biblioentry">
-Gregory, J. M., T. Andrews, P. Good, T. Mauritsen, and P. M. Forster. 2016. <span>“Small Global-Mean Cooling Due to Volcanic Radiative Forcing.”</span> <em>Climate Dynamics</em> 47 (December): 3979–91. <a href="https://doi.org/10.1007/s00382-016-3055-1">https://doi.org/10.1007/s00382-016-3055-1</a>.
+  Gregory, J. M., T. Andrews, P. Good, T. Mauritsen, and P. M. Forster. 2016.
+  <span>“Small Global-Mean Cooling Due to Volcanic Radiative Forcing.”</span>
+  <em>Climate Dynamics</em> 47 (December): 3979–91.
+  <a href="https://doi.org/10.1007/s00382-016-3055-1"
+    >https://doi.org/10.1007/s00382-016-3055-1</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-hansen1999" role="doc-biblioentry">
-Hansen, James, Reto Ruedy, J. Glascoe, and Makiko Sato. 1999. <span>“<span>GISS</span> Analysis of Surface Temperature Change.”</span> <em>Journal of Geophysical Research: Atmospheres</em> 104 (D24): 30997–1022. <a href="https://doi.org/10.1029/1999JD900835">https://doi.org/10.1029/1999JD900835</a>.
+  Hansen, James, Reto Ruedy, J. Glascoe, and Makiko Sato. 1999.
+  <span>“<span>GISS</span> Analysis of Surface Temperature Change.”</span>
+  <em>Journal of Geophysical Research: Atmospheres</em> 104 (D24): 30997–1022.
+  <a href="https://doi.org/10.1029/1999JD900835"
+    >https://doi.org/10.1029/1999JD900835</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-jones2005" role="doc-biblioentry">
-Jones, Gareth S., Jonathan M. Gregory, Peter A. Stott, Simon F. B. Tett, and Robert B. Thorpe. 2005. <span>“<span class="nocase">An <span>AOGCM</span> simulation of the climate response to a volcanic super-eruption</span>.”</span> <em>Climate Dynamics</em> 25 (7): 725–38. <a href="https://doi.org/10.1007/s00382-005-0066-8">https://doi.org/10.1007/s00382-005-0066-8</a>.
+  Jones, Gareth S., Jonathan M. Gregory, Peter A. Stott, Simon F. B. Tett, and
+  Robert B. Thorpe. 2005.
+  <span
+    >“<span class="nocase"
+      >An <span>AOGCM</span> simulation of the climate response to a volcanic
+      super-eruption</span
+    >.”</span
+  >
+  <em>Climate Dynamics</em> 25 (7): 725–38.
+  <a href="https://doi.org/10.1007/s00382-005-0066-8"
+    >https://doi.org/10.1007/s00382-005-0066-8</a
+  >.
 </div>
-- <!-- .element: style="font-size:20pt" -->
+-
+<!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-raible2016" role="doc-biblioentry">
-Raible, Christoph C., Stefan Brönnimann, Renate Auchmann, Philip Brohan, Thomas L. Frölicher, Hans-F. Graf, Phil Jones, et al. 2016. <span>“Tambora 1815 as a Test Case for High Impact Volcanic Eruptions: Earth System Effects.”</span> <em>WIREs Climate Change</em> 7 (4): 569–89. <a href="https://doi.org/10.1002/wcc.407">https://doi.org/10.1002/wcc.407</a>.
+  Raible, Christoph C., Stefan Brönnimann, Renate Auchmann, Philip Brohan,
+  Thomas L. Frölicher, Hans-F. Graf, Phil Jones, et al. 2016.
+  <span
+    >“Tambora 1815 as a Test Case for High Impact Volcanic Eruptions: Earth
+    System Effects.”</span
+  >
+  <em>WIREs Climate Change</em> 7 (4): 569–89.
+  <a href="https://doi.org/10.1002/wcc.407">https://doi.org/10.1002/wcc.407</a>.
 </div>
-
 --
-
 - <!-- .element: style="font-size:20pt" -->
 <div class="csl-entry" id="ref-sigl2015" role="doc-biblioentry">
 Sigl, M., M. Winstrup, J. R. McConnell, K. C. Welten, G. Plunkett, F. Ludlow, U. Büntgen, et al. 2015. <span>“Timing and Climate Forcing of Volcanic Eruptions for the Past 2,500 Years.”</span> <em>Nature</em> 523 (7562): 543–49. <a href="https://doi.org/10.1038/nature14565">https://doi.org/10.1038/nature14565</a>.
