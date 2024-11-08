@@ -5,11 +5,11 @@ on:
       - main
     paths:
       - '.github/labels.yml'
-      - '.github/workflows/labels.yml'
+      - '.github/workflows/labeler.yml'
   pull_request:
     paths:
       - '.github/labels.yml'
-      - '.github/workflows/labels.yml'
+      - '.github/workflows/labeler.yml'
 jobs:
   labeler:
     runs-on: ubuntu-latest
