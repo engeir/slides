@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Presentation 1: Model components in CESM2</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="../assets/theme/my-theme.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+    <!-- My added plugin stylecheets -->
+    <link
+      rel="stylesheet"
+      href="./plugin/attribution/attribution.css"
+    />
+    <link rel="stylesheet" href="./plugin/copycode/copycode.css" />
+    <link rel="stylesheet" href="./plugin/drawer/drawer.css" />
+    <link
+      rel="stylesheet"
+      href="./plugin/highlight/gruvbox-dark-medium.css"
+    />
+    <link rel="stylesheet" href="./plugin/pointer/pointer.css" />
+    <link rel="stylesheet" href="./plugin/simplemenu/simplemenu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\n---\n" data-separator-vertical="\n--\n">
+          <textarea data-template>
+            
+
+<!-- INTRODUCTION ================================================================== -->
+
+## CESM2
+
+<!-- .element class="r-fit-text" -->
+
+Eirik Enger, ATS745
+
+Press "s" to see comments to the slides.
+
+<!-- .element: style="font-size:15pt" -->
+
+---
+
+<!-- HISTORY ======================================================================= -->
+
+### History
+
+<!-- .element class="r-fit-text" -->
+
+--
+
+<!-- How old is the model and what is its family history --------------------------- -->
+
+Released in June 2018
+
+<!-- .element class="r-fit-text" -->
+
+| CESM2 | CESM1 | CCSM4 | CCSM3 | CCSM2 | CSM1 | CCM3 | CCM2 | CCM1 | CCM0 |
+| :---: | :---: | :---: | :---: | :---: | :--: | :--: | :--: | :--: | :--: |
+| 2018  | 2010  | 2010  | 2004  | 2002  | 1996 | 1996 | 1992 | 1987 | 1983 |
+
+<!-- .element class="r-fit-text" -->
+
+<a href="https://doi.org/10.1029/2019MS001916" data-citation-key="@danabasoglu2020">Danabasoglu
+et al. (2020)</a>,
+<a href="https://journals.ametsoc.org/view/journals/clim/19/11/jcli3761.1.xml" data-citation-key="@collins2006">Collins
+et al. (2006)</a>,
+<a href="https://journals.ametsoc.org/view/journals/clim/11/6/1520-0442_1998_011_1115_tncsmv_2.0.co_2.xml" data-citation-key="@boville1998">Boville
+and Gent (1998)</a>,
+<a href="https://www.cesm.ucar.edu/models/cesm1.0/notable_improvements.html">cesm.ucar.edu</a>,
+<a href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/introduction.html#ccm0-and-ccm1">ncar.github.io</a>,
+<a href="https://www.cgd.ucar.edu/cms/ccm3/history.shtml">cgd.ucar.edu</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+Released four years ago.
+
+Descendant of the Community Climate System Model (CCSM) (which is a subset of CESM1),
+the Climate System Model (CSM) and the Community Climate Models (CCM) (which itself was
+based on the Australian spectral model and an adiabatic, inviscid version of the ECMWF
+spectral model).
+
+CAM3 (three iterations before the current atmosphere model, CAM6), was the fifth
+generations of CCM, coming in after CCM3. The name change reflects how they now
+incorporate more than just the atmosphere in their model.
+
+"The initial version [of CSM-1] is a physical climate model similar to other coupled
+GCMs. It contains atmospheric and oceanic GCMs, a land surface biophysics and basic soil
+hydrology model, and a sea-ice dynamics and thermodynamics model. These component models
+communicate through a driver program called the flux coupler, …"
+
+--
+
+<!-- Is it closely related to other models? ---------------------------------------- -->
+
+NorESM (from CESM2.1)
+
+<!-- .element class="r-fit-text" -->
+
+<span class="r-fit-text">
+  <span class="fragment"> Differences: ocean model and aerosol module </span>
+</span>
+
+<!-- skip -->
+
+E3SM (from CESM1)
+
+<!-- .element class="r-fit-text" -->
+
+<span class="r-fit-text">
+  <span class="fragment">
+    Similarities: atm. model is based on CAM5, MOSART used in both
+  </span>
+</span>
+
+<!-- skip -->
+
+<a href="https://noresm-docs.readthedocs.io/en/noresm2/model-description/overview.html">noresm-docs.readthedocs.io</a>,
+<a href="https://e3sm.org/model/e3sm-model-description/">e3sm.org</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+NorESM come from a very recent CESM version, the most recent production release of CESM
+is CESM2.1.3, while there is also a supported development release of CESM2.2.0.
+
+NorESM uses the isopycnic coordinate Bergen Layered Ocean Model, uses a different
+aerosol module OsloAero6, contains specific modifications and tunings of the atmosphere
+component, and contains the iHAMOCC model to describe ocean biogeochemistry.
+
+E3SM (Energy Exascale Earth System Model), MOSART (The MOdel for Scale Adaptive River
+Transport)
+
+---
+
+### Model components
+
+<!-- .element class="r-fit-text" -->
+
+--
+
+![](https://github.com/engeir/presentations/raw/b3ef34d21afab4048249574e2095da2bdabb66b6/2022/at745/1/assets/component-models.png)
+
+<a href="https://doi.org/10.1029/2019MS001916"
+data-citation-key="@danabasoglu2020">Danabasoglu et al. (2020)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+- Coupler: Common Infrastructure for Modelling the Earth (CIME5, pronounced "seam")
+- Land model: Community Land Model, v5 (CLM5)
+- River runoff: The MOdel for Scale Adaptive River Transport (MOSART)
+- Surface waves: Wave Watch III (WW3)
+- The Marine Biogeochemistry Library (MARBL)
+- Sea ice: CICE5
+- Land ice: Community Ice Sheet Model (CISM), which then adds continental ice sheets to
+  the model
+- Atmosphere: Community Atmosphere Model and Whole Atmosphere Community Climate Model
+  (CAM6/WACCM6)
+- Ocean: Parallel Ocean Program (POP)
+
+<!-- See documentation at -->
+<!-- https://escomp.github.io/cism-docs/cism/release-cism2.1/pdf/cism2.1_doc.pdf -->
+
+---
+
+### CAM6
+
+<!-- .element class="r-fit-text" -->
+
+Notes:
+
+Community Atmosphere Model, version 6
+
+--
+
+#### Two versions
+
+- CAM ends at $2.26\\,\mathrm{hPa}$ ($40\\,\mathrm{km}$), while WACCM ends at
+  $4.5\times 10^{-6}\\,\mathrm{hPa}$ ($130\\,\mathrm{km}$)
+- Both include an interactive carbon cycle (CCSM2)
+
+<a href="https://doi.org/10.1029/2019MS001916"
+data-citation-key="@danabasoglu2020">Danabasoglu et al. (2020)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+The atmosphere is by default modelled by CAM6, but WACCM6 is also available. Both CAM
+and WACCM include at least parts of the stratosphere.
+
+There is even yet another (thermosphere and ionosphere) extension, WACCM-X, which goes
+all the way up to 2.5×10⁻⁹ hPa (∼500 km).
+
+Both also include an interactive carbon cycle, this was added when they developed CCSM2
+from CSM, and we remember that CCSM2 was released in 2002, while CSM1 was released in
+1996. (A long time ago!)
+
+--
+
+<!-- What vertical coordinate is used for the atmosphere and for the ocean? -------- -->
+
+#### Vertical coordinates
+
+- CAM6 uses 32 layers, WACCM6 70 layers
+- Quasi-Lagrangian, like an $\eta$-coordinate <!-- .element class="fragment" -->
+- Discretized with a Lorenz staggering <!-- .element class="fragment" -->
+
+<a
+href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#a-vertically-lagrangian-and-horizontally-eulerian-control-volume-discretization-of-the-hydrodynamics">
+ncar.github.io</a>,
+<a
+href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#vertical-coordinate-and-hydrostatic-equation">
+ncar.github.io</a>,
+<a href="https://doi.org/10.1029/2019MS001916"
+data-citation-key="@danabasoglu2020">Danabasoglu et al. (2020)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+The vertical discretization is essentially a quasi-Lagrangian, like an 𝜼-coordinate used
+by an Eulerian core, or hybrid 𝜎-𝑝-coordinate, and uses a hydrostatic atmosphere. This
+makes the Lagrangian coordinate system an inertial one. (The LHS and RHS of the vertical
+momentum equation vanishes for hydrostatic flows.) The vertical coordinate system is
+discretized with a Lorenz staggering.
+
+(_Vertical velocity in CAM6 come from vertical pressure velocity. (See
+[wn](https://github.com/ESCOMP/CAM/blob/cam_cesm2_2_rel/src/ionosphere/waccmx/dpie_coupling.F90#L307)
+and
+[omega](https://github.com/ESCOMP/CAM/blob/cam_cesm2_2_rel/src/physics/cam/cldwat.F90#L259).)_)
+
+<!-- "https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#a-vertically-lagrangian-and-horizontally-eulerian-control-volume-discretization-of-the-hydrodynamics" -->
+<!-- "https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#vertical-discretization" -->
+<!-- "https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#overview" -->
+
+--
+
+<!-- GRID USED IN CAM ============================================================== -->
+
+<div class="r-stack">
+  <img
+    class="fragment semi-fade-out"
+    data-fragment-index="0"
+    src="https://github.com/engeir/presentations/raw/b3ef34d21afab4048249574e2095da2bdabb66b6/2022/at745/1/assets/spectral-element-grid.png"
+    height="70%"
+  />
+  <span class="fragment fade-in" data-fragment-index="0">
+    <p>Semi-Lagrangian scheme</p>
+    <p>CD-grid</p>
+    <p class="fragment fade-in" data-fragment-index="1">
+      Down to $1^\circ$ resolution
+    </p>
+    <p style="font-size: 13pt">
+      <a
+        href="https://doi.org/10.1177/1094342005056108"
+        data-citation-key="@dennis2005"
+      >
+        Dennis et al. (2005)</a
+      >,
+      <a
+        href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#optional-diffusion-operators-in-cam5"
+      >
+        ncar.github.io</a
+      >,
+      <a href="https://www.gfdl.noaa.gov/fv3/"> gfdl.noaa.gov</a>
+    </p>
+  </span>
+</div>
+Notes: Illustration of the cubed sphere grid. The finite volume version 3 (FV3)
+dynamical core uses a semi-Lagrangian scheme. Sign preserving, arbitrarily long
+time steps, but also damping. Dynamics and physics are "time split" in the sense
+that all prognostic variables are updated sequentially by the "dynamics" and
+then the "physics". From [gfdl.noaa.gov](https://www.gfdl.noaa.gov/fv3/): The
+design of FV3 was guided by these tenets: 1. The discretization should be guided
+by physical principles as much as possible. 2. A fast model can be a good model,
+but a good model must be a fast model! Computational efficiency is crucial.
+Optional:
+The spectral element method relies on quadrilateral elements, thus they use a subdivided
+inscribed cube to generate quasi-isotropic tilings of the sphere with such quadrilateral
+elements.
+
+- CAM uses the cubed sphere, optionally a "continuous Galerkin spectral finite element
+  method". Spectral element to be used in CESM3?
+
+CD-grid:
+
+We remember from class: C-grid is used a lot, has 𝑑𝑢/𝑑𝑥, 𝑑𝑣/𝑑𝑦, it improves as the grid
+spacing get smaller. The D-grid swaps around on the placement of 𝑢 and 𝑣, has lots of
+averaging which introduce noise. But, it is attractive for calculating geostrophic wind.
+
+- **PRO**: provides explicit control over the rotational modes at the grid scale, due to
+  monotonicity constraint in the (PPM-based [piecewise parabolic method]) advection.
+- **CON**: no explicit control over the divergent modes at the grid scale. Therefore,
+  divergence damping terms appear on the RHS of the momentum equations.
+
+Resolution is nominal 1°, 1.25° in longitude/zonal direction and 0.9° in
+latitude/meridional direction.
+
+<!-- <a -->
+<!-- href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#spectral-element-dynamical-core"> -->
+<!-- ncar.github.io</a>, -->
+<!-- <a -->
+<!-- href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#horizontal-discretization-functional-spaces"> -->
+<!-- ncar.github.io</a> -->
+
+<!-- Questions after talk: -->
+<!-- - How is the spectral element grid different from the cubed sphere? (This looks so -->
+<!--   similar: https://www.nasa.gov/content/noaagfdl-cubed-sphere-core) -->
+
+--
+
+### Equations
+
+_Below are some equations to look at, for both CAM (atmosphere) and POP (ocean)_.
+
+--
+
+<!-- .slide: style="font-size:15pt" -->
+
+_CAM6_
+
+$ \frac{1}{\rho}\frac{\partial p}{\partial z}+g=0 $, hydrostatic balance.
+
+$ \frac{\partial}{\partial t}C+\nabla \cdot(\boldsymbol{V}C)=0 $
+
+The above is conservation of total air mass if $C=\pi$ and for tracer species if $C=\pi
+q$ with, $\boldsymbol{V}=(u,v,\frac{\mathrm{d}\zeta}{\mathrm{d}t})$. If $C=\pi\Theta$ we
+get the first law of thermodynamics, with $\Theta$ the potential temperature. $\pi$ is a
+pseudo-density, from the hydrostatic balance equation related to the true density as
+$\pi =-\frac{\partial \Phi }{\partial \zeta }\rho$.
+
+$$ \left\. \begin{array}{l} \frac{\partial}{\partial t}u=\Omega v-\frac{1}{A\cos\theta}
+\left\[\frac{\partial}{\partial\lambda}(\kappa+\Phi-\nu D)
++\frac{1}{\rho}\frac{\partial}{\partial\lambda}p\right\]
+-\frac{\mathrm{d}\zeta}{\mathrm{d}t}\frac{\partial u}{\partial \zeta} \\\\
+\frac{\partial}{\partial t}v=-\Omega u-\frac{1}{A}
+\left\[\frac{\partial}{\partial\theta}(\kappa+\Phi-\nu D)
++\frac{1}{\rho}\frac{\partial}{\partial\theta}p\right\]
+-\frac{\mathrm{d}\zeta}{\mathrm{d}t}\frac{\partial v}{\partial \zeta}
+\end{array}\right\\} \mathrm{momentum~equations} $$
+
+<a
+href="https://ncar.github.io/CAM/doc/build/html/cam6_scientific_guide/dynamics.html#the-governing-equations-for-the-hydrostatic-atmosphere">
+ncar.github.io</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+- 𝜋 is a pseudo-density, 𝜁 is a general vertical coordinate.
+- 𝑞 is the mass mixing ratio (or specific humidity) of the tracers (or water vapour).
+- 𝐴 is the radius of the earth, 𝜈 is the coefficient for the optional divergence
+  damping, 𝐷 is the horizontal divergence, 𝛺 is the vertical component of the absolute
+  vorticity.
+
+--
+
+<!-- .slide: style="font-size:15pt" -->
+
+_POP_
+
+$$
+\mathrm{Momentum~equations}
+\begin{cases}
+\frac{\partial}{\partial t}u + {\cal L} (u) - (uv\tan \phi)/a - fv =
+-\frac{1}{\rho_{\_0} a\cos \phi} \frac{\partial p}{\partial\lambda} +
+{\cal F}\_{Hx} (u,v) + {\cal F}\_V (u) \\\\
+\frac{\partial}{\partial t}v + {\cal L} (v) + (u^2\tan \phi)/a + fu =
+-\frac{1}{\rho_{\_0}a} \frac{\partial p}{\partial\phi} + {\cal F}\_{Hy}
+(u,v) + {\cal F}\_V (v) \\\\
+{\cal L}(\alpha) = \frac{1}{a\cos\phi} \left\[\frac{\partial}{
+\partial\lambda} (u\alpha) + \frac{\partial}{\partial\phi}
+(\cos\phi v\alpha)\right\] + \frac{\partial}{\partial z} (w\alpha)\\\\
+{\cal F}\_{Hx} (u,v) = A\_M\left\\{\nabla^2 u + u(1 - \tan^2\phi)/a^2 -
+\frac{2\sin\phi
+}{a^2\cos^2\phi} \frac{\partial v }{\partial\lambda}\right\\}\\\\
+{\cal F}\_{Hy} (u,v) = A\_M\left\\{\nabla^2v + v (1 - \tan^2\phi)/a^2 +
+\frac{2\sin\phi
+}{a^2\cos^2\phi} \frac{\partial u}{\partial\lambda}\right\\}\\\\
+\nabla^2\alpha = \frac{1}{a^2\cos^2\phi} \frac{\partial^2 \alpha}{
+\partial\lambda^2} +
+\frac{1}{a^2\cos\phi} \frac{\partial}{\partial\phi}
+\left(\cos\phi \frac{\partial \alpha}{\partial\phi}\right)\\\\
+{\cal F}\_V (\alpha) = \frac{\partial}{\partial z}\mu \frac{\partial
+}{\partial z}\alpha \\\\
+\end{cases}
+$$
+
+$$
+\begin{array}{rl}
+\text{Continuity equation}:&{\cal L} (1) = 0\\\\
+\text{Hydrostatic equation}: &\frac{\partial p}{\partial z} = -\rho g \\\\
+\text{Equation of state}: &\rho = \rho (\Theta, S, p)  \rightarrow  \rho (\Theta, S, z) \\\\
+\text{Tracer transport}: &
+\begin{cases}
+\frac{\partial}{\partial t} \varphi + {\cal L} (\varphi) = {\cal D}\_H (\varphi) + {\cal D}\_V (\varphi) \\\\
+{\cal D}\_H (\varphi) = A\_H \nabla^2 \varphi \\\\
+{\cal D}\_V (\varphi) = \frac{\partial}{\partial z} \kappa \frac{\partial }{\partial z} \varphi
+\end{cases}
+\end{array}
+$$
+
+<a
+href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html#the-primitive-equations-in-general-coordinates">
+ncar.github.io</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+In the tracer transport equations, 𝜑 represents 𝛩, 𝑆 or a passive tracer.
+
+𝜆, 𝜙 and 𝑧=𝑟-𝑎 are longitude, latitude, and depth relative to mean sea level 𝑟=𝑎.
+
+Visit
+[ncar.github.io](https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html#the-primitive-equations-in-general-coordinates)
+for details.
+
+--
+
+#### Prognostic variables
+
+<!-- dprint-ignore-start -->
+| CAM (atm.) | POP (ocn.) <!-- .element class="fragment" data-fragment-index="0" --> |
+| ---------- | ---------- |
+| Pseudo-density, $\pi$ | Density, $\rho$ <!-- .element class="fragment" data-fragment-index="0" --> |
+| Potential temperature, $\theta$ | Potential temperature, $\theta$ <!-- .element class="fragment" data-fragment-index="0" --> |
+| Horizontal velocity, $u$, $v$ | Horizontal velocity, $u$, $v$ <!-- .element class="fragment" data-fragment-index="0" --> |
+| Tracer species, $q$ |   |
+|   | Vertical velocity, $w$ <!-- .element class="fragment" data-fragment-index="0" --> |
+|   | Pressure, $p$ <!-- .element class="fragment" data-fragment-index="0" --> |
+|   | Salinity, $S$ <!-- .element class="fragment" data-fragment-index="0" --> |
+<!-- dprint-ignore-end -->
+
+<!-- .element: style="font-size:19pt" -->
+
+<a href="https://github.com/ESCOMP/CAM/blob/cam_cesm2_1_rel/src/dynamics/eul/prognostics.F90">github.com</a>,
+<a href="https://github.com/ESCOMP/POP2-CESM/blob/master/source/prognostic.F90">
+github.com</a>,
+<a
+href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html#the-primitive-equations-in-general-coordinates">
+ncar.github.io</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+---
+
+### POP2
+
+<!-- .element class="r-fit-text" -->
+
+Notes:
+
+Parallel Ocean Program, version 2
+
+--
+
+<!-- .slide: data-transition="slide-in fade-out" -->
+
+<div class="r-stack">
+  <img
+    class="fragment fade-out"
+    data-fragment-index="0"
+    src="https://github.com/engeir/presentations/raw/b3ef34d21afab4048249574e2095da2bdabb66b6/2022/at745/1/assets/FigDipoleGrid.png"
+  />
+  <img
+    class="fragment fade-in-then-semi-out"
+    data-fragment-index="0"
+    src="https://github.com/engeir/presentations/raw/b3ef34d21afab4048249574e2095da2bdabb66b6/2022/at745/1/assets/FigTripoleGrid.png"
+  />
+  <p class="fragment">ORTHOGONAL CURVILINEAR COORDINATE SYSTEM</p>
+</div>
+
+<!-- skip -->
+
+<a href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html#grids">ncar.github.io</a>,
+<a href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html#discrete-horizontal-and-vertical-grids">ncar.github.io</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+Orthogonal curvilinear coordinate systems (dipole or tripole) where one or two
+singularities are in NH where there are landmasses, equator a grid line, and SH a
+standard spherical polar grid (Mercator) with the singularity at the true South Pole.
+
+On POP2 grids: These grids are topologically equivalent to a cylinder (periodic in x but
+not in y), and therefore can be mapped onto a logically-rectangular 2-D array (i, j)
+which is cyclic in i. Tripole grids require additional communication along the northern
+boundary of the grid in order to “sew up” the grid along the line between the two
+northern grid poles.
+
+As long as the grid is an orthogonal curvilinear coordinate system, the only information
+the code needs locally at each grid point is the longitude and latitude of velocity
+points and the distances to neighbouring points along the two coordinate directions.
+
+The horizontal resolution is nominal 1° with a uniform resolution of 1.125° in the zonal
+direction. In the meridional it varies from 0.27° at its finest (equator) to 0.53° (SH)
+and 0.64° (northwestern Pacific Ocean).
+
+--
+
+<!-- .slide: data-transition="fade-in slide-out" -->
+
+<!-- What horizontal grid spacings are typically used for the atmosphere and for the ocean? -->
+
+<div class="r-stack">
+  <span class="fragment semi-fade-out" data-fragment-index="0">
+    <p>B-grid</p>
+    <p>
+      3D primitive equations for a <italic>thin stratified fluid</italic> using
+      the hydrostatic and Boussinesq approximations.
+    </p>
+    <p style="font-size: 13pt">
+      <a
+        href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html?highlight=grid#finite-difference-operators"
+      >
+        ncar.github.io</a
+      >,
+      <a
+        href="https://www.cesm.ucar.edu/models/cesm1.0/pop2/doc/sci/POPRefManual.pdf"
+        data-citation-key="@smith2010"
+        >Smith et al. (2010)</a
+      >
+    </p>
+  </span>
+  <img
+    class="fragment fade-in"
+    data-fragment-index="0"
+    src="https://github.com/engeir/presentations/raw/b3ef34d21afab4048249574e2095da2bdabb66b6/2022/at745/1/assets/b-grid.png"
+  />
+</div>
+Notes: Top: Specifically, a staggered horizontal B-grid ([fig.
+3.1](https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html?highlight=grid#discrete-horizontal-and-vertical-grids))
+However, _all viscous and diffusive terms are given in terms of an approximate
+C-grid discretization in order to ensure they will damp checkerboard
+oscillations on the scale of the grid spacing_
+([source](https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html?highlight=grid#finite-difference-operators)).
+Bottom: Ocean dynamics are described by the 3D primitive equations for a thin
+stratified fluid using the hydrostatic and Boussinesq approximations. Over:
+Vertical velocity in POP (ocean) is calculated at top of 𝑇 cells from horizontal
+velocity field (at 𝑈 points) by integrating the continuity equation. Image show a
+staggered B-grid, with solid lines enclosing a 𝑇-cell.
+
+Also, _as in most Bryan-Cox models_, bottom and lateral boundary conditions are no-flux
+for tracers (zero tracer gradient normal to boundary) and no-slip for velocities (both
+components of velocity zero on bottom and lateral boundaries).
+
+<!-- Ocean source: https://github.com/ESCOMP/POP2-CESM/blob/master/source/operators.F90#L275-L302 -->
+
+--
+
+<!-- What vertical coordinate is used for the atmosphere and for the ocean? -------- -->
+
+#### Vertical coordinates
+
+- Fixed Eulerian grid with depth as the vertical coordinate
+- $60$ levels down to $5500\\,\mathrm{m}$
+- $10\\,\mathrm{m}$ resolution down to $160\\,\mathrm{m}$, then it increases
+  monotonically to $250\\,\mathrm{m}$ at $3500\\,\mathrm{m}$
+
+<a
+href="https://ncar.github.io/POP/doc/build/html/reference_manual/POPRefManual.html?highlight=grid#vertical-grid-variants">
+ncar.github.io</a>,
+<a href="https://doi.org/10.1029/2019MS001916"
+data-citation-key="@danabasoglu2020">Danabasoglu et al. (2020)</a>
+
+<!-- .element: style="font-size:13pt" -->
+
+Notes:
+
+The current vertical grid in POP is a fixed Eulerian grid with depth as the vertical
+coordinate.
+
+Some problems can occur with such a grid, and two options are available to mitigate
+this:
+
+1. A variable-thickness surface layer can be used to more accurately treat changes in
+   sea surface height and fluxes of tracers at the surface.
+2. Partial bottom cells can be used to more accurately represent bottom topography.
+
+There are 60 levels that go down to a depth of 5500 m. The resolution is 10 m down to
+160 m, then it increases monotonically to 250 m at 3500 m.
+
+<!-- Start adding with revealjs-make-reflist -->
+<!-- Generated by revealjs-make-reflist. Do not edit. -->
+
+---
+
+## References
+
+<div class="csl-entry" id="ref-boville1998" role="doc-biblioentry">
+  Boville, Byron A., and Peter R. Gent. 1998.
+  <span>“The <span>NCAR</span> Climate System Model, Version One.”</span>
+  <em>Journal of Climate</em> 11 (6): 1115–30.
+  <a
+    href="https://doi.org/10.1175/1520-0442(1998)011&lt;1115:TNCSMV&gt;2.0.CO;2"
+    >https://doi.org/10.1175/1520-0442(1998)011&lt;1115:TNCSMV&gt;2.0.CO;2</a
+  >.
+</div>
+<!-- .element: style="font-size:20pt" -->
+<div class="csl-entry" id="ref-collins2006" role="doc-biblioentry">
+  Collins, William D., Cecilia M. Bitz, Maurice L. Blackmon, Gordon B. Bonan,
+  Christopher S. Bretherton, James A. Carton, Ping Chang, et al. 2006.
+  <span
+    >“The Community Climate System Model Version 3 (<span>Ccsm3</span>).”</span
+  >
+  <em>Journal of Climate</em> 19 (11): 2122–43.
+  <a href="https://doi.org/10.1175/JCLI3761.1"
+    >https://doi.org/10.1175/JCLI3761.1</a
+  >.
+</div>
+<!-- .element: style="font-size:20pt" -->
+<div class="csl-entry" id="ref-danabasoglu2020" role="doc-biblioentry">
+  Danabasoglu, G., J.-F. Lamarque, J. Bacmeister, D. A. Bailey, A. K. DuVivier,
+  J. Edwards, L. K. Emmons, et al. 2020.
+  <span
+    >“The Community Earth System Model Version 2 (<span>Cesm2</span>).”</span
+  >
+  <em>Journal of Advances in Modeling Earth Systems</em> 12 (2): e2019MS001916.
+  https://doi.org/<a href="https://doi.org/10.1029/2019MS001916"
+    >https://doi.org/10.1029/2019MS001916</a
+  >.
+</div>
+<!-- .element: style="font-size:20pt" -->
+--
+
+<div class="csl-entry" id="ref-dennis2005" role="doc-biblioentry">
+Dennis, John, Aimé Fournier, William F. Spotz, Amik St-Cyr, Mark A. Taylor, Stephen J. Thomas, and Henry Tufo. 2005. <span>“High-Resolution Mesh Convergence Properties and Parallel Efficiency of a Spectral Element Atmospheric Dynamical Core.”</span> <em>The International Journal of High Performance Computing Applications</em> 19 (3): 225–35. <a href="https://doi.org/10.1177/1094342005056108">https://doi.org/10.1177/1094342005056108</a>.
+</div>
+<!-- .element: style="font-size:20pt" -->
+<div class="csl-entry" id="ref-smith2010" role="doc-biblioentry">
+Smith, R, P. Jones, B. Briegleb, F. Bryan, G. Danabasoglu, J. Dennis, J. Dukowicz, et al. 2010. <span>“The Parallel Ocean Program (<span>POP</span>) Reference Manual.”</span> <em>LAUR-10-01853</em>, March. <a href="https://www.cesm.ucar.edu/models/cesm1.0/pop2/doc/sci/POPRefManual.pdf">https://www.cesm.ucar.edu/models/cesm1.0/pop2/doc/sci/POPRefManual.pdf</a>.
+</div>
+<!-- .element: style="font-size:20pt" -->
+<!-- End adding with revealjs-make-reflist -->
+
+          </textarea
+          >
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <!-- My added plugins -->
+    <script src="./plugin/animated/revealjs-animated.js"></script>
+    <script src="./plugin/attribution/plugin.js"></script>
+    <script src="./plugin/copycode/copycode.js"></script>
+    <script src="./plugin/drawer/drawer.js"></script>
+    <script
+      src="./plugin/elapsed-time-bar/elapsed-time-bar.js"
+    ></script>
+    <script src="./plugin/fullscreen/plugin.js"></script>
+    <script src="./plugin/pointer/pointer.js"></script>
+    <script src="./plugin/simplemenu/simplemenu.js"></script>
+    <script
+      src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    ></script>
+    <script>
+    function extend() {
+      var target = {};
+      for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    }
+
+    // default options to init reveal.js
+    var defaultOptions = {
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'default', // none/fade/slide/convex/concave/zoom
+      slideNumber: true,
+      highlight: {
+        highlightOnLoad: false
+      },
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealZoom,
+        RevealNotes,
+        RevealMath,
+        // My added plugins
+        CopyCode,
+        RevealAttribution,
+        RevealDrawer,
+        RevealFullscreen,
+        RevealPointer,
+        Simplemenu,
+      ]
+    };
+
+    // options from URL query string
+    var queryOptions = Reveal().getQueryHash() || {};
+
+    var options = extend(defaultOptions, {"allottedTime":900000,"auto-animate":true,"slideNumber":false,"scrollProgress":true,"view":"vertical","controls":true,"progress":true,"history":true,"center":true,"transition":"slide","_":["content/"],"static":"docs","static-dirs":"content/attachments","staticDirs":"content/attachments","template":"theme/my-reveal.html","theme":"theme/my-theme.css","listing-template":"theme/my-site.html","listingTemplate":"theme/my-site.html"}, queryOptions);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script>
+    Reveal.initialize(options);
+    Reveal.addEventListener("ready", function (event) {
+      const blocks = Reveal.getRevealElement().querySelectorAll(
+        "pre code:not(.mermaid)",
+      );
+      const hlp = Reveal.getPlugin("highlight");
+      blocks.forEach(hlp.highlightBlock);
+    });
+    </script>
+
+    <script>
+    const mermaidOptions = extend({ startOnLoad: false }, {});
+    mermaid.startOnLoad = false;
+    mermaid.initialize(mermaidOptions);
+    const cb = function (event) {
+      mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+      mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+    }
+    Reveal.addEventListener('ready', cb);
+    Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>

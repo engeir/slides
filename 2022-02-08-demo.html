@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Demo of features</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="../assets/theme/my-theme.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+    <!-- My added plugin stylecheets -->
+    <link
+      rel="stylesheet"
+      href="./plugin/attribution/attribution.css"
+    />
+    <link rel="stylesheet" href="./plugin/copycode/copycode.css" />
+    <link rel="stylesheet" href="./plugin/drawer/drawer.css" />
+    <link
+      rel="stylesheet"
+      href="./plugin/highlight/gruvbox-dark-medium.css"
+    />
+    <link rel="stylesheet" href="./plugin/pointer/pointer.css" />
+    <link rel="stylesheet" href="./plugin/simplemenu/simplemenu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\n---\n" data-separator-vertical="\n----\n">
+          <textarea data-template>
+            
+
+# Demo of features
+
+Press space to move through the slides, or `?` to see a help menu.
+
+---
+
+## iFrame background
+
+<!-- .element class="menu" name="item" -->
+
+Note: Test note
+
+<!-- dprint-ignore-start -->
+
+----
+
+<!-- dprint-ignore-end -->
+
+<!-- .slide: data-background-iframe="https://eirik.re" -->
+
+---
+
+## Code
+
+<!-- dprint-ignore-start -->
+
+----
+
+<!-- dprint-ignore-end -->
+
+```python [21,22|19|2-13]
+def count_printed_lines(i: int) -> int:
+    """Run the print loop.
+
+    Parameters
+    ----------
+    i: int
+        How many lines to print
+
+    Returns
+    -------
+    int
+        The number of lines that was printed
+    """
+    for i in range(3):
+        print(f"Do nothing, just print line {i}")
+
+def main() -> None:
+    i = 9
+    _ = count_printed_lines(i)
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+<!-- .slide: style="color: #ee2" -->
+
+## Math
+
+> Math should be wrapped in `` `backticks` ``
+
+<!-- .element: class="fragment" style="font-size: 0.30em !important;" -->
+
+```latex
+`$\frac{1}{2}$`
+```
+
+<!-- dprint-ignore-start -->
+
+----
+
+<!-- dprint-ignore-end -->
+
+This:
+
+<!-- dprint-ignore-start -->
+
+`$$
+\begin{align}
+\begin{split}
+    \langle n_{\mathrm{e}}^*(\boldsymbol{k})Y_{\mathrm{e}}\rangle
+    &=-\frac{1}{V}\frac{1+2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    \int_{\boldsymbol{v}}\int_{-\infty}^\varphi G_{\mathrm{e}}(\varphi,\varphi')
+    f_{\mathrm{e},0}(\boldsymbol{v})\text{d}\boldsymbol{v}\text{d}\varphi' \\
+    &=\frac{n_{\mathrm{e},0}}{\Omega_{\mathrm{e}}V}
+    \frac{1+2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    g_{\mathrm{e}}\left(\boldsymbol{k},\frac{s}{\Omega_{\mathrm{e}}}\right)
+\end{split} \\[1em]
+\begin{split}
+    \langle n_{\mathrm{e}}^*(\boldsymbol{k})Y_{\mathrm{i}}\rangle
+    &=-\frac{1}{V}\frac{2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    \int_{\boldsymbol{v}}\int_{\infty}^\varphi G_{\mathrm{i}}(\varphi,\varphi')
+    f_{\mathrm{i},0}(\boldsymbol{v})\text{d}\boldsymbol{v}\text{d}\varphi' \\
+    &=\frac{n_{\mathrm{e},0}}{\Omega_{\mathrm{i}}V}
+    \frac{2X_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    g_{\mathrm{i}}\left(\boldsymbol{k},\frac{s}{\Omega_{\mathrm{i}}}\right)
+\end{split}
+\end{align}
+$$`
+<!-- .element: style="font-size:20pt" -->
+
+----
+
+<!-- dprint-ignore-end -->
+
+...is generated from this:
+
+```latex [1|22|23|3,11]
+`$$
+\begin{align}
+\begin{split}
+    \langle n_{\mathrm{e}}^*(\boldsymbol{k})Y_{\mathrm{e}}\rangle
+    &=-\frac{1}{V}\frac{1+2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    \int_{\boldsymbol{v}}\int_{-\infty}^\varphi G_{\mathrm{e}}(\varphi,\varphi')
+    f_{\mathrm{e},0}(\boldsymbol{v})\text{d}\boldsymbol{v}\text{d}\varphi' \\
+    &=\frac{n_{\mathrm{e},0}}{\Omega_{\mathrm{e}}V}
+    \frac{1+2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    g_{\mathrm{e}}\left(\boldsymbol{k},\frac{s}{\Omega_{\mathrm{e}}}\right)
+\end{split} \\[1em]
+\begin{split}
+    \langle n_{\mathrm{e}}^*(\boldsymbol{k})Y_{\mathrm{i}}\rangle
+    &=-\frac{1}{V}\frac{2ZX_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    \int_{\boldsymbol{v}}\int_{\infty}^\varphi G_{\mathrm{i}}(\varphi,\varphi')
+    f_{\mathrm{i},0}(\boldsymbol{v})\text{d}\boldsymbol{v}\text{d}\varphi' \\
+    &=\frac{n_{\mathrm{e},0}}{\Omega_{\mathrm{i}}V}
+    \frac{2X_{\mathrm{p}}^2}{1+2X_{\mathrm{p}}^2(1+Z)}
+    g_{\mathrm{i}}\left(\boldsymbol{k},\frac{s}{\Omega_{\mathrm{i}}}\right)
+\end{split}
+\end{align}
+$$`
+<!-- .element: style="font-size:20pt" -->
+```
+
+<!-- .element: style="font-size:12pt" -->
+
+<!-- dprint-ignore-start -->
+
+----
+
+`$$\begin{aligned}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy
+\end{aligned}$$`
+
+<!-- dprint-ignore-end -->
+
+---
+
+<!-- .slide: class="data-auto-animate" -->
+
+## Animations
+
+<!-- .element class="fragment animated move-to-middle-top" data-animated-duration="1000" data-animated-iterations="1" data-animated-fill="forwards" -->
+
+[List of available animations](https://github.com/rogeralmeida/revealjs-animated)
+
+<!-- .element class="fragment animated rotate" -->
+
+---
+
+## Fragments
+
+![Aerosol forcing](https://github.com/engeir/presentations/raw/main/2022/uit-climate-meeting/assets/AEROD_v_simple_vanilla.png)
+
+<!-- .element: class="fragment" -->
+
+---
+
+## Pointer
+
+> Using [reveal-pointer](https://github.com/burnpiro/reveal-pointer).
+
+Press `q`!
+
+---
+
+## Drawer
+
+> Using [reveal-drawer](https://github.com/burnpiro/reveal-drawer).
+
+Press
+
+- `t` to toggle drawing board
+- `d` to toggle drawing functionality while drawing board is up
+- `C-z` (`ctrl+z`) to undo last drawing
+- `1`, `2`, `3`, `4` to choose between red, green, blue and yellow
+
+---
+
+## Attribution
+
+> Using
+> [rschmehl attribution plugin](https://github.com/rschmehl/reveal-plugins/tree/main/attribution).
+
+<img width="40%" src="https://raw.githubusercontent.com/engeir/flottflyt/d950bc3e01f797bbd4d619eccd53da94cd55ee58/favicon_package_v0.16/safari-pinned-tab.svg" />
+
+<span class="attribution">Photo courtesy of
+<a href="https://slides.eirik.re">eirik.re</a></span>
+
+---
+
+## Fullscreen
+
+> Using
+> [rajgoel fullscreen plugin](https://github.com/rajgoel/reveal.js-plugins/tree/master/fullscreen).
+
+<!-- .slide: data-fullscreen="true"  -->
+
+<table class="stretch">
+  <tr>
+    <td>
+
+| Table | With   | Stuff  |
+| ----- | ------ | ------ |
+| One   | Two    | Three  |
+| Four  | Five   | Six    |
+| Seven | Eight  | Nine   |
+| Ten   | Eleven | Twelve |
+
+<img width="45%" src="https://raw.githubusercontent.com/engeir/flottflyt/d950bc3e01f797bbd4d619eccd53da94cd55ee58/favicon_package_v0.16/safari-pinned-tab.svg" />
+</td>
+<td>
+
+| Table | With   | Stuff  |
+| ----- | ------ | ------ |
+| One   | Two    | Three  |
+| Four  | Five   | Six    |
+| Seven | Eight  | Nine   |
+| Ten   | Eleven | Twelve |
+
+<img width="45%" src="https://raw.githubusercontent.com/engeir/flottflyt/d950bc3e01f797bbd4d619eccd53da94cd55ee58/favicon_package_v0.16/safari-pinned-tab.svg" />
+</td>
+  </tr>
+</table>
+
+---
+
+## QR Code
+
+Using the [qr-code](https://github.com/bitjson/qr-code) HTML element:
+
+<qr-code id="qr1" contents="https://github.com/engeir/slides" module-color="#1c4e7d" position-ring-color="#13532d" position-center-color="#9b6b36" mask-x-to-y-ratio="1.1" style="width: 160px; height: 160px; margin: 0em auto; background-color: #ffff0f">
+<img src="https://raw.githubusercontent.com/engeir/flottflyt/d950bc3e01f797bbd4d619eccd53da94cd55ee58/favicon_package_v0.16/safari-pinned-tab.svg" slot="icon" />
+</qr-code>
+
+          </textarea
+          >
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <!-- My added plugins -->
+    <script src="./plugin/animated/revealjs-animated.js"></script>
+    <script src="./plugin/attribution/plugin.js"></script>
+    <script src="./plugin/copycode/copycode.js"></script>
+    <script src="./plugin/drawer/drawer.js"></script>
+    <script
+      src="./plugin/elapsed-time-bar/elapsed-time-bar.js"
+    ></script>
+    <script src="./plugin/fullscreen/plugin.js"></script>
+    <script src="./plugin/pointer/pointer.js"></script>
+    <script src="./plugin/simplemenu/simplemenu.js"></script>
+    <script
+      src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    ></script>
+    <script>
+    function extend() {
+      var target = {};
+      for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    }
+
+    // default options to init reveal.js
+    var defaultOptions = {
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'default', // none/fade/slide/convex/concave/zoom
+      slideNumber: true,
+      highlight: {
+        highlightOnLoad: false
+      },
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealZoom,
+        RevealNotes,
+        RevealMath,
+        // My added plugins
+        CopyCode,
+        RevealAttribution,
+        RevealDrawer,
+        RevealFullscreen,
+        RevealPointer,
+        Simplemenu,
+      ]
+    };
+
+    // options from URL query string
+    var queryOptions = Reveal().getQueryHash() || {};
+
+    var options = extend(defaultOptions, {"transition":"fade","allottedTime":900000,"auto-animate":true,"slideNumber":false,"scrollProgress":true,"view":"vertical","controls":true,"progress":true,"history":true,"center":true,"_":["content/"],"static":"docs","static-dirs":"content/attachments","staticDirs":"content/attachments","template":"theme/my-reveal.html","theme":"theme/my-theme.css","listing-template":"theme/my-site.html","listingTemplate":"theme/my-site.html"}, queryOptions);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script>
+    Reveal.initialize(options);
+    Reveal.addEventListener("ready", function (event) {
+      const blocks = Reveal.getRevealElement().querySelectorAll(
+        "pre code:not(.mermaid)",
+      );
+      const hlp = Reveal.getPlugin("highlight");
+      blocks.forEach(hlp.highlightBlock);
+    });
+    </script>
+
+    <script>
+    const mermaidOptions = extend({ startOnLoad: false }, {});
+    mermaid.startOnLoad = false;
+    mermaid.initialize(mermaidOptions);
+    const cb = function (event) {
+      mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+      mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+    }
+    Reveal.addEventListener('ready', cb);
+    Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>

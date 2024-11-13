@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Temperature response to volcanic forcing</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="../assets/theme/my-theme.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+    <!-- My added plugin stylecheets -->
+    <link
+      rel="stylesheet"
+      href="./plugin/attribution/attribution.css"
+    />
+    <link rel="stylesheet" href="./plugin/copycode/copycode.css" />
+    <link rel="stylesheet" href="./plugin/drawer/drawer.css" />
+    <link
+      rel="stylesheet"
+      href="./plugin/highlight/gruvbox-dark-medium.css"
+    />
+    <link rel="stylesheet" href="./plugin/pointer/pointer.css" />
+    <link rel="stylesheet" href="./plugin/simplemenu/simplemenu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\n---\n" data-separator-vertical="\n--\n">
+          <textarea data-template>
+            
+
+# Temperature response to volcanic forcing
+
+--
+
+<span class="fragment fade-in-then-semi-out" data-fragment-index="0">Can we describe
+how</span> temperature
+($T$)<span class="fragment fade-in-then-semi-out" data-fragment-index="0"> responds to
+</span>volcanic eruptions ($\mathrm{SO_{2}}$, $S$)
+<span class="fragment fade-in-then-semi-out" data-fragment-index="0">with a general
+</span> pulse shape
+($\varphi$)<span class="fragment fade-in-then-semi-out" data-fragment-index="0">?</span>
+
+`$$
+T(t)=\left[\varphi\ast{}S\right](t)
+$$`
+
+<!-- .element: class="fragment" -->
+
+--
+
+<!-- .slide: data-background-color="#002f4b" -->
+<!-- .slide: data-background-video-loop="true" -->
+<!-- .slide: data-background-video="https://github.com/engeir/presentations-files/raw/9a4f6b9150206f27120130b18d8ac09f68469465/2021/fysikermotet/animation.mp4" -->
+<!-- .slide: data-background-size="contain" -->
+
+Notes:
+
+Note that in the video, f is S (in the equations above).
+
+---
+
+## Deconvolution
+
+`$$
+\varphi_{j}^{(n+1)}
+=\varphi_{j}^{(n)}
+ \frac{(T\ast\hat{S})_{j}+b}{(\varphi^{(n)}\ast{}S\ast\hat{S})_{j}+b}
+$$`
+
+... where the pulse shape is the unknown.
+
+--
+
+## Alternative methods
+
+- <!-- .element class="fragment semi-fade-out" data-fragment-index="0" --> Large ensemble of simulations of the same eruption
+- <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="0" --> Conditional average over many events in a long time series
+- <!-- .element: class="fragment" data-fragment-index="1" --> Parameter estimation using linear models
+
+---
+
+## Physical system
+
+- Climate simulations (CESM2*)
+- Volcanoes as the only external forcing <!-- .element: class="fragment" -->
+- Otherwise cycle the year 1850 <!-- .element: class="fragment" -->
+
+*Community Earth System Model version 2
+
+<!-- .element: style="font-size:13pt" -->
+
+--
+
+<!-- .slide: data-auto-animate style="font-size:100pt" -->
+
+<span> SO<sub>2</sub>
+
+</span>
+
+--
+
+<!-- .slide: data-auto-animate style="font-size:40pt" -->
+
+<span> SO<sub>2</sub>
+
+$\downarrow$
+
+H<sub>2</sub>SO<sub>4</sub>
+
+</span>
+
+--
+
+<!-- .slide: id="chem" data-auto-animate style="font-size:40pt" -->
+
+<span> SO<sub>2</sub>
+
+$\downarrow$
+
+H<sub>2</sub>SO<sub>4</sub>
+
+$\downarrow$
+
+AOD/RF
+
+</span>
+
+--
+
+<!-- .slide: id="chem" data-auto-animate style="font-size:40pt" -->
+
+<span> SO<sub>2</sub>
+
+$\downarrow$
+
+H<sub>2</sub>SO<sub>4</sub>
+
+$\downarrow$
+
+Temp(AOD/RF)
+
+</span>
+
+---
+
+## Simulations
+
+- <span style="color:#6a6c01">$26\\,\mathrm{Tg}$</span> (decades)
+- <span style="color:#8d8d3b">$400\\,\mathrm{Tg}$</span> (millennia)
+- <!-- .element: class="fragment semi-fade-out" -->
+  <span style="color:#b0b169">$1629\\,\mathrm{Tg}$</span> &
+  <span style="color:#d3d598">$3000\\,\mathrm{Tg}$
+  </span> (hundreds of millennia)
+- <!-- .element: class="fragment" --> >20 years, with one or two eruptions
+
+$\mathrm{Tg}$: Teragram $\mathrm{SO_{2}}$ injected into the atmosphere
+
+<!-- .element: style="font-size:13pt" -->
+
+---
+
+## Temperature response pulse function
+
+<span class="r-stack">
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/testing.webp)
+
+</span>
+
+--
+
+## Reconstructed double-eruption events
+
+<span class="r-stack">
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/responses_combined_S26.webp)
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/responses_combined_S400.webp)
+
+<!-- .element class="fragment" -->
+
+</span>
+
+--
+
+<!-- .slide: data-auto-animate -->
+
+- CESM2: 20 years long
+
+<div data-id="box" style="height: 50px; width: 2%; background: salmon;"></div>
+<div data-id="box-long" style="height: 50px; width: 0%; background: blue;"></div>
+
+--
+
+<!-- .slide: data-auto-animate -->
+
+- CESM2: 20 years long
+- CESM1 (external dataset): 1000 years long
+
+<div data-id="box" style="height: 50px; width: 2%; background: salmon;"></div>
+<div data-id="box-long" style="height: 50px; width: 100%; background: blue;"></div>
+
+--
+
+## CESM1 1000 years
+
+<span class="r-stack" style="width:70%;margin: 0 auto;">
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/compare-historical-size-temp-reconstructed-full.webp)
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/compare-historical-size-temp-reconstructed-zoom.webp)
+
+<!-- .element class="fragment" -->
+
+</span>
+
+--
+
+## 7 year cut-off
+
+<span class="r-stack">
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/ob16-month_resp_temp-so2_combined.webp)
+
+![](https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/cesm2-S26_resp_temp-so2_combined.webp)
+
+<!-- .element class="fragment" -->
+
+</span>
+
+---
+
+<span class="r-stack">
+
+## Temperature response to eruptions 4 years apart combine linearly
+
+<!-- .element: class="fragment fade-out" data-fragment-index="0" -->
+
+## Deconvolution is an alternative to large ensemble studies
+
+<!-- .element: class="fragment fade-in-then-out" data-fragment-index="0" -->
+
+## Significant cooling up to 7 years after eruptions
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+</span>
+
+<span class="r-stack">
+
+<img style="float: right;width: 40%;" src="https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/responses_combined_S400.webp" />
+
+<!-- .element: class="fragment fade-out" data-fragment-index="0" -->
+
+<img style="float: right;width: 20%;" src="https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/compare-historical-size-temp-reconstructed-full.webp" />
+
+<!-- .element: class="fragment fade-in-then-out" data-fragment-index="0" -->
+
+<img style="float: right;width: 40%;" src="https://raw.githubusercontent.com/engeir/presentations/50e2bc1bf0fd880c8a8046b23e6d56b2573c77b6/2024/skibotn/assets/ob16-month_resp_temp-so2_combined.webp" />
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+</span>
+
+Notes:
+
+- The temperature response to eruptions separated by 4 years or more combine linearly
+- A deconvolution method may be an alternative to large ensemble studies to obtain
+  estimates of the volcanic eruption model response
+- The temperature response to eruptions in a 1000-year-long historic climate simulation
+  show significant cooling up to 7 years after eruptions
+
+--
+
+## Conclusions
+
+- Temperature response to eruptions 4 years apart combine linearly
+- Deconvolution is an alternative to large ensemble studies
+- Significant cooling up to 7 years after eruptions
+
+Notes:
+
+- The temperature response to eruptions separated by 4 years or more combine linearly
+- A deconvolution method may be an alternative to large ensemble studies to obtain
+  estimates of the volcanic eruption model response
+- The temperature response to eruptions in a 1000-year-long historic climate simulation
+  show significant cooling up to 7 years after eruptions
+
+          </textarea
+          >
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <!-- My added plugins -->
+    <script src="./plugin/animated/revealjs-animated.js"></script>
+    <script src="./plugin/attribution/plugin.js"></script>
+    <script src="./plugin/copycode/copycode.js"></script>
+    <script src="./plugin/drawer/drawer.js"></script>
+    <script
+      src="./plugin/elapsed-time-bar/elapsed-time-bar.js"
+    ></script>
+    <script src="./plugin/fullscreen/plugin.js"></script>
+    <script src="./plugin/pointer/pointer.js"></script>
+    <script src="./plugin/simplemenu/simplemenu.js"></script>
+    <script
+      src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    ></script>
+    <script>
+    function extend() {
+      var target = {};
+      for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    }
+
+    // default options to init reveal.js
+    var defaultOptions = {
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'default', // none/fade/slide/convex/concave/zoom
+      slideNumber: true,
+      highlight: {
+        highlightOnLoad: false
+      },
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealZoom,
+        RevealNotes,
+        RevealMath,
+        // My added plugins
+        CopyCode,
+        RevealAttribution,
+        RevealDrawer,
+        RevealFullscreen,
+        RevealPointer,
+        Simplemenu,
+      ]
+    };
+
+    // options from URL query string
+    var queryOptions = Reveal().getQueryHash() || {};
+
+    var options = extend(defaultOptions, {"allottedTime":1200000,"backgroundTransition":"none","pdfSeparateFragments":false,"transition":"none","margin":0,"maxScale":3,"controls":false,"auto-animate":true,"slideNumber":false,"scrollProgress":true,"view":"vertical","progress":true,"history":true,"center":true,"_":["content/"],"static":"docs","static-dirs":"content/attachments","staticDirs":"content/attachments","template":"theme/my-reveal.html","theme":"theme/my-theme.css","listing-template":"theme/my-site.html","listingTemplate":"theme/my-site.html"}, queryOptions);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script>
+    Reveal.initialize(options);
+    Reveal.addEventListener("ready", function (event) {
+      const blocks = Reveal.getRevealElement().querySelectorAll(
+        "pre code:not(.mermaid)",
+      );
+      const hlp = Reveal.getPlugin("highlight");
+      blocks.forEach(hlp.highlightBlock);
+    });
+    </script>
+
+    <script>
+    const mermaidOptions = extend({ startOnLoad: false }, {});
+    mermaid.startOnLoad = false;
+    mermaid.initialize(mermaidOptions);
+    const cb = function (event) {
+      mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+      mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+    }
+    Reveal.addEventListener('ready', cb);
+    Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
