@@ -27,7 +27,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 2
       # (Optional) GitHub Enterprise requires GHE_HOST variable set
@@ -74,7 +74,7 @@ jobs:
     if: needs.update_release_draft.outputs.deploy == 'true' && github.actor == github.repository_owner
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
